@@ -28,7 +28,7 @@
 スケジュールと一緒に日記を残しておくため、前後の行事など一目でわかる。<br>
 
 ## 設計書
-<br>
+- ER図 https://app.diagrams.net/#G1Jb7eFonuiUNE4jVMJoox7RcrjzTFdz3-
 
 ## 開発環境
 - OS：Linux(CentOS)
