@@ -28,7 +28,7 @@
 スケジュールと一緒に日記を残しておくため、前後の行事など一目でわかる。<br>
 
 ## 設計書
-- ER図　https://app.diagrams.net/#G11Gv0hopae4rZeg7i4999LzDsJD9lSRNQ
+- ER図　https://drive.google.com/file/d/1UpkrXsRpAQfxP8YL20gOkcRfjSiOHs5U/view?usp=sharing
 - ワイヤーフレーム　https://app.diagrams.net/#G1Jb7eFonuiUNE4jVMJoox7RcrjzTFdz3-
 
 ## 開発環境
