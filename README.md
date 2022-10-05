@@ -28,8 +28,10 @@
 スケジュールと一緒に日記を残しておくため、前後の行事など一目でわかる。<br>
 
 ## 設計書
-- ER図　https://drive.google.com/file/d/1UpkrXsRpAQfxP8YL20gOkcRfjSiOHs5U/view?usp=sharing
+- ER図
 - ワイヤーフレーム　https://app.diagrams.net/#G1Jb7eFonuiUNE4jVMJoox7RcrjzTFdz3-
+- 画面遷移図　https://app.diagrams.net/#G1k-EIhKFxDzvJQGhdjpC8bHtpUJWcX9mT
+- テーブル定義書　https://docs.google.com/spreadsheets/d/1LCxs2BIVReeKhGSQHW_gmFyGtSjUi_X0ezhJcOqAprw/edit#gid=291359249
 
 ## 開発環境
 - OS：Linux(CentOS)
