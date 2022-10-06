@@ -3,12 +3,12 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :"ニックネーム" %>
-    <%= f.email_field :nickname, autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", placeholder: "表示名" %>
   </div>
 
   <div class="field">
     <%= f.label :"メールアドレス" %>
-    <%= f.email_field :email, autocomplete: "email" %>
+    <%= f.email_field :email, autocomplete: "email", placeholder: "e-address@sample.jp" %>
   </div>
 
   <div class="field">
