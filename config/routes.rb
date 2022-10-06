@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'homes/index'
   # 管理者用 /admin/sign_in
   devise_for :admin, skip: [:registrations, :passwords], controllers: {
     sessions: "admin/sessions"
@@ -11,5 +10,8 @@ Rails.application.routes.draw do
     sessions: 'public/sessions'
   }
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: 'homes#index'
+
+  root to: 'homes#top'
+  get 'homes/about' => 'homes#about', as: 'about'
+
 end
