@@ -56,6 +56,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
+gem 'rails-i18n'
+gem 'enum_help'
 
 # 環境変数を管理するgemとMySQLを利用するためのgem
 gem 'dotenv-rails'
