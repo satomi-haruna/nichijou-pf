@@ -6,19 +6,20 @@
     <%= f.text_field :plan %>
 
     <h3>日時</h3>
-    <%= f.text_field :plan %>
+    <%= f.text_field :plan_detetime %>
+    <h3>終日フラグ</h3>
 
     <h3>色をつける</h3>
-    <%= f.text_field :plan %>
+    <%= f.text_field :color_id %>
 
     <h3>メモ</h3>
-    <%= f.text_area :plan %>
+    <%= f.text_area :memo %>
 
     <h3>場所</h3>
-    <%= f.text_area :plan %>
+    <%= f.text_area :place %>
 
     <h3>通知</h3>
-    <%= f.text_field :plan %>
+    <%= f.text_field :is_active%>
 
     <div class="btn">
       <%= f.submit '保存' %>
