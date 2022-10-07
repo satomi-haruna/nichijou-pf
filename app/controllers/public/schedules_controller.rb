@@ -7,10 +7,11 @@ class Public::SchedulesController < ApplicationController
     @schedule = Schedule.new(schedule_params)
     @schedule.user_id = current_user.id
     @schedule.save
-    redirect_to public_schedules_path
+    redirect_to public_schedule_path(:schedule.id)
   end
 
   def show
+    @schedule = Schedule.find(params[:id])
   end
 
   def edit

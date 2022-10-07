@@ -1,9 +1,9 @@
-<h1>予定の一覧　カレンダー画面</h1>
+<h1>予定の一覧 カレンダー画面</h1>
 
 <% @schedules.each do |schedule| %>
 <div>
   <h3>今日の予定</h3>
-  <%= schedule.plan %>
+  <%= link_to schedule.plan, public_schedule_path(schedule.id) %>
 
   <!--カレンダー画面にする場合、タイトルのみ表示-->
   <!--<h3>日時</h3>-->
