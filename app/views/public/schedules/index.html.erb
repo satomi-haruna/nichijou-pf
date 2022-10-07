@@ -1,0 +1,25 @@
+<h1>予定の一覧 カレンダー画面</h1>
+
+<% @schedules.each do |schedule| %>
+<div>
+  <h3>今日の予定</h3>
+  <%= link_to schedule.plan, public_schedule_path(schedule.id) %>
+
+  <!--カレンダー画面にする場合、タイトルのみ表示-->
+  <!--<h3>日時</h3>-->
+  <!--<%= schedule.plan_datetime %>-->
+  <!--<h3>終日フラグ</h3>-->
+
+  <!--<h3>色をつける</h3>-->
+  <!--<%= schedule.color_id %>-->
+
+  <!--<h3>メモ</h3>-->
+  <!--<%= schedule.memo %>-->
+
+  <!--<h3>場所</h3>-->
+  <!--<%= schedule.place %>-->
+
+  <!--<h3>通知</h3>-->
+  <!--<%= schedule.is_active %>-->
+</div>
+<% end %>
