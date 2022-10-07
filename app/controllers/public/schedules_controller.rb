@@ -23,6 +23,7 @@ class Public::SchedulesController < ApplicationController
   end
 
   def index
+    @schedules = Schedule.all
   end
 
 
