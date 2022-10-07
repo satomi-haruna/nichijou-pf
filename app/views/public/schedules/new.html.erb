@@ -1,2 +1,28 @@
-<h1>Public::Schedules#new</h1>
-<p>Find me in app/views/public/schedules/new.html.erb</p>
+<body>
+  <h1>新しく予定を登録</h1>
+
+  <%= form_with model: [:public, @schedule] do |f| %>
+    <h3>今日の予定</h3>
+    <%= f.text_field :plan %>
+
+    <h3>日時</h3>
+    <%= f.text_field :plan %>
+
+    <h3>色をつける</h3>
+    <%= f.text_field :plan %>
+
+    <h3>メモ</h3>
+    <%= f.text_area :plan %>
+
+    <h3>場所</h3>
+    <%= f.text_area :plan %>
+
+    <h3>通知</h3>
+    <%= f.text_field :plan %>
+
+    <div class="btn">
+      <%= f.submit '保存' %>
+    </div>
+  <% end %>
+
+</body>

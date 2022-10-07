@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2022_10_06_055609) do
   end
 
   create_table "schedules", force: :cascade do |t|
+    t.integer "user_id"
     t.string "plan"
     t.datetime "plan_datetime"
     t.boolean "allday_flg", default: false
