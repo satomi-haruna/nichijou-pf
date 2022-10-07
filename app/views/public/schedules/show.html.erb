@@ -1,0 +1,22 @@
+<h1>予定詳細画面</h1>
+
+<div>
+  <h3>今日の予定</h3>
+  <%= @schedule.plan %>
+
+  <h3>日時</h3>
+  <%= @schedule.plan_datetime %>
+  <h3>終日フラグ</h3>
+
+  <h3>色をつける</h3>
+  <%= @schedule.color_id %>
+
+  <h3>メモ</h3>
+  <%= @schedule.memo %>
+
+  <h3>場所</h3>
+  <%= @schedule.place %>
+
+  <h3>通知</h3>
+  <%= @schedule.is_active %>
+</div>

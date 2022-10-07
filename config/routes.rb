@@ -1,17 +1,22 @@
 Rails.application.routes.draw do
-  # 管理者用 /admin/sign_in
+  # 管理者用 devise
   devise_for :admin, skip: [:registrations, :passwords], controllers: {
     sessions: "admin/sessions"
   }
 
-  # 会員側 users/sign_up,sign_in
+
+  root to: 'homes#top'
+  get 'homes/about' => 'homes#about', as: 'about'
+
+  # 会員側 devise
   devise_for :users, skip: [:passwords], controllers: {
     registrations: "public/registrations",
     sessions: 'public/sessions'
   }
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  root to: 'homes#top'
-  get 'homes/about' => 'homes#about', as: 'about'
+  namespace :public do
+    resources :schedules
+  end
 
 end
