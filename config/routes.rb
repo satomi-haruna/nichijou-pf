@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   scope module: :public do
     resources :schedules do
-      resources :diaries, :except => [:index]
+      resources :diaries, except: [:index]
     end
   end
 
