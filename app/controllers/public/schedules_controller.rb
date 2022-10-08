@@ -13,6 +13,7 @@ class Public::SchedulesController < ApplicationController
   def show
     @schedule = Schedule.find(params[:id])
     @diary = Diary.new
+    @list = List.new
   end
 
   def edit

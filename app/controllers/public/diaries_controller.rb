@@ -1,6 +1,5 @@
 class Public::DiariesController < ApplicationController
   def new
-    @diary = Diary.new
   end
 
   def create
