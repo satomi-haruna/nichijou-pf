@@ -20,6 +20,9 @@ Rails.application.routes.draw do
       resources :diaries, except: [:index]
       resources :lists, except: [:new, :show]
     end
+    get 'users/my_page' => 'users#show'
+    get 'users/information/edit' => 'users#edit'
+    patch 'users/information' => 'users#update'
   end
 
 end
