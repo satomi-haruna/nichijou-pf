@@ -3,7 +3,7 @@
 <% @schedules.each do |schedule| %>
 <div>
   <h3>今日の予定</h3>
-  <%= link_to schedule.plan, public_schedule_path(schedule.id) %>
+  <%= link_to schedule.plan, schedule_path(schedule.id) %>
 
   <!--カレンダー画面にする場合、タイトルのみ表示-->
   <!--<h3>日時</h3>-->
