@@ -1,15 +1,14 @@
 class Public::DiariesController < ApplicationController
   def new
     @diary = Diary.new
-    @schedule = Schedule.new
   end
 
   def create
-    # @schedule = Schedule.find(params[:schedule_id])
-    # @diary = Diary.new(diary_params)
-    # # diary.schedule_id = schedule.id
-    # diary.save
-    # redirect_to public_schedules_path
+    schedule = Schedule.find(params[:schedule_id])
+    diary = Diary.new(diary_params)
+    diary.schedule_id = schedule.id
+    diary.save
+    redirect_to schedule_path(schedule.id)
   end
 
   def show
@@ -22,6 +21,8 @@ class Public::DiariesController < ApplicationController
   end
 
   def destroy
+    Diary.find(params[:id]).destroy
+    redirect_to schedule_path(params[:schedule_id])
   end
 
   private
