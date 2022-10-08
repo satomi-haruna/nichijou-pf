@@ -1,6 +1,7 @@
 class Schedule < ApplicationRecord
   belongs_to :user
   has_many :diaries, dependent: :destroy
+  has_many :lists, dependent: :destroy
 
   # 色分けのためのcolor_idをenumで設定
   enum color_id: {

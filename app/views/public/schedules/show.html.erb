@@ -44,3 +44,22 @@
     <%= f.submit "保存" %>
   <% end %>
 </div>
+
+<!--リストを表示-->
+<div>
+  <h3>作成したリスト</h3>
+  <% @schedule.lists.each do |list| %>
+    <p><%= list.title %></p>
+    <p><%= list.item %></p>
+    <%= link_to "削除", schedule_list_path(list.schedule, list), method: :delete %>
+  <% end %>
+</div>
+<!--リスト登録-->
+<div>
+  <h3>リストを作成</h3>
+  <%= form_with model: [@schedule, @list] do |f| %>
+    <%= f.text_field :title %><br>
+    <%= f.text_field :item %><br>
+    <%= f.submit "保存" %>
+  <% end %>
+</div>
