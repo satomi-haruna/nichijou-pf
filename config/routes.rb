@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   scope module: :public do
     resources :schedules do
       resources :diaries, except: [:index]
+      resources :lists, except: [:new, :show]
     end
   end
 
