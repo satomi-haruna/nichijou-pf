@@ -17,9 +17,16 @@ class Public::UsersController < ApplicationController
   end
 
   def unsubscribe
+    @user = current_user
   end
 
   def withdraw
+    @user = current_user
+    # is_deletedカラムをtrueに変更＝削除済み
+    @user.update(is_deleted: true)
+    reset_session
+    flash[:notice] = "退会が完了しました。ご利用ありがとうございました。"
+    redirect_to root_path
   end
 
   private

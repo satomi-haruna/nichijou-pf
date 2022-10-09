@@ -23,6 +23,10 @@ Rails.application.routes.draw do
     get 'users/my_page' => 'users#show'
     get 'users/information/edit' => 'users#edit'
     patch 'users/information' => 'users#update'
+    # 退会確認画面
+    get '/users/unsubscribe' => 'users#unsubscribe'
+    # user論理削除
+    patch 'users/withdraw' => 'users#withdraw'
   end
 
 end
