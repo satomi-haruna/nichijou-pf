@@ -1,5 +1,9 @@
 <h1>Homes#top</h1>
 
+<div class="flash">
+  <%= flash[:notice] %>
+</div>
+
 <!--一旦ログアウト機能を置く-->
 <header>
   <% if user_signed_in? %>
