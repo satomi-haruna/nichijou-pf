@@ -1,4 +1,6 @@
 class Public::SchedulesController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @schedule = Schedule.new
   end

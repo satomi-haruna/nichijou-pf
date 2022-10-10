@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  # 管理者用 devise
-  devise_for :admin, skip: [:registrations, :passwords], controllers: {
-    sessions: "admin/sessions"
-  }
-
-
   root to: 'homes#top'
   get 'homes/about' => 'homes#about', as: 'about'
 
@@ -27,6 +21,15 @@ Rails.application.routes.draw do
     get '/users/unsubscribe' => 'users#unsubscribe'
     # user論理削除
     patch 'users/withdraw' => 'users#withdraw'
+  end
+
+  # 管理者用 devise
+  devise_for :admin, skip: [:registrations, :passwords], controllers: {
+    sessions: "admin/sessions"
+  }
+
+  namespace :admin do
+    root "users#index"
   end
 
 end
