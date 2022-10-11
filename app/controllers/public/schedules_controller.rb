@@ -29,6 +29,9 @@ class Public::SchedulesController < ApplicationController
   end
 
   def destroy
+    schedule = Schedule.find(params[:id])
+    schedule.destroy
+    redirect_to schedules_path
   end
 
   def index
