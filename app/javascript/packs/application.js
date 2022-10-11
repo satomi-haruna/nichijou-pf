@@ -41,17 +41,12 @@ document.addEventListener('turbolinks:load', function() {
     height: "auto",
 
     dateClick: function(info){
-        //日付をクリックしたときのイベント(詳しくは次回の記事へ)
     },
     eventClick: function(info){
-        //表示されたイベントをクリックしたときのイベント(詳しくは次回の記事へ)
     },
     eventClassNames: function(arg){
-        //表示されたイベントにclassをcss用に追加する(詳しくは次回の記事へ)
     }
-
   });
   //カレンダー表示
   calendar.render();
-
 });

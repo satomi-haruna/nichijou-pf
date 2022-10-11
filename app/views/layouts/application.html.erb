@@ -14,13 +14,13 @@
     <header>
       <% if user_signed_in? %>
         <li>
-          <%= link_to "予定登録", new_schedule_path %>
+          <%= link_to "予定登録", new_event_path %>
         </li>
         <li>
-          <%= link_to "カレンダー", schedules_path %>
+          <%= link_to "カレンダー", events_path %>
         </li>
         <li>
-          <%= link_to "予定一覧", schedules_path %>
+          <%= link_to "予定一覧", events_path %>
         </li>
         <li>
           <%= link_to "会員情報の確認", users_my_page_path %>
@@ -37,10 +37,10 @@
         </li>
       <% else %>
         <li>
-          <%= link_to "予定登録", new_schedule_path %>
+          <%= link_to "予定登録", new_event_path %>
         </li>
         <li>
-          <%= link_to "カレンダー", schedules_path %>
+          <%= link_to "カレンダー", events_path %>
         </li>
         <li>
           <%= link_to "新規登録", new_user_registration_path %>
