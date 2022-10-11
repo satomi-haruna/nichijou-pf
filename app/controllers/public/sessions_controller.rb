@@ -5,6 +5,21 @@ class Public::SessionsController < Devise::SessionsController
   before_action :user_state, only: [:create]
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  # ゲストログイン
+  # def guest_sign_in
+  #   user = User.guest
+  #   sign_in user
+  #   redirect_to schedules_path, message: 'ゲストユーザーでログインしました。'
+  # end
+
+  def after_sign_in_path_for(resource)
+    schedules_path
+  end
+
+  def after_sign_out_path_for(resource)
+    root_path
+  end
+
   # GET /resource/sign_in
   # def new
   #   super
@@ -29,12 +44,14 @@ class Public::SessionsController < Devise::SessionsController
   # 退会しているかを判断するメソッド
   def user_state
     # 入力されたニックネームからアカウントを1件取得、取得できない場合メソッドを終了。
-    # 取得できた場合、登録パスワードと入力パスワードが一致しているか判別かつ、is_deletedカラムの値を確認し退会済みかどうか判別。
+    # 取得できた場合、登録パスワードと入力パスワードが一致しているか判別かつ、userモデルの制限を利用し退会済みかどうか判別。
     @user = User.find_by(nickname: params[:user][:nickname])
     return if !@user
-    if @user.valid_password?(params[:user][:password]) && (@user.is_deleted == true)
+    if @user.valid_password?(params[:user][:password]) && (@user.active_for_authentication? == false)
       flash[:notice] = "退会済みです。別のメールアドレスにて再度ご登録ください。"
       redirect_to new_user_registration_path
+    else
+      flash[:notice] = "項目を入力してください。"
     end
   end
 
