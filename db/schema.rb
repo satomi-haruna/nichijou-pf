@@ -62,10 +62,10 @@ ActiveRecord::Schema.define(version: 2022_10_08_072613) do
   end
 
   create_table "lists", force: :cascade do |t|
-    t.integer "schedule_id"
-    t.string "title"
-    t.string "item"
-    t.boolean "is_completed"
+    t.integer "schedule_id", null: false
+    t.string "title", null: false
+    t.string "item", null: false
+    t.boolean "is_completed", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
