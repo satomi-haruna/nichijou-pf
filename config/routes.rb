@@ -35,7 +35,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root "users#index"
-    patch 'users/withdraw' => 'users#withdraw'
+    patch 'users/withdraw/:id' => 'users#withdraw', as: "users_withdraw"
   end
 
 end

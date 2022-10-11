@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2022_10_11_101538) do
   end
 
   create_table "diaries", force: :cascade do |t|
-    t.integer "event_id"
+    t.integer "event_id", null: false
     t.string "simple_diary"
     t.text "detail"
     t.string "image_id"
@@ -62,14 +62,14 @@ ActiveRecord::Schema.define(version: 2022_10_11_101538) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "plan"
-    t.datetime "plan_datetime"
-    t.boolean "allday_flg", default: false
+    t.integer "user_id", null: false
+    t.string "plan", null: false
+    t.datetime "plan_datetime", null: false
+    t.boolean "allday_flg", default: false, null: false
     t.text "memo"
     t.string "place"
-    t.integer "color_id", default: 0
-    t.boolean "is_active", default: false
+    t.integer "color_id", default: 0, null: false
+    t.boolean "is_active", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -94,9 +94,9 @@ ActiveRecord::Schema.define(version: 2022_10_11_101538) do
     t.string "last_name_kana", null: false
     t.string "first_name_kana", null: false
     t.string "nickname", null: false
+    t.boolean "is_deleted", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "is_deleted", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
