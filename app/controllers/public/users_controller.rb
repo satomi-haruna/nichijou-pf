@@ -31,6 +31,11 @@ class Public::UsersController < ApplicationController
     redirect_to root_path
   end
 
+  # 退会チェックする
+  def withdraw_not_check
+    true
+  end
+
   private
 
   def user_params

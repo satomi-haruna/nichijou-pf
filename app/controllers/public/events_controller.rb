@@ -37,6 +37,11 @@ class Public::EventsController < ApplicationController
     @events = Event.all
   end
 
+  # 退会チェックする
+  def withdraw_not_check
+    true
+  end
+
   private
 
   def event_params
