@@ -1,4 +1,4 @@
-class Schedule < ApplicationRecord
+class Event < ApplicationRecord
   belongs_to :user
   has_many :diaries, dependent: :destroy
   has_many :lists, dependent: :destroy

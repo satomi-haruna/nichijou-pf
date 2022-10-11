@@ -16,5 +16,5 @@ class User < ApplicationRecord
     super && (is_deleted == false)
   end
 
-  has_many :schedules, dependent: :destroy
+  has_many :events, dependent: :destroy
 end
