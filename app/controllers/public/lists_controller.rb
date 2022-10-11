@@ -5,11 +5,11 @@ class Public::ListsController < ApplicationController
   end
 
   def create
-    schedule = Schedule.find(params[:schedule_id])
+    event = event.find(params[:event_id])
     list =List.new(list_params)
-    list.schedule_id = schedule.id
+    list.event_id = event.id
     list.save
-    redirect_to schedule_path(schedule.id)
+    redirect_to event_path(event.id)
   end
 
   def edit
@@ -20,13 +20,13 @@ class Public::ListsController < ApplicationController
 
   def destroy
     List.find(params[:id]).destroy
-    redirect_to schedule_path(params[:schedule_id])
+    redirect_to event_path(params[:event_id])
   end
 
   private
 
   def list_params
-    params.require(:list).permit(:schedule_id, :title, :item, :is_completed)
+    params.require(:list).permit(:event_id, :title, :item, :is_completed)
   end
 
 end
