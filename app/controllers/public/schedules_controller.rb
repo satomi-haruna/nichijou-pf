@@ -1,4 +1,6 @@
 class Public::SchedulesController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @schedule = Schedule.new
   end
@@ -27,6 +29,9 @@ class Public::SchedulesController < ApplicationController
   end
 
   def destroy
+    schedule = Schedule.find(params[:id])
+    schedule.destroy
+    redirect_to schedules_path
   end
 
   def index

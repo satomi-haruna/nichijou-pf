@@ -1,4 +1,6 @@
 class Public::DiariesController < ApplicationController
+  before_action :authenticate_user!
+
   def new
   end
 
