@@ -1,6 +1,6 @@
 <h1>予定の編集画面</h1>
 
-<%= form_with model: @schedule, url: schedule_path(@schedule.id), method: :patch do |f| %>
+<%= form_with model: @event, url: event_path(@event.id), method: :patch do |f| %>
   <h3>今日の予定</h3>
   <%= f.text_field :plan %>
 

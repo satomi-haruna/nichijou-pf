@@ -2,45 +2,45 @@
 
 <div>
   <h3>今日の予定</h3>
-  <%= link_to "編集", edit_schedule_path(@schedule.id) %><br>
-  <%= link_to "削除", schedule_path, method: :delete, "data-confirm" => "この予定に対しての日記やリストも削除されます。\n削除してよろしいですか？" %><br>
+  <%= link_to "編集", edit_event_path(@event.id) %><br>
+  <%= link_to "削除", event_path, method: :delete, "data-confirm" => "この予定に対しての日記やリストも削除されます。\n削除してよろしいですか？" %><br>
 
-  <%= @schedule.plan %>
+  <%= @event.plan %>
 
   <h3>日時</h3>
-  <%= @schedule.plan_datetime %>
+  <%= @event.plan_datetime %>
   <h3>終日フラグ</h3>
 
   <h3>色をつける</h3>
-  <%= @schedule.color_id %>
+  <%= @event.color_id %>
 
   <h3>メモ</h3>
-  <%= @schedule.memo %>
+  <%= @event.memo %>
 
   <h3>場所</h3>
-  <%= @schedule.place %>
+  <%= @event.place %>
 
   <h3>通知</h3>
-  <%= @schedule.is_active %>
+  <%= @event.is_active %>
 </div>
 
 <!--日記表示-->
 <div>
   <h3>日記</h3>
-  <% @schedule.diaries.each do |diary| %>
-    <p><%= @schedule.plan_datetime %></p>
+  <% @event.diaries.each do |diary| %>
+    <p><%= @event.plan_datetime %></p>
     <%= diary.simple_diary %>
     <%= diary.detail %>
     <!--%= diary.image_id %>-->
-    <%= link_to "削除", schedule_diary_path(diary.schedule, diary), method: :delete %>
+    <%= link_to "削除", event_diary_path(diary.event, diary), method: :delete %>
   <% end %>
 </div>
 <!--日記投稿-->
 <div>
   <h3>日記を書く</h3>
   <h4>日付</h4>
-  <%= @schedule.plan_datetime %>
-  <%= form_with model: [@schedule, @diary] do |f| %>
+  <%= @event.plan_datetime %>
+  <%= form_with model: [@event, @diary] do |f| %>
     <%= f.text_field :simple_diary, placeholder: "今日を一言で" %><br>
     <%= f.text_area :detail %><br>
     <!--%= image_tag @diary.get_image(100,100) %>-->
@@ -51,16 +51,16 @@
 <!--リストを表示-->
 <div>
   <h3>作成したリスト</h3>
-  <% @schedule.lists.each do |list| %>
+  <% @event.lists.each do |list| %>
     <p><%= list.title %></p>
     <p><%= list.item %></p>
-    <%= link_to "削除", schedule_list_path(list.schedule, list), method: :delete %>
+    <%= link_to "削除", event_list_path(list.event, list), method: :delete %>
   <% end %>
 </div>
 <!--リスト登録-->
 <div>
   <h3>リストを作成</h3>
-  <%= form_with model: [@schedule, @list] do |f| %>
+  <%= form_with model: [@event, @list] do |f| %>
     <%= f.text_field :title %><br>
     <%= f.text_field :item %><br>
     <%= f.submit "保存" %>

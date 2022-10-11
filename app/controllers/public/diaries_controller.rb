@@ -5,11 +5,11 @@ class Public::DiariesController < ApplicationController
   end
 
   def create
-    schedule = Schedule.find(params[:schedule_id])
+    event = event.find(params[:event_id])
     diary = Diary.new(diary_params)
-    diary.schedule_id = schedule.id
+    diary.event_id = event.id
     diary.save
-    redirect_to schedule_path(schedule.id)
+    redirect_to event_path(event.id)
   end
 
   def show
@@ -23,13 +23,13 @@ class Public::DiariesController < ApplicationController
 
   def destroy
     Diary.find(params[:id]).destroy
-    redirect_to schedule_path(params[:schedule_id])
+    redirect_to event_path(params[:event_id])
   end
 
   private
 
   def diary_params
-    params.require(:diary).permit(:schedule_id, :simple_diary, :detail, :image_id)
+    params.require(:diary).permit(:event_id, :simple_diary, :detail, :image_id)
   end
 
 end

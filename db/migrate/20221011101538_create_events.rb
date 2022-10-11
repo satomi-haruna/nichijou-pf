@@ -1,6 +1,6 @@
-class CreateSchedules < ActiveRecord::Migration[6.1]
+class CreateEvents < ActiveRecord::Migration[6.1]
   def change
-    create_table :schedules do |t|
+    create_table :events do |t|
       t.integer :user_id, nill: false
       t.string :plan, nill: false
       t.datetime :plan_datetime, nill: false
