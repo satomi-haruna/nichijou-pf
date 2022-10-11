@@ -23,6 +23,11 @@ Rails.application.routes.draw do
     patch 'users/withdraw' => 'users#withdraw'
   end
 
+  # ゲストログイン
+  # devise_scope :user do
+  #   post 'users/guest_sign_in', to: 'users/sessoins#guest_sign_in'
+  # end
+
   # 管理者用 devise
   devise_for :admin, skip: [:registrations, :passwords], controllers: {
     sessions: "admin/sessions"
@@ -30,6 +35,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root "users#index"
+    patch 'users/withdraw' => 'users#withdraw'
   end
 
 end
