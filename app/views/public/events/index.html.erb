@@ -7,22 +7,5 @@
 <% @events.each do |event| %>
 <div>
   <%= link_to event.plan, event_path(event.id) %>
-
-  <!--カレンダー画面にする場合、タイトルのみ表示-->
-  <!--<h3>日時</h3>-->
-  <!--<%= event.plan_datetime %>-->
-  <!--<h3>終日フラグ</h3>-->
-
-  <!--<h3>色をつける</h3>-->
-  <!--<%= event.color_id %>-->
-
-  <!--<h3>メモ</h3>-->
-  <!--<%= event.memo %>-->
-
-  <!--<h3>場所</h3>-->
-  <!--<%= event.place %>-->
-
-  <!--<h3>通知</h3>-->
-  <!--<%= event.is_active %>-->
-<% end %>
 </div>
+<% end %>

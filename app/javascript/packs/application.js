@@ -12,41 +12,17 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-// インストールしたカレンダーのファイルを呼び出し
-import { Calendar} from '@fullcalendar/core';
+// カレンダー表示設定
+import { Calendar } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
-import monthGridPlugin from '@fullcalendar/daygrid'
-import googleCalendarApi from '@fullcalendar/google-calendar'
 
 document.addEventListener('turbolinks:load', function() {
   var calendarEl = document.getElementById('calendar');
+
   var calendar = new Calendar(calendarEl, {
-    plugins: [ monthGridPlugin, interactionPlugin, googleCalendarApi ],
-
-    //細かな表示設定
-    locale: 'ja',
-    timeZone: 'Asia/Tokyo',
-    firstDay: 0,
-    headerToolbar: {
-      start: '',
-      center: 'title',
-      end: 'today prev,next'
-    },
-    expandRows: true,
-    stickyHeaderDates: true,
-    buttonText: {
-       today: '今日'
-    },
-    allDayText: '終日',
-    height: "auto",
-
-    dateClick: function(info){
-    },
-    eventClick: function(info){
-    },
-    eventClassNames: function(arg){
-    }
+    plugins: [ dayGridPlugin, interactionPlugin ]
   });
-  //カレンダー表示
+
   calendar.render();
 });
