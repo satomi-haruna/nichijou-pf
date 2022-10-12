@@ -31,7 +31,7 @@
           退会
         <% end %>
       </td>
-      <td><%= link_to "ステータスを変更する", admin_users_withdraw_path(user.id), method: :patch, "data-confirm" => "会員が登録した予定等が削除されます。\n本当に会員ステータスを変更しますか？" %></td>
+      <td><%= link_to "ステータスを変更する", admin_users_withdraw_path(user.id), method: :patch, "data-confirm" => "退会へ変更する場合、会員が登録した予定等が削除されます。\n本当に会員ステータスを変更しますか？" %></td>
     </tr>
   <% end %>
   </tbody>

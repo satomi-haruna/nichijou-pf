@@ -65,6 +65,11 @@ group :production do
   gem 'mysql2'
 end
 
-gem "net-smtp"
-gem "net-pop"
-gem "net-imap"
+gem 'net-smtp'
+gem 'net-pop'
+gem 'net-imap'
+
+# fullcalendarを導入
+gem 'jquery-rails', '4.3.3'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
