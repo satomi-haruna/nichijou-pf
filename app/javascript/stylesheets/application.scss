@@ -1,0 +1,22 @@
+@import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #696969;
+}
+
+.footer {
+  background-color: #3cb371;
+}
+
+.footer p {
+  color: #f5f5f5;
+}
+
+/*各コントローラ別でCSS読み込み*/
+/*.events {*/
+/*  color: #ff0000;*/
+/*}*/
