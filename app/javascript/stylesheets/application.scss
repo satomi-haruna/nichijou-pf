@@ -1,11 +1,95 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 
+.fc-daygrid-event-dot {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: #696969;
+}
+
+#colorless {
+  background-color: #fffaf0;
+}
+
+#colorless:hover, #colorless:active, #colorless:focus, #colorless:target {
+  background-color: #ffeecc;
+}
+
+#pink {
+  background-color: #f4b3c2;
+}
+
+#pink:hover, #pink:active, #pink:focus {
+  background-color: #e7609e;
+}
+
+#red {
+  background-color: #ec6d71;
+}
+
+#red:hover, #red:active, #red:focus {
+  background-color: #d9333f;
+}
+
+#orange {
+  background-color: #f8b862;
+}
+
+#orange:hover, #orange:active, #orange:focus {
+  background-color: #f08300;
+}
+
+#yellow {
+  background-color: #fef263;
+}
+
+#yellow:hover, #yellow:active, #yellow:focus {
+  background-color: #ffdc00;
+}
+
+#yellow_green {
+  background-color: #98d98e;
+}
+
+#yellow_green:hover, #yellow_green:active, #yellow_green:focus {
+  background-color: #65ab31;
+}
+
+#green {
+  background-color: #3eb370;
+}
+
+#green:hover, #green:active, #green:focus {
+  background-color: #007b43;
+}
+
+#light_blue {
+  background-color: #66ccff;
+}
+
+#light_blue:hover, #light_blue:active, #light_blue:focus {
+  background-color: #2ca9e1;
+}
+
+#blue {
+  background-color: #3381ff;
+}
+
+#blue:hover, #blue:active, #blue:focus {
+  background-color: #1e50a2;
+}
+
+#purple {
+  background-color: #a96ded;
+}
+
+#purple:hover, #purple:active, #purple:focus {
+  background-color: #674196;
 }
 
 .footer {

@@ -1,11 +1,2 @@
-<h1>予定の一覧 カレンダー画面</h1>
-
 <!--カレンダー表示-->
 <div id='calendar'></div>
-
-<h3>今日の予定</h3>
-<% @events.each do |event| %>
-<div>
-  <%= link_to event.plan, event_path(event.id) %>
-</div>
-<% end %>

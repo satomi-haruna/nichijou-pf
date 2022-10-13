@@ -1,28 +1,40 @@
 <h1>予定詳細画面</h1>
 
-<div>
-  <h3>今日の予定</h3>
-  <%= link_to "編集", edit_event_path(@event.id) %><br>
-  <%= link_to "削除", event_path, method: :delete, "data-confirm" => "この予定に対しての日記やリストも削除されます。\n削除してよろしいですか？" %><br>
+<h3>今日の予定</h3>
+<%= link_to "編集", edit_event_path(@event.id) %><br>
+<%= link_to "削除", event_path, method: :delete, "data-confirm" => "この予定に対しての日記やリストも削除されます。\n削除してよろしいですか？" %><br>
 
-  <%= @event.plan %>
-
-  <h3>日時</h3>
-  <%= @event.plan_datetime %>
-  <h3>終日フラグ</h3>
-
-  <h3>色をつける</h3>
-  <%= @event.color_id %>
-
-  <h3>メモ</h3>
-  <%= @event.memo %>
-
-  <h3>場所</h3>
-  <%= @event.place %>
-
-  <h3>通知</h3>
-  <%= @event.is_active %>
-</div>
+<table>
+  <tr>
+    <td>今日の予定</td>
+    <td><%= @event.plan %></td>
+  </tr>
+  <tr>
+    <td>日時</td>
+    <td>
+      <%= @event.plan_datetime %>
+    </td>
+  </tr>
+  <tr>
+    <td>終日フラグ</td>
+  </tr>
+  <tr>
+    <td>色をつける</td>
+    <td><%= @event.color_id %></td>
+  </tr>
+  <tr>
+    <td>メモ</td>
+    <td><%= @event.memo %></td>
+  </tr>
+  <tr>
+    <td>場所</td>
+    <td><%= @event.place %></td>
+  </tr>
+  <tr>
+    <td>通知</td>
+    <td><%= @event.is_active %></td>
+  </tr>
+</table>
 
 <!--日記表示-->
 <div>

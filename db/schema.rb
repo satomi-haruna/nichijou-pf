@@ -65,8 +65,6 @@ ActiveRecord::Schema.define(version: 2022_10_11_101538) do
     t.integer "user_id", null: false
     t.string "plan", null: false
     t.datetime "plan_datetime", null: false
-    t.datetime "start"
-    t.datetime "end"
     t.boolean "allday_flg", default: false, null: false
     t.text "memo"
     t.string "place"

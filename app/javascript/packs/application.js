@@ -19,7 +19,7 @@ Turbolinks.start()
 ActiveStorage.start()
 
 // カレンダー表示設定
-import { Calendar } from '@fullcalendar/core';
+import {Calendar} from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 
@@ -27,7 +27,24 @@ document.addEventListener('turbolinks:load', function() {
   var calendarEl = document.getElementById('calendar');
 
   var calendar = new Calendar(calendarEl, {
-    plugins: [ dayGridPlugin, interactionPlugin ]
+    plugins: [ dayGridPlugin, interactionPlugin ],
+    events: '/events.json',
+    locale: 'ja',
+    height: 'auto',
+    firstDay: 0,
+    timeZone: 'Asia/Tokyo',
+    headerToolbar: {
+      start: '',
+      center: 'title',
+      end: 'today prev,next'
+    },
+    stickyHeaderDates: true,
+    buttonText: {
+       today: '今日へ'
+    },
+    dayCellContent: function (e) {
+      e.dayNumberText = e.dayNumberText.replace('日', '');
+    }
   });
 
   calendar.render();
