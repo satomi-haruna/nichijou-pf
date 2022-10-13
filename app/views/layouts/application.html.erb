@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>日常のスケジュール日誌</title>
+    <title>ほのぼのスケジュール日誌</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -15,7 +15,7 @@
     <header class="shadow-sm">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-          <a class="navbar-brand p-3" href="/">LOGO</a>
+          <a class="navbar-brand p-3" href="/"><%= image_tag('Schedul Diary.png', :size => '60x60') %></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,9 +29,9 @@
               <li class="nav-item">
                 <%= link_to "カレンダー", events_path, class: 'nav-link text-dark' %>
               </li>
-              <li class="nav-item">
-                <%= link_to "予定一覧", events_path, class: 'nav-link text-dark' %>
-              </li>
+              <!--<li class="nav-item">-->
+              <!--  <%= link_to "予定一覧", events_path, class: 'nav-link text-dark' %>-->
+              <!--</li>-->
               <li class="nav-item">
                 <%= link_to "会員情報の確認", users_my_page_path, class: 'nav-link text-dark' %>
               </li>
@@ -72,11 +72,11 @@
       <%= yield %>
     </main>
 
-    <footer class="footer pt-5 pb-4">
+    <footer class="footer pt-3 pb-2">
       <div class="container">
         <div class="row">
           <div class="col">
-            <p>Ordinary days may be boring, but they are very important times.</p>
+            <p class="text-center">Ordinary days may be boring, but they are very important times.</p>
           </div>
         </div>
       </div>
