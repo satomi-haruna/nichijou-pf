@@ -48,10 +48,10 @@ class Public::SessionsController < Devise::SessionsController
     @user = User.find_by(nickname: params[:user][:nickname])
     return if !@user
     if @user.valid_password?(params[:user][:password]) && (@user.active_for_authentication? == false)
-      flash[:notice] = "退会済みです。別のメールアドレスにて再度ご登録ください。"
+      flash[:message] = "退会済みです。別のメールアドレスにて再度ご登録ください。"
       redirect_to new_user_registration_path
     else
-      flash[:notice] = "項目を入力してください。"
+      flash[:message] = "項目を入力してください。"
     end
   end
 
