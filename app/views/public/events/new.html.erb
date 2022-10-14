@@ -28,36 +28,36 @@
         <tr>
           <td>色をつける</td>
           <td>
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label class="btn" id="colorless">
-                <%= f.radio_button :color_id, :colorless %>なし
+            <div class="btn-group btn-group-toggle">
+              <label class="maru" id="colorless">
+                <%= f.radio_button :color_id, :colorless %>
               </label>
-              <label class="btn" id="pink">
-                <%= f.radio_button :color_id, :pink %>桃色
+              <label class="maru" id="pink">
+                <%= f.radio_button :color_id, :pink %>
               </label>
-              <label class="btn" id="red">
-                <%= f.radio_button :color_id, :red %>赤色
+              <label class="maru" id="red">
+                <%= f.radio_button :color_id, :red %>
               </label>
-              <label class="btn" id="orange">
-                <%= f.radio_button :color_id, :orange %>橙色
+              <label class="maru" id="orange">
+                <%= f.radio_button :color_id, :orange %>
               </label>
-              <label class="btn" id="yellow">
-                <%= f.radio_button :color_id, :yellow %>黄色
+              <label class="maru" id="yellow">
+                <%= f.radio_button :color_id, :yellow %>
               </label>
-              <label class="btn" id="yellow_green">
-                <%= f.radio_button :color_id, :yellow_green %>黄緑
+              <label class="maru" id="yellow_green">
+                <%= f.radio_button :color_id, :yellow_green %>
               </label>
-              <label class="btn" id="green">
-                <%= f.radio_button :color_id, :green %>緑色
+              <label class="maru" id="green">
+                <%= f.radio_button :color_id, :green %>
               </label>
-              <label class="btn" id="light_blue">
-                <%= f.radio_button :color_id, :light_blue %>水色
+              <label class="maru" id="light_blue">
+                <%= f.radio_button :color_id, :light_blue %>
               </label>
-              <label class="btn" id="blue">
-                <%= f.radio_button :color_id, :blue %>青色
+              <label class="maru" id="blue">
+                <%= f.radio_button :color_id, :blue %>
               </label>
-              <label class="btn" id="purple">
-                <%= f.radio_button :color_id, :purple %>紫色
+              <label class="maru" id="purple">
+                <%= f.radio_button :color_id, :purple %>
               </label>
             </div>
           </td>
@@ -75,8 +75,8 @@
           <td><%= f.text_field :is_active%></td>
         </tr>
       </table>
-      <div class="btn">
-        <%= f.submit '保存' %>
+      <div>
+        <%= f.submit '予定を登録', class: "btn btn-warning" %>
       </div>
       <% end %>
     </div>
