@@ -3,12 +3,12 @@ ja:
   enums:
     schedule:
       color_id:
-        colorless: "無色"
-        pink: "ピンク色"
+        colorless: "なし"
+        pink: "桃色"
         red: "赤色"
-        orange: "オレンジ色"
+        orange: "橙色"
         yellow: "黄色"
-        yellow_green: "黄緑色"
+        yellow_green: "黄緑"
         green: "緑色"
         light_blue: "水色"
         blue: "青色"

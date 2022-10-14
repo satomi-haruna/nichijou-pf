@@ -26,6 +26,11 @@ class Public::DiariesController < ApplicationController
     redirect_to event_path(params[:event_id])
   end
 
+  # 退会チェックする
+  def withdraw_not_check
+    true
+  end
+
   private
 
   def diary_params

@@ -37,10 +37,15 @@ class Public::EventsController < ApplicationController
     @events = Event.all
   end
 
+  # 退会チェックする
+  def withdraw_not_check
+    true
+  end
+
   private
 
   def event_params
-    params.require(:event).permit(:user_id, :plan, :plan_detetime, :allday_flg, :memo, :place, :color_id, :is_active)
+    params.require(:event).permit(:user_id, :plan, :plan_datetime, :allday_flg, :memo, :place, :color_id, :is_active)
   end
 
 end
