@@ -12,6 +12,12 @@
   color: #696969;
 }
 
+.maru {
+  padding: 10px 15px;
+  margin: 0 2px;
+  border-radius: 50%;
+}
+
 #colorless {
   background-color: #fffaf0;
 }
@@ -22,6 +28,7 @@
 
 #pink {
   background-color: #f4b3c2;
+  accent-color: #f4b3c2;
 }
 
 #pink:hover, #pink:active, #pink:focus {
@@ -30,6 +37,7 @@
 
 #red {
   background-color: #ec6d71;
+  accent-color: #ec6d71;
 }
 
 #red:hover, #red:active, #red:focus {
@@ -38,6 +46,7 @@
 
 #orange {
   background-color: #f8b862;
+  accent-color: #f8b862;
 }
 
 #orange:hover, #orange:active, #orange:focus {
@@ -46,6 +55,7 @@
 
 #yellow {
   background-color: #fef263;
+  accent-color: #fef263;
 }
 
 #yellow:hover, #yellow:active, #yellow:focus {
@@ -54,6 +64,7 @@
 
 #yellow_green {
   background-color: #98d98e;
+  accent-color: #98d98e;
 }
 
 #yellow_green:hover, #yellow_green:active, #yellow_green:focus {
@@ -62,6 +73,7 @@
 
 #green {
   background-color: #3eb370;
+  accent-color: #3eb370;
 }
 
 #green:hover, #green:active, #green:focus {
@@ -70,6 +82,7 @@
 
 #light_blue {
   background-color: #66ccff;
+  accent-color: #66ccff;
 }
 
 #light_blue:hover, #light_blue:active, #light_blue:focus {
@@ -78,6 +91,7 @@
 
 #blue {
   background-color: #3381ff;
+  accent-color: #3381ff;
 }
 
 #blue:hover, #blue:active, #blue:focus {
@@ -86,6 +100,7 @@
 
 #purple {
   background-color: #a96ded;
+  accent-color: #a96ded;
 }
 
 #purple:hover, #purple:active, #purple:focus {
@@ -98,6 +113,12 @@
 
 .footer p {
   color: #f5f5f5;
+  font-size: 12px;
+}
+
+.footer span {
+  color: #f5f5f5;
+  font-size: 8px;
 }
 
 /*各コントローラ別でCSS読み込み*/

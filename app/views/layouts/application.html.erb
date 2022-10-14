@@ -69,14 +69,21 @@
     </header>
 
     <main class="mb-auto">
-      <%= yield %>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 px-auto py-4">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer pt-3 pb-2">
       <div class="container">
         <div class="row">
           <div class="col">
-            <p class="text-center">Ordinary days may be boring, but they are very important times.</p>
+            <p class="text-center">今日もいい日でありますように。<br>
+            <span>Ordinary days may be boring, but they are very important times.</span></p>
           </div>
         </div>
       </div>
