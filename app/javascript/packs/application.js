@@ -8,45 +8,44 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+import "jquery";
+import "popper.js";
+import "bootstrap";
+import "../stylesheets/application"
+import '@fortawesome/fontawesome-free/js/all'
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-// インストールしたカレンダーのファイルを呼び出し
-import { Calendar} from '@fullcalendar/core';
+// カレンダー表示設定
+import {Calendar} from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
-import monthGridPlugin from '@fullcalendar/daygrid'
-import googleCalendarApi from '@fullcalendar/google-calendar'
 
 document.addEventListener('turbolinks:load', function() {
   var calendarEl = document.getElementById('calendar');
-  var calendar = new Calendar(calendarEl, {
-    plugins: [ monthGridPlugin, interactionPlugin, googleCalendarApi ],
 
-    //細かな表示設定
+  var calendar = new Calendar(calendarEl, {
+    plugins: [ dayGridPlugin, interactionPlugin ],
+    events: '/events.json',
     locale: 'ja',
-    timeZone: 'Asia/Tokyo',
+    height: 'auto',
     firstDay: 0,
+    timeZone: 'Asia/Tokyo',
     headerToolbar: {
       start: '',
       center: 'title',
       end: 'today prev,next'
     },
-    expandRows: true,
     stickyHeaderDates: true,
     buttonText: {
-       today: '今日'
+       today: '今日へ'
     },
-    allDayText: '終日',
-    height: "auto",
-
-    dateClick: function(info){
-    },
-    eventClick: function(info){
-    },
-    eventClassNames: function(arg){
+    dayCellContent: function (e) {
+      e.dayNumberText = e.dayNumberText.replace('日', '');
     }
   });
-  //カレンダー表示
+
   calendar.render();
 });

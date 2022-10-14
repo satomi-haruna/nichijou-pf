@@ -1,30 +1,84 @@
-<body>
-  <h1>新しく予定を登録</h1>
-
-  <%= form_with model: @event do |f| %>
-    <h3>今日の予定</h3>
-    <%= f.text_field :plan %>
-
-    <h3>日時</h3>
-    <%= f.text_field :plan_datetime %>
-
-    <h3>終日フラグ</h3>
-
-    <h3>色をつける</h3>
-    <%= f.text_field :color_id %>
-
-    <h3>メモ</h3>
-    <%= f.text_area :memo %>
-
-    <h3>場所</h3>
-    <%= f.text_area :place %>
-
-    <h3>通知</h3>
-    <%= f.text_field :is_active%>
-
-    <div class="btn">
-      <%= f.submit '保存' %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3>
+        <%= image_tag 'hitsuji.png', size: '80x80' %>
+        予定の登録
+      </h3>
     </div>
-  <% end %>
+  </div>
 
-</body>
+  <div class="row">
+    <div class="col">
+      <%= form_with model: @event do |f| %>
+      <table>
+        <tr>
+          <td>今日の予定</td>
+          <td><%= f.text_field :plan %></td>
+        </tr>
+        <tr>
+          <td>日時</td>
+          <td>
+            <%= f.datetime_select :plan_datetime, {include_blank: true,start_year: (Time.now.year), end_year: (Time.now.year + 10), use_month_numbers: true, minute_step: 05}, {class: 'time-box'} %>
+          </td>
+        </tr>
+        <tr>
+          <td>終日フラグ</td>
+        </tr>
+        <tr>
+          <td>色をつける</td>
+          <td>
+            <div class="btn-group btn-group-toggle">
+              <label class="maru" id="colorless">
+                <%= f.radio_button :color_id, :colorless %>
+              </label>
+              <label class="maru" id="pink">
+                <%= f.radio_button :color_id, :pink %>
+              </label>
+              <label class="maru" id="red">
+                <%= f.radio_button :color_id, :red %>
+              </label>
+              <label class="maru" id="orange">
+                <%= f.radio_button :color_id, :orange %>
+              </label>
+              <label class="maru" id="yellow">
+                <%= f.radio_button :color_id, :yellow %>
+              </label>
+              <label class="maru" id="yellow_green">
+                <%= f.radio_button :color_id, :yellow_green %>
+              </label>
+              <label class="maru" id="green">
+                <%= f.radio_button :color_id, :green %>
+              </label>
+              <label class="maru" id="light_blue">
+                <%= f.radio_button :color_id, :light_blue %>
+              </label>
+              <label class="maru" id="blue">
+                <%= f.radio_button :color_id, :blue %>
+              </label>
+              <label class="maru" id="purple">
+                <%= f.radio_button :color_id, :purple %>
+              </label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>メモ</td>
+          <td><%= f.text_area :memo %></td>
+        </tr>
+        <tr>
+          <td>場所</td>
+          <td><%= f.text_area :place %></td>
+        </tr>
+        <tr>
+          <td>通知</td>
+          <td><%= f.text_field :is_active%></td>
+        </tr>
+      </table>
+      <div>
+        <%= f.submit '予定を登録', class: "btn btn-warning" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

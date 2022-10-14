@@ -1,0 +1,127 @@
+@import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+.fc-daygrid-event-dot {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #696969;
+}
+
+.maru {
+  padding: 10px 15px;
+  margin: 0 2px;
+  border-radius: 50%;
+}
+
+#colorless {
+  background-color: #fffaf0;
+}
+
+#colorless:hover, #colorless:active, #colorless:focus, #colorless:target {
+  background-color: #ffeecc;
+}
+
+#pink {
+  background-color: #f4b3c2;
+  accent-color: #f4b3c2;
+}
+
+#pink:hover, #pink:active, #pink:focus {
+  background-color: #e7609e;
+}
+
+#red {
+  background-color: #ec6d71;
+  accent-color: #ec6d71;
+}
+
+#red:hover, #red:active, #red:focus {
+  background-color: #d9333f;
+}
+
+#orange {
+  background-color: #f8b862;
+  accent-color: #f8b862;
+}
+
+#orange:hover, #orange:active, #orange:focus {
+  background-color: #f08300;
+}
+
+#yellow {
+  background-color: #fef263;
+  accent-color: #fef263;
+}
+
+#yellow:hover, #yellow:active, #yellow:focus {
+  background-color: #ffdc00;
+}
+
+#yellow_green {
+  background-color: #98d98e;
+  accent-color: #98d98e;
+}
+
+#yellow_green:hover, #yellow_green:active, #yellow_green:focus {
+  background-color: #65ab31;
+}
+
+#green {
+  background-color: #3eb370;
+  accent-color: #3eb370;
+}
+
+#green:hover, #green:active, #green:focus {
+  background-color: #007b43;
+}
+
+#light_blue {
+  background-color: #66ccff;
+  accent-color: #66ccff;
+}
+
+#light_blue:hover, #light_blue:active, #light_blue:focus {
+  background-color: #2ca9e1;
+}
+
+#blue {
+  background-color: #3381ff;
+  accent-color: #3381ff;
+}
+
+#blue:hover, #blue:active, #blue:focus {
+  background-color: #1e50a2;
+}
+
+#purple {
+  background-color: #a96ded;
+  accent-color: #a96ded;
+}
+
+#purple:hover, #purple:active, #purple:focus {
+  background-color: #674196;
+}
+
+.footer {
+  background-color: #3cb371;
+}
+
+.footer p {
+  color: #f5f5f5;
+  font-size: 12px;
+}
+
+.footer span {
+  color: #f5f5f5;
+  font-size: 8px;
+}
+
+/*各コントローラ別でCSS読み込み*/
+/*.events {*/
+/*  color: #ff0000;*/
+/*}*/
