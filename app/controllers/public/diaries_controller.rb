@@ -13,6 +13,8 @@ class Public::DiariesController < ApplicationController
   end
 
   def show
+    @event = Event.find(params[:event_id])
+    @diary = Diary.new
   end
 
   def edit

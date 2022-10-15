@@ -12,6 +12,11 @@ class Public::ListsController < ApplicationController
     redirect_to event_path(event.id)
   end
 
+  def index
+    @event = Event.find(params[:event_id])
+    @list = List.new
+  end
+
   def edit
   end
 
