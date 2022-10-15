@@ -14,6 +14,33 @@
   color: #696969;
 }
 
+// diary
+.diaryimage {
+  width: 700px;
+  height: 530px;
+}
+
+.new-diary {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+
+.simple-diary {
+ width: 350px;
+ margin: 10px 0;
+}
+
+.diary-detail {
+  width: 350px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.diary-btn {
+  padding-right: 15px;
+}
+
 // event
 .title {
   margin-left: 20px;

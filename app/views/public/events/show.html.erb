@@ -4,7 +4,7 @@
       <%= image_tag 'hitsuji.png', size: '80x80' %>
       登録した予定
       <sapn class="float-right">
-        <%= link_to "日記", event_diary_path(@event.id), class: "btn btn-primary" %>
+        <%= link_to "日記", new_event_diary_path(@event.id), class: "btn btn-primary" %>
         <%= link_to "リスト", event_lists_path(@event.id), class: "btn btn-success" %>
       </sapn>
     </h3>
