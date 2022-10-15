@@ -1,2 +1,23 @@
-<h1>Public::Diaries#show</h1>
-<p>Find me in app/views/public/diaries/show.html.erb</p>
+<!--日記表示-->
+<div>
+  <h3>日記</h3>
+  <% @event.diaries.each do |diary| %>
+    <p><%= @event.plan_datetime %></p>
+    <%= diary.simple_diary %>
+    <%= diary.detail %>
+    <!--%= diary.image_id %>-->
+    <%= link_to "削除", event_diary_path(diary.event, diary), method: :delete %>
+  <% end %>
+</div>
+<!--日記投稿-->
+<div>
+  <h3>日記を書く</h3>
+  <h4>日付</h4>
+  <%= @event.plan_datetime %>
+  <%= form_with model: [@event, @diary] do |f| %>
+    <%= f.text_field :simple_diary, placeholder: "今日を一言で" %><br>
+    <%= f.text_area :detail %><br>
+    <!--%= image_tag @diary.get_image(100,100) %>-->
+    <%= f.submit "保存" %>
+  <% end %>
+</div>

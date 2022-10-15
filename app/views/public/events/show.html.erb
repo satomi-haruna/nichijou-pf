@@ -1,80 +1,63 @@
-<h1>予定詳細画面</h1>
-
-<h3>今日の予定</h3>
-<%= link_to "編集", edit_event_path(@event.id) %><br>
-<%= link_to "削除", event_path, method: :delete, "data-confirm" => "この予定に対しての日記やリストも削除されます。\n削除してよろしいですか？" %><br>
-
-<table>
-  <tr>
-    <td>今日の予定</td>
-    <td><%= @event.plan %></td>
-  </tr>
-  <tr>
-    <td>日時</td>
-    <td>
-      <%= @event.plan_datetime %>
-    </td>
-  </tr>
-  <tr>
-    <td>終日フラグ</td>
-  </tr>
-  <tr>
-    <td>色をつける</td>
-    <td><%= @event.color_id %></td>
-  </tr>
-  <tr>
-    <td>メモ</td>
-    <td><%= @event.memo %></td>
-  </tr>
-  <tr>
-    <td>場所</td>
-    <td><%= @event.place %></td>
-  </tr>
-  <tr>
-    <td>通知</td>
-    <td><%= @event.is_active %></td>
-  </tr>
-</table>
-
-<!--日記表示-->
-<div>
-  <h3>日記</h3>
-  <% @event.diaries.each do |diary| %>
-    <p><%= @event.plan_datetime %></p>
-    <%= diary.simple_diary %>
-    <%= diary.detail %>
-    <!--%= diary.image_id %>-->
-    <%= link_to "削除", event_diary_path(diary.event, diary), method: :delete %>
-  <% end %>
-</div>
-<!--日記投稿-->
-<div>
-  <h3>日記を書く</h3>
-  <h4>日付</h4>
-  <%= @event.plan_datetime %>
-  <%= form_with model: [@event, @diary] do |f| %>
-    <%= f.text_field :simple_diary, placeholder: "今日を一言で" %><br>
-    <%= f.text_area :detail %><br>
-    <!--%= image_tag @diary.get_image(100,100) %>-->
-    <%= f.submit "保存" %>
-  <% end %>
+<div class="row">
+  <div class="col title">
+    <h3>
+      <%= image_tag 'hitsuji.png', size: '80x80' %>
+      登録した予定
+      <sapn class="float-right">
+        <%= link_to "日記", event_diary_path(@event.id), class: "btn btn-primary" %>
+        <%= link_to "リスト", event_lists_path(@event.id), class: "btn btn-success" %>
+      </sapn>
+    </h3>
+  </div>
 </div>
 
-<!--リストを表示-->
-<div>
-  <h3>作成したリスト</h3>
-  <% @event.lists.each do |list| %>
-    <p><%= list.title %></p>
-    <p><%= list.item %></p>
-    <%= link_to "削除", event_list_path(list.event, list), method: :delete %>
-  <% end %>
-</div>
-<!--リスト登録-->
-<div>
-  <h3>リストを作成</h3>
-  <%= form_with model: [@event, @list] do |f| %>
-    <%= f.text_field :title %><br>
-    <%= f.text_field :item %><br>
-    <%= f.submit "保存" %>
-  <% end %>
+<div class="row">
+  <div class="col">
+    <%= image_tag "clip.png", class:"backimage" %>
+    <table class="table-sm table-1" width="75%">
+      <tr>
+        <th></th>
+        <td align="right">
+          <%= link_to "編集", edit_event_path(@event.id), class: "btn btn-outline-primary" %>
+          <%= link_to "削除", event_path, method: :delete, "data-confirm" => "この予定に対しての日記やリストも削除されます。\n削除してよろしいですか？", class: "btn btn-outline-danger" %>
+        </td>
+      </tr>
+      <tr>
+        <th width="30%" height="50px">今日の予定</th>
+        <td width="60% plan"><%= @event.plan %></td>
+      </tr>
+      <tr>
+        <th>日時</th>
+        <td>
+          <%= @event.plan_datetime.to_date %>
+          <%= @event.plan_datetime.strftime( "%H:%M" ) %>
+        </td>
+      </tr>
+      <!--<tr>-->
+      <!--  <th>終日フラグ</th>-->
+      <!--</tr>-->
+      <tr>
+        <th>色をつける</th>
+        <td><%= @event.color_id %></td>
+      </tr>
+      <tr>
+        <th>メモ</th>
+        <td><%= @event.memo %></td>
+      </tr>
+      <tr>
+        <th>場所</th>
+        <td><%= @event.place %></td>
+      </tr>
+      <tr>
+        <th>通知</th>
+        <td>
+          <% if @event.is_active == false %>
+            OFF
+          <% else %>
+            ON
+          <% end %>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
