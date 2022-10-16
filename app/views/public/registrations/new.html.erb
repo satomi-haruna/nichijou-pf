@@ -1,25 +1,27 @@
 <h2>新規登録</h2>
 
+<div class="flash">
+  <%= flash[:notice] %>
+</div>
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "public/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :"お名前(姓)" %>
-    <%= f.email_field :last_name, autofocus: true, autocomplete: "last_name" %>
-    <%= f.label :"(名)" %>
-    <%= f.email_field :first_name, autocomplete: "first_name" %>
+    <%= f.label :"お名前" %>
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "姓" %>
+    <%= f.text_field :first_name, autocomplete: "first_name", placeholder: "名" %>
   </div>
 
   <div class="field">
-    <%= f.label :"フリガナ(セイ)" %>
-    <%= f.email_field :last_name_kana, autocomplete: "last_name_kana" %>
-    <%= f.label :"(メイ)" %>
-    <%= f.email_field :first_name_kana, autocomplete: "first_name_kana" %>
+    <%= f.label :"フリガナ" %>
+    <%= f.text_field :last_name_kana, autocomplete: "last_name_kana", placeholder: "セイ" %>
+    <%= f.text_field :first_name_kana, autocomplete: "first_name_kana", placeholder: "メイ" %>
   </div>
 
   <div class="field">
     <%= f.label :ニックネーム %>
-    <%= f.email_field :nickname, autocomplete: "nickname" %><br>
+    <%= f.text_field :nickname, autocomplete: "nickname", placeholder: "表示名" %><br>
     <span>
       こちらがアカウント内の表示名、ログイン情報として使用されます。
     </span>
@@ -27,7 +29,7 @@
 
   <div class="field">
     <%= f.label :"メールアドレス" %>
-    <%= f.email_field :email, autocomplete: "email" %>
+    <%= f.email_field :email, autocomplete: "email", placeholder: "e-address@sample.jp" %>
   </div>
 
   <div class="field">
