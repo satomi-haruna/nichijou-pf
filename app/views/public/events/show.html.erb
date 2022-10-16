@@ -1,63 +1,65 @@
-<div class="row">
-  <div class="col title">
-    <h3>
-      <%= image_tag 'hitsuji.png', size: '80x80' %>
-      登録した予定
-      <sapn class="float-right">
-        <%= link_to "日記", new_event_diary_path(@event.id), class: "btn btn-primary" %>
-        <%= link_to "リスト", event_lists_path(@event.id), class: "btn btn-success" %>
-      </sapn>
-    </h3>
+<div class="event-show">
+  <div class="row">
+    <div class="col title">
+      <h3>
+        <%= image_tag 'hitsuji.png', size: '80x80' %>
+        登録した予定
+        <sapn class="float-right">
+          <%= link_to "日記", new_event_diary_path(@event.id), class: "btn btn-primary" %>
+          <%= link_to "リスト", event_lists_path(@event.id), class: "btn btn-success" %>
+        </sapn>
+      </h3>
+    </div>
   </div>
-</div>
 
-<div class="row">
-  <div class="col">
-    <%= image_tag "clip.png", class:"backimage" %>
-    <table class="table-sm table-1" width="75%">
-      <tr>
-        <th></th>
-        <td align="right">
-          <%= link_to "編集", edit_event_path(@event.id), class: "btn btn-outline-primary" %>
-          <%= link_to "削除", event_path, method: :delete, "data-confirm" => "この予定に対しての日記やリストも削除されます。\n削除してよろしいですか？", class: "btn btn-outline-danger" %>
-        </td>
-      </tr>
-      <tr>
-        <th width="30%" height="50px">今日の予定</th>
-        <td width="60% plan"><%= @event.plan %></td>
-      </tr>
-      <tr>
-        <th>日時</th>
-        <td>
-          <%= @event.plan_datetime.to_date %>
-          <%= @event.plan_datetime.strftime( "%H:%M" ) %>
-        </td>
-      </tr>
-      <!--<tr>-->
-      <!--  <th>終日フラグ</th>-->
-      <!--</tr>-->
-      <tr>
-        <th>色をつける</th>
-        <td><%= @event.color_id %></td>
-      </tr>
-      <tr>
-        <th>メモ</th>
-        <td><%= @event.memo %></td>
-      </tr>
-      <tr>
-        <th>場所</th>
-        <td><%= @event.place %></td>
-      </tr>
-      <tr>
-        <th>通知</th>
-        <td>
-          <% if @event.is_active == false %>
-            OFF
-          <% else %>
-            ON
-          <% end %>
-        </td>
-      </tr>
-    </table>
+  <div class="row">
+    <div class="col">
+      <%= image_tag "clip.png", class:"backimage" %>
+      <table class="table-sm table-1" width="75%">
+        <tr>
+          <th></th>
+          <td align="right">
+            <%= link_to "編集", edit_event_path(@event.id), class: "btn btn-outline-primary" %>
+            <%= link_to "削除", event_path, method: :delete, "data-confirm" => "この予定に対しての日記やリストも削除されます。\n削除してよろしいですか？", class: "btn btn-outline-danger" %>
+          </td>
+        </tr>
+        <tr>
+          <th>今日の予定</th>
+          <td><%= @event.plan %></td>
+        </tr>
+        <tr>
+          <th>日時</th>
+          <td>
+            <%= @event.plan_datetime.to_date %>
+            <%= @event.plan_datetime.strftime( "%H:%M" ) %>
+          </td>
+        </tr>
+        <!--<tr>-->
+        <!--  <th>終日フラグ</th>-->
+        <!--</tr>-->
+        <tr>
+          <th>色をつける</th>
+          <td><%= @event.color_id %></td>
+        </tr>
+        <tr>
+          <th>メモ</th>
+          <td><%= @event.memo %></td>
+        </tr>
+        <tr>
+          <th>場所</th>
+          <td><%= @event.place %></td>
+        </tr>
+        <tr>
+          <th>通知</th>
+          <td>
+            <% if @event.is_active == false %>
+              OFF
+            <% else %>
+              ON
+            <% end %>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>
