@@ -1,12 +1,25 @@
-<!--日記表示-->
+<div class="row">
+  <div class="col title">
+    <h3>
+      <span>
+        <%= link_to event_path(@event.id) do %>
+          <i class="fa-solid fa-circle-left"></i>
+        <% end %>
+      </span>
+      <span>
+        <%= @event.plan_datetime.to_date %>
+      </span>
+    </h3>
+  </div>
+</div>
+
 <div>
-  <%= image_tag "diary2.png", class:"diaryimage" %>
+  <%= image_tag "book4.png", class:"diaryimage" %>
   <!--日記投稿-->
   <div class="new-diary">
-    <%= @event.plan_datetime.to_date %>
     <%= form_with model: [@event, @diary] do |f| %>
-      <%= f.text_field :simple_diary, placeholder: "今日を一言で", class: "simple-diary" %><br>
-      <%= f.text_area :detail, class: "diary-detail"%><br>
+      <%= f.text_field :simple_diary, placeholder: "ひとこと日記", class: "simple-diary" %><br>
+      <%= f.text_area :detail, class: "diary-detail" %><br>
       <!--%= image_tag @diary.get_image(100,100) %>-->
       <div class="diary-btn", align="right">
         <%= f.submit "保存", class: "btn btn-success" %>
@@ -15,12 +28,36 @@
   </div>
 
   <!--日記一覧-->
-  <% @event.diaries.each do |diary| %>
-    <p><%= @event.plan_datetime %></p>
-    <%= diary.simple_diary %>
-    <%= diary.detail %>
-    <!--%= diary.image_id %>-->
-    <%= link_to "削除", event_diary_path(diary.event, diary), method: :delete %>
-  <% end %>
+  <div class="diary-show">
+    <div class="row">
+      <% @event.diaries.each do |diary| %>
+      <div class="col-1">
+        <% if @event.diaries.present? %>
+          <%= image_tag "hane.png", class:"hane" %>
+          <%= image_tag "blue.line2.png", class:"line1" %>
+        <% end %>
+      </div>
+      <div class="col-9 simple-diary2">
+        <%= diary.simple_diary %>
+      </div>
+      <div class="col-1 simple-diary2">
+        <%= link_to event_diary_path(diary.event, diary), method: :delete do %>
+          <i class="fa-solid fa-trash"></i>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1">
+      </div>
+      <div class="col-9 detail">
+        <%= diary.detail %>
+        <!--%= diary.image_id %>-->
+      </div>
+        <% if @event.diaries.present? %>
+          <%= image_tag "eda1.png", class:"line2" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 
 </div>

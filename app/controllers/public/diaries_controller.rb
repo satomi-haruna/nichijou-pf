@@ -5,7 +5,6 @@ class Public::DiariesController < ApplicationController
   def new
     @event = Event.find(params[:event_id])
     @diary = Diary.new
-    xmas_time = @event.plan_datetime
   end
 
   def create
