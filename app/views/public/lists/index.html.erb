@@ -1,0 +1,18 @@
+<!--リストを表示-->
+<div>
+  <h3>作成したリスト</h3>
+  <% @event.lists.each do |list| %>
+    <p><%= list.title %></p>
+    <p><%= list.item %></p>
+    <%= link_to "削除", event_list_path(list.event, list), method: :delete %>
+  <% end %>
+</div>
+<!--リスト登録-->
+<div>
+  <h3>リストを作成</h3>
+  <%= form_with model: [@event, @list] do |f| %>
+    <%= f.text_field :title %><br>
+    <%= f.text_field :item %><br>
+    <%= f.submit "保存" %>
+  <% end %>
+</div>

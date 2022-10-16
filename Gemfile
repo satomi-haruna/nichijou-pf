@@ -56,6 +56,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
+gem 'rails-i18n'
+gem 'enum_help'
 
 # 環境変数を管理するgemとMySQLを利用するためのgem
 gem 'dotenv-rails'
@@ -63,6 +65,11 @@ group :production do
   gem 'mysql2'
 end
 
-gem "net-smtp"
-gem "net-pop"
-gem "net-imap"
+gem 'net-smtp'
+gem 'net-pop'
+gem 'net-imap'
+
+# fullcalendarを導入
+gem 'jquery-rails', '4.3.3'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
