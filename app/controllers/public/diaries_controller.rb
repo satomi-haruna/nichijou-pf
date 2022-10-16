@@ -1,18 +1,23 @@
 class Public::DiariesController < ApplicationController
   before_action :authenticate_user!
 
+  # diaryのnew,show表示
   def new
+    @event = Event.find(params[:event_id])
+    @diary = Diary.new
   end
 
   def create
-    event = event.find(params[:event_id])
+    @event = Event.find(params[:event_id])
     diary = Diary.new(diary_params)
-    diary.event_id = event.id
+    diary.event_id = @event.id
     diary.save
-    redirect_to event_path(event.id)
+    redirect_to new_event_diary_path(@event.id)
   end
 
   def show
+  #   @event = Event.find(params[:event_id])
+  #   @diary = Diary.new
   end
 
   def edit
@@ -22,8 +27,9 @@ class Public::DiariesController < ApplicationController
   end
 
   def destroy
+    @event = Event.find(params[:event_id])
     Diary.find(params[:id]).destroy
-    redirect_to event_path(params[:event_id])
+    redirect_to new_event_diary_path(@event.id)
   end
 
   # 退会チェックする

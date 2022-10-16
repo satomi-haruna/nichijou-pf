@@ -17,4 +17,15 @@ class Event < ApplicationRecord
     purple:       9
   }
 
+  # color_idによる画像表示の分岐
+  # def flower_image
+  #   if @event.color_id = colorless
+  #     "flower/colorless.png"
+  #   elsif @event.color_id = pink
+  #     "flower/pink.png"
+  #   else
+  #     "flower/red.png"
+  #   end
+  # end
+
 end
