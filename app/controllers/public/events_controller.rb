@@ -21,9 +21,9 @@ class Public::EventsController < ApplicationController
   end
 
   def update
-    event = Event.find(params[:id])
-    event.update(event_params)
-    redirect_to event_path(event.id)
+    @event = Event.find(params[:id])
+    @event.update(event_params)
+    redirect_to event_path(@event.id)
   end
 
   def destroy

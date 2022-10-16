@@ -1,6 +1,6 @@
-<div class="container">
+<div class="event">
   <div class="row">
-    <div class="col">
+    <div class="col title">
       <h3>
         <%= image_tag 'hitsuji.png', size: '80x80' %>
         予定の登録
@@ -10,23 +10,24 @@
 
   <div class="row">
     <div class="col">
+      <%= image_tag "clip.png", class:"backimage" %>
       <%= form_with model: @event do |f| %>
-      <table>
+      <table class="table-sm table-1" width="75%">
         <tr>
-          <td>今日の予定</td>
+          <th>今日の予定</th>
           <td><%= f.text_field :plan %></td>
         </tr>
         <tr>
-          <td>日時</td>
+          <th>日時</th>
           <td>
             <%= f.datetime_select :plan_datetime, {include_blank: true,start_year: (Time.now.year), end_year: (Time.now.year + 10), use_month_numbers: true, minute_step: 05}, {class: 'time-box'} %>
           </td>
         </tr>
+        <!--<tr>-->
+        <!--  <th>終日フラグ</th>-->
+        <!--</tr>-->
         <tr>
-          <td>終日フラグ</td>
-        </tr>
-        <tr>
-          <td>色をつける</td>
+          <th>色をつける</th>
           <td>
             <div class="btn-group btn-group-toggle">
               <label class="maru" id="colorless">
@@ -63,20 +64,33 @@
           </td>
         </tr>
         <tr>
-          <td>メモ</td>
-          <td><%= f.text_area :memo %></td>
+          <th>メモ</th>
+          <td><%= f.text_area :memo, class: "memo" %></td>
         </tr>
         <tr>
-          <td>場所</td>
-          <td><%= f.text_area :place %></td>
+          <th>場所</th>
+          <td><%= f.text_area :place, class: "place" %></td>
         </tr>
         <tr>
-          <td>通知</td>
-          <td><%= f.text_field :is_active%></td>
+          <th>通知</th>
+          <td>
+            <div class="btn-group btn-group-toggle">
+              <label>
+                <%= f.radio_button :is_active, :true %>ON
+              </label>
+              <label>
+                <%= f.radio_button :is_active, :false %>OFF
+              </label>
+            </div>
+          </td>
         </tr>
       </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-9 col-2">
       <div>
-        <%= f.submit '予定を登録', class: "btn btn-warning" %>
+        <%= f.submit '予定を登録', class: "btn btn-success" %>
       </div>
       <% end %>
     </div>
