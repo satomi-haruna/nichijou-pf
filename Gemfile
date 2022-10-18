@@ -73,3 +73,6 @@ gem 'net-imap'
 gem 'jquery-rails', '4.3.3'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+
+# ゲストログイン機能に伴うwhenever,cron導入
+gem 'whenever', require: false
