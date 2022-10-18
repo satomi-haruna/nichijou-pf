@@ -42,6 +42,7 @@ document.addEventListener('turbolinks:load', function() {
     buttonText: {
        today: '今日へ'
     },
+    navLinks: false,
     dayCellContent: function (e) {
       e.dayNumberText = e.dayNumberText.replace('日', '');
     }

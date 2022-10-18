@@ -21,9 +21,15 @@ class Public::DiariesController < ApplicationController
   end
 
   def edit
+    @event = Event.find(params[:event_id])
+    @diary = Diary.find(params[:id])
   end
 
   def update
+    @event = Event.find(params[:event_id])
+    @diary = Diary.find(params[:id])
+    @diary.update(diary_params)
+    redirect_to new_event_diary_path
   end
 
   def destroy

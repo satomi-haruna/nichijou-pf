@@ -6,11 +6,11 @@ class Public::SessionsController < Devise::SessionsController
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   # ゲストログイン
-  # def guest_sign_in
-  #   user = User.guest
-  #   sign_in user
-  #   redirect_to events_path, message: 'ゲストユーザーでログインしました。'
-  # end
+  def guest_sign_in
+    user = User.guest
+    sign_in user
+    redirect_to events_path, message: 'ゲストユーザーでログインしました。'
+  end
 
   def after_sign_in_path_for(resource)
     events_path
