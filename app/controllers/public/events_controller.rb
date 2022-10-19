@@ -34,7 +34,8 @@ class Public::EventsController < ApplicationController
 
   def index
     # fullcalendar表示には変数eventである必要がある
-    @events = Event.all
+    # ログインユーザーの登録情報を一覧表示
+    @events = current_user.events
   end
 
   # 退会チェックする
