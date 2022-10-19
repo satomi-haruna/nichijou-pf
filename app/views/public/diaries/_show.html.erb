@@ -1,5 +1,5 @@
 <!--日記一覧-->
-<div class="col-lg-5">
+<div class="col-lg-6">
   <div class="diary-show">
     <% if event.diaries.present? %>
       <% event.diaries.each do |diary| %>
@@ -18,8 +18,7 @@
         </div>
         <!--日記の削除-->
         <div class="col-1 simple-diary2">
-          <%= link_to event_diary_path(di
-          ary.event, diary), method: :delete, "data-confirm" => "削除しますか？" do %>
+          <%= link_to event_diary_path(diary.event, diary), method: :delete, "data-confirm" => "削除しますか？" do %>
             <i class="fas fa-trash"></i>
           <% end %>
         </div>
