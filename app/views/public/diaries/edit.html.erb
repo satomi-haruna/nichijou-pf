@@ -17,8 +17,8 @@
 <%= image_tag "book4.png", class:"diaryimage" %>
 <div class="new-diary">
   <%= form_with model: [@event, @diary] do |f| %>
-    <%= f.text_field :simple_diary, class: "simple-diary" %><br>
-    <%= f.text_area :detail, class: "diary-detail" %><br>
+    <%= f.text_field :simple_diary, class: "diary-width" %><br>
+    <%= f.text_area :detail, class: "diary-width diary-detail" %><br>
     <!--%= image_tag @diary.get_image(100,100) %>-->
     <div class="diary-btn", align="right">
       <%= f.submit "更新", class: "btn btn-success" %>

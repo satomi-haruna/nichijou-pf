@@ -4,36 +4,35 @@
 
 // diary
 .diaryimage {
-  width: 700px;
-  height: 530px;
+  width: 600px;
+  height: 500px;
   margin-top: 10px;
 }
 
 .new-diary {
   position: absolute;
-  top: 130px;
-  left: 115px;
+  top: 55px;
+  left: 85px;
 }
 
-.simple-diary {
- width: 500px;
+.diary-width {
+ width: 450px;
  height: 40px;
  margin-bottom: 10px;
 }
 
 .diary-detail {
-  width: 500px;
   height: 220px;
-  margin-bottom: 10px;
 }
 
 .diary-show {
-  padding: 25px 0 5px 20px;
+  padding: 25px 0 5px 100px;
 }
 
 .simple-diary2 {
   height: 40px;
-  padding-top: 30px;
+  padding-top: 25px;
+  padding-left: 10px;
 }
 
 .edit-diary {
@@ -48,7 +47,7 @@
 }
 
 .line1 {
-  width: 600px;
+  width: 400px;
   margin-left: 15px;
 }
 
@@ -57,7 +56,7 @@
 }
 
 .line2 {
-  width: 680px;
+  width: 460px;
 }
 
 .diary-btn {
@@ -67,26 +66,32 @@
 // タブレット横置きサイズ（1024px）以下
 @media screen and (max-width:1025px) {
   .diaryimage {
-    width: 900px;
-    height: 600px;
-    margin-top: 10px;
+    width: 500px;
+    height: 570px;
   }
 
-  .new-diary {
-    position: absolute;
-    top: 130px;
-    left: 65px;
-  }
-
-  .simple-diary {
-   width: 700px;
-   margin-bottom: 10px;
+  .diary-width {
+   width: 360px;
   }
 
   .diary-detail {
-    width: 700px;
     height: 270px;
-    margin-bottom: 10px;
+  }
+
+  .diary-show {
+    padding: 25px 0 5px 60px;
+  }
+
+  .simple-diary2 {
+    padding-left: 25px;
+  }
+
+  .line1 {
+    width: 360px;
+  }
+
+  .line2 {
+    width: 420px;
   }
 }
 
@@ -95,49 +100,64 @@
   .diaryimage {
     width: 700px;
     height: 530px;
-    margin-top: 10px;
   }
 
   .new-diary {
-    position: absolute;
-    top: 130px;
-    left: 115px;
+    top: 70px;
+    left: 120px;
   }
 
-  .simple-diary {
+  .diary-width {
    width: 500px;
-   margin-bottom: 10px;
   }
 
   .diary-detail {
-    width: 500px;
     height: 220px;
-    margin-bottom: 10px;
+  }
+
+  .diary-show {
+    padding: 25px 0 5px 20px;
+  }
+
+  .line1 {
+    width: 600px;
+  }
+
+  .line2 {
+    width: 680px;
   }
 }
 
 // スマートフォンサイズ（425px）以下
 @media screen and (max-width:426px) {
   .diaryimage {
-    width: 670px;
+    width: 400px;
     height: 530px;
-    margin-top: 10px;
   }
 
   .new-diary {
-    position: absolute;
-    top: 130px;
-    left: 95px;
+    top: 60px;
+    left: 65px;
   }
 
-  .simple-diary {
-   width: 500px;
-   margin-bottom: 10px;
+  .diary-width {
+   width: 300px;
   }
 
-  .diary-detail {
-    width: 500px;
+  .diary-detail {;
     height: 220px;
-    margin-bottom: 10px;
+  }
+
+  .diary-show {
+    padding: 25px 0 5px 20px;
+  }
+
+  .line1 {
+    width: 330px;
+    margin-left: 0;
+  }
+
+  .line2 {
+    width: 380px;
   }
 }
