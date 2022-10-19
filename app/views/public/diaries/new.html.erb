@@ -13,7 +13,7 @@
   </div>
 </div>
 
-<div>
+<div class="row">
   <%= image_tag "book4.png", class:"diaryimage" %>
   <!--日記投稿-->
   <div class="new-diary">
@@ -26,12 +26,13 @@
       </div>
     <% end %>
   </div>
+</div>
 
   <!--日記一覧-->
   <div class="diary-show">
-    <div class="row">
-      <% if @event.diaries.present? %>
-        <% @event.diaries.each do |diary| %>
+    <% if @event.diaries.present? %>
+      <% @event.diaries.each do |diary| %>
+      <div class="row">
         <div class="col-md-1">
             <%= image_tag "hane.png", class:"hane" %>
             <%= image_tag "blue.line2.png", class:"line1" %>
@@ -39,11 +40,13 @@
         <div class="col-md-8 simple-diary2">
           <%= diary.simple_diary %>
         </div>
+        <!--日記の編集-->
         <div class="col-md-1 simple-diary2">
           <%= link_to edit_event_diary_path(diary.event_id,diary.id) do %>
             <i class="fas fa-pen"></i>
           <% end %>
         </div>
+        <!--日記の削除-->
         <div class="col-md-1 simple-diary2">
           <%= link_to event_diary_path(diary.event, diary), method: :delete, "data-confirm" => "削除しますか？" do %>
             <i class="fas fa-trash"></i>
@@ -57,10 +60,8 @@
           <%= diary.detail %>
           <!--%= diary.image_id %>-->
         </div>
-            <%= image_tag "eda1.png", class:"line2" %>
-        <% end %>
+          <%= image_tag "eda1.png", class:"line2" %>
+      </div>
       <% end %>
-    </div>
+    <% end %>
   </div>
-
-</div>

@@ -1,3 +1,233 @@
 // Place all the styles related to the public/events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// event 登録・編集画面
+.backimage {
+  width: 100%;
+  height: 800px;
+}
+
+.event-show th {
+  height: 70px;
+  width: 30%;
+}
+
+.event-show td {
+  width: 60%;
+}
+
+.event th {
+  height: 75px;
+  width: 30%;
+}
+
+.event td {
+  width: 60%;
+}
+
+.title {
+  margin-left: 100px;
+}
+
+// .flower {
+//   width: 50px;
+//   height: 50px;
+//   position: absolute;
+//   top: 50px;
+//   left: 50px;
+// }
+
+.table-1 {
+  position: absolute;
+  top: 20%;
+  left: 13%;
+}
+
+.form_width {
+  width: 100%;
+}
+
+.plan {
+  height: 40px;
+}
+
+.memo {
+  height: 100px;
+}
+
+.place {
+  height: 50px;
+}
+
+input[type=radio] {
+  margin: 5px;
+}
+
+.edit-btn {
+  margin: 5px 80px 0 0;
+}
+
+// カラータグのラジオボタンの設定
+.maru {
+  padding: 7px 7px;
+  margin-right: 2px;
+  border-radius: 50%;
+}
+
+#colorless {
+  background-color: #fffaf0;
+}
+
+#colorless:hover, #colorless:active, #colorless:focus, #colorless:target {
+  background-color: #ffeecc;
+}
+
+#pink {
+  background-color: #f4b3c2;
+  accent-color: #f4b3c2;
+}
+
+#pink:hover, #pink:active, #pink:focus {
+  background-color: #e7609e;
+}
+
+#red {
+  background-color: #ec6d71;
+  accent-color: #ec6d71;
+}
+
+#red:hover, #red:active, #red:focus {
+  background-color: #d9333f;
+}
+
+#orange {
+  background-color: #f8b862;
+  accent-color: #f8b862;
+}
+
+#orange:hover, #orange:active, #orange:focus {
+  background-color: #f08300;
+}
+
+#yellow {
+  background-color: #fef263;
+  accent-color: #fef263;
+}
+
+#yellow:hover, #yellow:active, #yellow:focus {
+  background-color: #ffdc00;
+}
+
+#yellow_green {
+  background-color: #98d98e;
+  accent-color: #98d98e;
+}
+
+#yellow_green:hover, #yellow_green:active, #yellow_green:focus {
+  background-color: #65ab31;
+}
+
+#green {
+  background-color: #3eb370;
+  accent-color: #3eb370;
+}
+
+#green:hover, #green:active, #green:focus {
+  background-color: #007b43;
+}
+
+#light_blue {
+  background-color: #66ccff;
+  accent-color: #66ccff;
+}
+
+#light_blue:hover, #light_blue:active, #light_blue:focus {
+  background-color: #2ca9e1;
+}
+
+#blue {
+  background-color: #3381ff;
+  accent-color: #3381ff;
+}
+
+#blue:hover, #blue:active, #blue:focus {
+  background-color: #1e50a2;
+}
+
+#purple {
+  background-color: #a96ded;
+  accent-color: #a96ded;
+}
+
+#purple:hover, #purple:active, #purple:focus {
+  background-color: #674196;
+}
+
+// タブレット横置きサイズ（1024px）以下
+@media screen and (max-width:1025px) {
+  .backimage {
+    width: 100%;
+    height: 800px;
+  }
+
+  .event th {
+    height: 75px;
+  }
+
+  .event-show th {
+    height: 70px;
+  }
+
+  .title {
+    margin-left: 100px;
+  }
+}
+
+// タブレット縦置きサイズ（768px）以下
+@media screen and (max-width:769px) {
+  .backimage {
+    width: 100%;
+    height: 530px;
+  }
+
+  .event th {
+    height: 30px;
+  }
+
+  .event-show th {
+    height: 50px;
+  }
+
+  .title {
+    margin-left: 20px;
+  }
+}
+
+// スマートフォンサイズ（425px）以下
+@media screen and (max-width:426px) {
+  .maru {
+    padding: 0;
+  }
+
+  .backimage {
+    width: 100%;
+    height: 600px;
+  }
+
+  .event th {
+    height: 40px;
+  }
+
+  .event-show th {
+    height: 50px;
+  }
+
+  .title {
+    margin-left: 20px;
+  }
+
+  .edit-btn {
+    margin: 5px 15px 0 0;
+  }
+}

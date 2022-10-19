@@ -1,3 +1,143 @@
 // Place all the styles related to the public/diaries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// diary
+.diaryimage {
+  width: 700px;
+  height: 530px;
+  margin-top: 10px;
+}
+
+.new-diary {
+  position: absolute;
+  top: 130px;
+  left: 115px;
+}
+
+.simple-diary {
+ width: 500px;
+ height: 40px;
+ margin-bottom: 10px;
+}
+
+.diary-detail {
+  width: 500px;
+  height: 220px;
+  margin-bottom: 10px;
+}
+
+.diary-show {
+  padding: 25px 0 5px 20px;
+}
+
+.simple-diary2 {
+  height: 40px;
+  padding-top: 30px;
+}
+
+.edit-diary {
+  padding-right: 10px;
+}
+
+.hane {
+  width: 30px;
+  height: 40px;
+  margin-top: 25px;
+  transform: scale(-1, 1);
+}
+
+.line1 {
+  width: 600px;
+  margin-left: 15px;
+}
+
+.detail {
+  padding: 20px;
+}
+
+.line2 {
+  width: 680px;
+}
+
+.diary-btn {
+  padding-right: 15px;
+}
+
+// タブレット横置きサイズ（1024px）以下
+@media screen and (max-width:1025px) {
+  .diaryimage {
+    width: 900px;
+    height: 600px;
+    margin-top: 10px;
+  }
+
+  .new-diary {
+    position: absolute;
+    top: 130px;
+    left: 65px;
+  }
+
+  .simple-diary {
+   width: 700px;
+   margin-bottom: 10px;
+  }
+
+  .diary-detail {
+    width: 700px;
+    height: 270px;
+    margin-bottom: 10px;
+  }
+}
+
+// タブレット縦置きサイズ（768px）以下
+@media screen and (max-width:769px) {
+  .diaryimage {
+    width: 700px;
+    height: 530px;
+    margin-top: 10px;
+  }
+
+  .new-diary {
+    position: absolute;
+    top: 130px;
+    left: 115px;
+  }
+
+  .simple-diary {
+   width: 500px;
+   margin-bottom: 10px;
+  }
+
+  .diary-detail {
+    width: 500px;
+    height: 220px;
+    margin-bottom: 10px;
+  }
+}
+
+// スマートフォンサイズ（425px）以下
+@media screen and (max-width:426px) {
+  .diaryimage {
+    width: 670px;
+    height: 530px;
+    margin-top: 10px;
+  }
+
+  .new-diary {
+    position: absolute;
+    top: 130px;
+    left: 95px;
+  }
+
+  .simple-diary {
+   width: 500px;
+   margin-bottom: 10px;
+  }
+
+  .diary-detail {
+    width: 500px;
+    height: 220px;
+    margin-bottom: 10px;
+  }
+}
