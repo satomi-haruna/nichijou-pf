@@ -2,7 +2,7 @@
   "name": "nichijou",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.2.0",
+    "@fortawesome/fontawesome-free": "5.15.4",
     "@fullcalendar/core": "^5.11.3",
     "@fullcalendar/daygrid": "^5.11.3",
     "@fullcalendar/google-calendar": "^5.11.3",
