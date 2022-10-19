@@ -63,6 +63,17 @@
   padding-right: 15px;
 }
 
+.piyoimage {
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.piyoimage-size {
+  width: 50%;
+}
+
 // タブレット横置きサイズ（1024px）以下
 @media screen and (max-width:1025px) {
   .diaryimage {
@@ -79,6 +90,14 @@
 
   .simple-diary2 {
     padding-left: 25px;
+  }
+
+  .piyoimage {
+    width: 50%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
   }
 }
 
