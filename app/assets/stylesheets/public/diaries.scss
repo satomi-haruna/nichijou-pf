@@ -4,7 +4,7 @@
 
 // diary
 .diaryimage {
-  width: 600px;
+  width: 100%;
   height: 500px;
   margin-top: 10px;
 }
@@ -12,11 +12,14 @@
 .new-diary {
   position: absolute;
   top: 55px;
-  left: 85px;
+  width: 70%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .diary-width {
- width: 450px;
+ width: 100%;
  height: 40px;
  margin-bottom: 10px;
 }
@@ -31,12 +34,8 @@
 
 .simple-diary2 {
   height: 40px;
-  padding-top: 25px;
+  padding-top: 30px;
   padding-left: 10px;
-}
-
-.edit-diary {
-  padding-right: 10px;
 }
 
 .hane {
@@ -47,16 +46,16 @@
 }
 
 .line1 {
-  width: 400px;
-  margin-left: 15px;
+  width: 90%;
+  margin-left: 20px;
 }
 
 .detail {
-  padding: 20px;
+  padding: 30px;
 }
 
 .line2 {
-  width: 460px;
+  width: 100%;
 }
 
 .diary-btn {
@@ -66,12 +65,7 @@
 // タブレット横置きサイズ（1024px）以下
 @media screen and (max-width:1025px) {
   .diaryimage {
-    width: 500px;
     height: 570px;
-  }
-
-  .diary-width {
-   width: 360px;
   }
 
   .diary-detail {
@@ -85,30 +79,12 @@
   .simple-diary2 {
     padding-left: 25px;
   }
-
-  .line1 {
-    width: 360px;
-  }
-
-  .line2 {
-    width: 420px;
-  }
 }
 
 // タブレット縦置きサイズ（768px）以下
 @media screen and (max-width:769px) {
   .diaryimage {
-    width: 700px;
     height: 530px;
-  }
-
-  .new-diary {
-    top: 70px;
-    left: 120px;
-  }
-
-  .diary-width {
-   width: 500px;
   }
 
   .diary-detail {
@@ -116,32 +92,14 @@
   }
 
   .diary-show {
-    padding: 25px 0 5px 20px;
-  }
-
-  .line1 {
-    width: 600px;
-  }
-
-  .line2 {
-    width: 680px;
+    padding: 25px 0 5px 0px;
   }
 }
 
 // スマートフォンサイズ（425px）以下
 @media screen and (max-width:426px) {
   .diaryimage {
-    width: 400px;
     height: 530px;
-  }
-
-  .new-diary {
-    top: 60px;
-    left: 65px;
-  }
-
-  .diary-width {
-   width: 300px;
   }
 
   .diary-detail {;
@@ -149,15 +107,6 @@
   }
 
   .diary-show {
-    padding: 25px 0 5px 20px;
-  }
-
-  .line1 {
-    width: 330px;
-    margin-left: 0;
-  }
-
-  .line2 {
-    width: 380px;
+    padding: 25px 0 5px 0px;
   }
 }

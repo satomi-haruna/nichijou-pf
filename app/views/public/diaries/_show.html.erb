@@ -4,25 +4,26 @@
     <% if event.diaries.present? %>
       <% event.diaries.each do |diary| %>
       <div class="row">
-        <div class="col-md-1">
+        <div class="col-1">
             <%= image_tag "hane.png", class:"hane" %>
-            <%= image_tag "blue.line2.png", class:"line1" %>
         </div>
-        <div class="col-md-8 simple-diary2">
+        <div class="col-8 simple-diary2">
           <%= diary.simple_diary %>
         </div>
         <!--日記の編集-->
-        <div class="col-md-1 simple-diary2">
+        <div class="col-1 simple-diary2">
           <%= link_to edit_event_diary_path(diary.event_id,diary.id) do %>
             <i class="fas fa-pen"></i>
           <% end %>
         </div>
         <!--日記の削除-->
-        <div class="col-md-1 simple-diary2">
-          <%= link_to event_diary_path(diary.event, diary), method: :delete, "data-confirm" => "削除しますか？" do %>
+        <div class="col-1 simple-diary2">
+          <%= link_to event_diary_path(di
+          ary.event, diary), method: :delete, "data-confirm" => "削除しますか？" do %>
             <i class="fas fa-trash"></i>
           <% end %>
         </div>
+        <%= image_tag "blue.line2.png", class:"line1" %>
       </div>
       <div class="row">
         <div class="col-lg-1">
