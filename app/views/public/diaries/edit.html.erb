@@ -1,2 +1,27 @@
-<h1>Public::Diaries#edit</h1>
-<p>Find me in app/views/public/diaries/edit.html.erb</p>
+<div class="row">
+  <div class="col title">
+    <h3>
+      <span>
+        <%= link_to event_path(@event.id) do %>
+          <i class="fas fa-arrow-circle-left"></i>
+        <% end %>
+      </span>
+      <span>
+        <%= @event.plan_datetime.to_date %>
+      </span>
+    </h3>
+  </div>
+</div>
+
+<!--日記の編集-->
+<%= image_tag "book4.png", class:"diaryimage" %>
+<div class="new-diary">
+  <%= form_with model: [@event, @diary] do |f| %>
+    <%= f.text_field :simple_diary, class: "simple-diary" %><br>
+    <%= f.text_area :detail, class: "diary-detail" %><br>
+    <!--%= image_tag @diary.get_image(100,100) %>-->
+    <div class="diary-btn", align="right">
+      <%= f.submit "更新", class: "btn btn-success" %>
+    </div>
+  <% end %>
+</div>

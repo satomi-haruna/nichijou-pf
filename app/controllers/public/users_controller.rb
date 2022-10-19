@@ -1,5 +1,6 @@
 class Public::UsersController < ApplicationController
   before_action :authenticate_user!
+  before_action :guest_check
 
   def show
     @user = current_user
@@ -27,7 +28,7 @@ class Public::UsersController < ApplicationController
     # is_deletedカラムをtrueに変更＝削除済み
     @user.update(is_deleted: true)
     reset_session
-    flash[:notice] = "退会が完了しました。ご利用ありがとうございました。"
+    flash[:message] = "退会が完了しました。ご利用ありがとうございました。"
     redirect_to root_path
   end
 
@@ -40,6 +41,13 @@ class Public::UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :nickname, :email, :is_deleted)
+  end
+
+  def guest_check
+    if current_user.email == 'guest@sample.com'
+      flash[:message] = "ゲストユーザーはそちらの機能を利用できません。"
+      redirect_to root_path
+    end
   end
 
 end

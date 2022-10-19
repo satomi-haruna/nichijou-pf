@@ -3,3 +3,7 @@
 <div class="flash">
   <%= flash[:message] %>
 </div>
+
+<div class="row">
+  <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "btn btn-secondary btn-sm btn-block mb-3 sign_in" %>
+</div>
