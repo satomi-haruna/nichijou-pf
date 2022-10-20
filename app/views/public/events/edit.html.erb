@@ -71,19 +71,19 @@
           <th>場所</th>
           <td><%= f.text_area :place, class: "place form_width" %></td>
         </tr>
-        <tr>
-          <th>通知</th>
-          <td>
-            <div class="btn-group btn-group-toggle">
-              <label>
-                <%= f.radio_button :is_active, :true %>ON
-              </label>
-              <label>
-                <%= f.radio_button :is_active, :false %>OFF
-              </label>
-            </div>
-          </td>
-        </tr>
+        <!--<tr>-->
+        <!--  <th>通知</th>-->
+        <!--  <td>-->
+        <!--    <div class="btn-group btn-group-toggle">-->
+        <!--      <label>-->
+        <!--        <%= f.radio_button :is_active, :true %>ON-->
+        <!--      </label>-->
+        <!--      <label>-->
+        <!--        <%= f.radio_button :is_active, :false %>OFF-->
+        <!--      </label>-->
+        <!--    </div>-->
+        <!--  </td>-->
+        <!--</tr>-->
       </table>
       <div class="edit-btn float-right">
         <%= f.submit '更新', class:"btn btn-success" %>

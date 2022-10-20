@@ -30,9 +30,6 @@
               <li class="nav-item">
                 <%= link_to "カレンダー", events_path, class: 'nav-link text-dark' %>
               </li>
-              <!--<li class="nav-item">-->
-              <!--  <%= link_to "予定一覧", events_path, class: 'nav-link text-dark' %>-->
-              <!--</li>-->
               <li class="nav-item">
                 <%= link_to "会員情報の確認", users_my_page_path, class: 'nav-link text-dark' %>
               </li>
@@ -48,20 +45,14 @@
               </li>
             <% else %>
               <li class="nav-item">
-                <%= link_to "予定登録", new_event_path, class: 'nav-link text-dark' %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "カレンダー", events_path, class: 'nav-link text-dark' %>
+                <%= link_to "ログイン", new_user_session_path, class: 'nav-link text-dark' %>
               </li>
               <li class="nav-item">
                 <%= link_to "新規登録", new_user_registration_path, class: 'nav-link text-dark' %>
               </li>
               <li class="nav-item">
-                <%= link_to "ログイン", new_user_session_path, class: 'nav-link text-dark' %>
+                <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: 'nav-link text-dark' %>
               </li>
-              <!--<li class="nav-item">-->
-              <!--  %= link_to "ゲストログイン", users_guest_sign_in_path, method: :post %>-->
-              <!--</li>-->
             <% end %>
             </ul>
           </div>
