@@ -1,6 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 
+// 全体の設定
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #696969;
+}
+
 // カレンダーの点
 .fc-daygrid-event-dot {
   display: none;
@@ -11,14 +19,6 @@
 }
 
 .fc .fc-col-header-cell-cushion {
-  color: #696969;
-}
-
-// 全体の設定
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   color: #696969;
 }
 
@@ -73,231 +73,6 @@
   padding-top: 20px;
 }
 
-// diary
-.diaryimage {
-  width: 700px;
-  height: 530px;
-  margin-top: 10px;
-}
-
-.new-diary {
-  position: absolute;
-  top: 130px;
-  left: 115px;
-}
-
-.simple-diary {
- width: 500px;
- height: 30px;
- margin-bottom: 10px;
-}
-
-.diary-detail {
-  width: 500px;
-  height: 220px;
-  margin-bottom: 10px;
-}
-
-.diary-show {
-  padding: 25px 0 5px 20px;
-}
-
-.simple-diary2 {
-  height: 40px;
-  padding-top: 30px;
-}
-
-.edit-diary {
-  padding-right: 10px;
-}
-
-.hane {
-  width: 30px;
-  height: 40px;
-  margin-top: 25px;
-  transform: scale(-1, 1);
-}
-
-.line1 {
-  width: 600px;
-  margin-left: 15px;
-}
-
-.detail {
-  padding: 20px;
-}
-
-.line2 {
-  width: 680px;
-}
-
-.diary-btn {
-  padding-right: 15px;
-}
-
-// event
-.event th {
-  height: 30px;
-  width: 30%;
-}
-
-.event td {
-  height: 30px;
-  width: 60%;
-}
-
-.event-show th {
-  height: 50px;
-  width: 30%;
-}
-
-.event-show td {
-  height: 50px;
-  width: 60%;
-}
-
-.title {
-  margin-left: 20px;
-}
-
-.backimage {
-  width: 700px;
-  height: 530px;
-}
-
-.flower {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 50px;
-  left: 50px;
-}
-
-.table-1 {
-  position: absolute;
-  top: 20%;
-  left: 13%;
-}
-
-.memo {
-  width: 100%;
-  height: 100px;
-}
-
-.place {
-  width: 100%;
-  height: 50px;
-}
-
-input[type=radio] {
-  margin: 5px;
-}
-
-.edit-btn {
-  margin: 5px 80px 0 0;
-}
-
-// カラータグのラジオボタンの設定
-.maru {
-  padding: 7px 7px;
-  margin-right: 2px;
-  border-radius: 50%;
-}
-
-#colorless {
-  background-color: #fffaf0;
-}
-
-#colorless:hover, #colorless:active, #colorless:focus, #colorless:target {
-  background-color: #ffeecc;
-}
-
-#pink {
-  background-color: #f4b3c2;
-  accent-color: #f4b3c2;
-}
-
-#pink:hover, #pink:active, #pink:focus {
-  background-color: #e7609e;
-}
-
-#red {
-  background-color: #ec6d71;
-  accent-color: #ec6d71;
-}
-
-#red:hover, #red:active, #red:focus {
-  background-color: #d9333f;
-}
-
-#orange {
-  background-color: #f8b862;
-  accent-color: #f8b862;
-}
-
-#orange:hover, #orange:active, #orange:focus {
-  background-color: #f08300;
-}
-
-#yellow {
-  background-color: #fef263;
-  accent-color: #fef263;
-}
-
-#yellow:hover, #yellow:active, #yellow:focus {
-  background-color: #ffdc00;
-}
-
-#yellow_green {
-  background-color: #98d98e;
-  accent-color: #98d98e;
-}
-
-#yellow_green:hover, #yellow_green:active, #yellow_green:focus {
-  background-color: #65ab31;
-}
-
-#green {
-  background-color: #3eb370;
-  accent-color: #3eb370;
-}
-
-#green:hover, #green:active, #green:focus {
-  background-color: #007b43;
-}
-
-#light_blue {
-  background-color: #66ccff;
-  accent-color: #66ccff;
-}
-
-#light_blue:hover, #light_blue:active, #light_blue:focus {
-  background-color: #2ca9e1;
-}
-
-#blue {
-  background-color: #3381ff;
-  accent-color: #3381ff;
-}
-
-#blue:hover, #blue:active, #blue:focus {
-  background-color: #1e50a2;
-}
-
-#purple {
-  background-color: #a96ded;
-  accent-color: #a96ded;
-}
-
-#purple:hover, #purple:active, #purple:focus {
-  background-color: #674196;
-}
-
-// フッダーの設定
-// .footer {
-//   background-color: #3cb371;
-// }
-
 .footer-image {
   width: 100%;
   height: 100px;
@@ -308,7 +83,9 @@ input[type=radio] {
   font-size: 10px;
   position: absolute;
   top: -35px;
-  left: 30%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .footer span {

@@ -1,3 +1,132 @@
 // Place all the styles related to the public/diaries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// diary
+.diaryimage {
+  width: 100%;
+  height: 500px;
+  margin-top: 10px;
+}
+
+.new-diary {
+  position: absolute;
+  top: 55px;
+  width: 70%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.diary-width {
+ width: 100%;
+ height: 40px;
+ margin-bottom: 10px;
+}
+
+.diary-detail {
+  height: 220px;
+}
+
+.diary-show {
+  padding: 25px 0 5px 15%;
+}
+
+.simple-diary2 {
+  height: 40px;
+  padding-top: 30px;
+  padding-left: 10px;
+}
+
+.hane {
+  width: 30px;
+  height: 40px;
+  margin-top: 25px;
+  transform: scale(-1, 1);
+}
+
+.line1 {
+  width: 88%;
+  margin: auto;
+}
+
+.detail {
+  padding: 30px;
+}
+
+.line2 {
+  width: 95%;
+  margin: auto;
+}
+
+.diary-btn {
+  padding-right: 15px;
+}
+
+.piyoimage {
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.piyoimage-size {
+  width: 50%;
+}
+
+// タブレット横置きサイズ（1024px）以下
+@media screen and (max-width:1025px) {
+  .diaryimage {
+    height: 570px;
+  }
+
+  .diary-detail {
+    height: 270px;
+  }
+
+  .diary-show {
+    padding: 25px 0 5px 5%;
+  }
+
+  .simple-diary2 {
+    padding-left: 25px;
+  }
+
+  .piyoimage {
+    width: 50%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+// タブレット縦置きサイズ（768px）以下
+@media screen and (max-width:769px) {
+  .diaryimage {
+    height: 530px;
+  }
+
+  .diary-detail {
+    height: 220px;
+  }
+
+  .diary-show {
+    padding: 25px 0 5px 0px;
+  }
+}
+
+// スマートフォンサイズ（425px）以下
+@media screen and (max-width:426px) {
+  .diaryimage {
+    height: 530px;
+  }
+
+  .diary-detail {;
+    height: 220px;
+  }
+
+  .diary-show {
+    padding: 25px 0 5px 0px;
+  }
+}
