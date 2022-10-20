@@ -6,7 +6,7 @@
         登録した予定
         <sapn class="float-right">
           <%= link_to "日記", new_event_diary_path(@event.id), class: "btn btn-primary" %>
-          <%= link_to "リスト", event_lists_path(@event.id), class: "btn btn-success" %>
+          <!--%= link_to "リスト", event_lists_path(@event.id), class: "btn btn-success" %>-->
         </sapn>
       </h3>
     </div>
@@ -49,16 +49,16 @@
           <th>場所</th>
           <td><%= @event.place %></td>
         </tr>
-        <tr>
-          <th>通知</th>
-          <td>
-            <% if @event.is_active == false %>
-              OFF
-            <% else %>
-              ON
-            <% end %>
-          </td>
-        </tr>
+        <!--<tr>-->
+        <!--  <th>通知</th>-->
+        <!--  <td>-->
+        <!--    <% if @event.is_active == false %>-->
+        <!--      OFF-->
+        <!--    <% else %>-->
+        <!--      ON-->
+        <!--    <% end %>-->
+        <!--  </td>-->
+        <!--</tr>-->
       </table>
     </div>
   </div>
