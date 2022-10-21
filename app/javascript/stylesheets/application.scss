@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // color: #696969;
+  // color: #383c3c;
 }
 
 // カレンダーの点
@@ -14,63 +14,13 @@
   display: none;
 }
 
+// カレンダーの表示色
 .fc .fc-daygrid-day-number {
   color: #696969;
 }
 
 .fc .fc-col-header-cell-cushion {
   color: #696969;
-}
-
-// 新規登録、ログイン、users
-.sessions-title {
-  padding: 0 0 15px 20px;
-}
-
-.registration th {
-  height: 45px;
-  width: 40%;
-}
-
-.caution {
-  font-size: 10px;
-}
-
-.registration-form {
-  width: 100%;
-}
-
-.log-in {
-  margin: 40px 50px 0 0;
-}
-
-.sessions {
-  width: 100%;
-}
-
-.sessions th {
-  height: 45px;
-  width: 30%;
-}
-
-.sessions-form {
-  width: 85%;
-}
-
-.users-edit {
-  padding: 20px 15px 0 0;
-}
-
-.unsubscribe {
-  text-align: center;
-}
-
-.unsubscribe h3 {
-  padding: 20px;
-}
-
-.unsubscribe-btn {
-  padding-top: 20px;
 }
 
 .footer-image {

@@ -27,7 +27,7 @@
 }
 
 .title {
-  margin-left: 100px;
+  text-align: center;
 }
 
 // .flower {
@@ -178,10 +178,6 @@ input[type=radio] {
   .event-show th {
     height: 70px;
   }
-
-  .title {
-    margin-left: 100px;
-  }
 }
 
 // タブレット縦置きサイズ（768px）以下
@@ -201,10 +197,6 @@ input[type=radio] {
 
   .event-show th {
     height: 50px;
-  }
-
-  .title {
-    margin-left: 20px;
   }
 
   .btn-group {
@@ -229,10 +221,6 @@ input[type=radio] {
 
   .event-show th {
     height: 50px;
-  }
-
-  .title {
-    margin-left: 20px;
   }
 
   .edit-btn {
