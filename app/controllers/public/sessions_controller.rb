@@ -9,7 +9,8 @@ class Public::SessionsController < Devise::SessionsController
   def guest_sign_in
     user = User.guest
     sign_in user
-    redirect_to events_path, message: 'ゲストユーザーでログインしました。'
+    flash[:message] = 'ゲストユーザーでログインしました'
+    redirect_to events_path
   end
 
   def after_sign_in_path_for(resource)

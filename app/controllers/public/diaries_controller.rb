@@ -9,15 +9,14 @@ class Public::DiariesController < ApplicationController
 
   def create
     @event = Event.find(params[:event_id])
-    diary = Diary.new(diary_params)
-    diary.event_id = @event.id
-    diary.save
-    redirect_to new_event_diary_path(@event.id)
-  end
-
-  def show
-  #   @event = Event.find(params[:event_id])
-  #   @diary = Diary.new
+    @diary = Diary.new(diary_params)
+    @diary.event_id = @event.id
+    if @diary.save
+      redirect_to new_event_diary_path(@event.id)
+    else
+      flash[:message] = "ひとこと日記、または日記部分のどちらかは入力してください"
+      render :new
+    end
   end
 
   def edit
@@ -28,8 +27,12 @@ class Public::DiariesController < ApplicationController
   def update
     @event = Event.find(params[:event_id])
     @diary = Diary.find(params[:id])
-    @diary.update(diary_params)
-    redirect_to new_event_diary_path
+    if @diary.update(diary_params)
+      redirect_to new_event_diary_path
+    else
+      flash[:message] = "ひとこと日記、または日記部分のどちらかは入力してください"
+      render :edit
+    end
   end
 
   def destroy

@@ -1,9 +1,10 @@
 class ApplicationController < ActionController::Base
+  before_action :authenticate_user!, except: [:top, :about]
   before_action :withdraw_check, if: :withdraw_not_check
 
   # 管理者側で「退会」にした場合、会員は閲覧できなくなる。
-  # 退会チェックする場合、withdraw_not_checkメソッドtrueを記述。
-  # public機能以外は基本的に退会チェックしない。
+  # 退会チェックするコントローラーには、withdraw_not_checkメソッド＝trueを記述。
+  # public機能以外は基本的に退会チェックしないのでfalse。
   def withdraw_not_check
     false
   end

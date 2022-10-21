@@ -4,6 +4,16 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  # userデータのバリデーション
+  validates :last_name, presence: true
+  validates :first_name, presence: true
+  validates :last_name_kana, presence: true
+  validates :first_name_kana, presence: true
+  validates :nickname, presence: true
+  validates :email, presence: true
+  validates :encrypted_password, presence: true
+  validates :is_deleted, presence: true
+
   # ゲストログイン
   def self.guest
     find_or_create_by!(nickname: 'ゲスト', email: 'guest@sample.com') do |user|
