@@ -9,7 +9,7 @@ class Public::EventsController < ApplicationController
     if @event.save
       redirect_to event_path(@event.id)
     else
-      flash[:message] = "予定名と日時は必須項目です"
+      flash.now[:message] = "予定名と日時は必須項目です"
       render :new
     end
   end
@@ -29,7 +29,7 @@ class Public::EventsController < ApplicationController
     if @event.update(event_params)
       redirect_to event_path(@event.id)
     else
-      flash[:message] = "予定名と日時は必須項目です"
+      flash.now[:message] = "予定名と日時は必須項目です"
       render :edit
     end
   end

@@ -1,9 +1,5 @@
 <h3 class="sessions-title">ログイン</h3>
 
-<div class="flash">
-  <%= flash[:message] %>
-</div>
-
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <table class="sessions">
   <tr>

@@ -5,11 +5,15 @@ class Public::ListsController < ApplicationController
   end
 
   def create
-    event = event.find(params[:event_id])
-    list =List.new(list_params)
-    list.event_id = event.id
-    list.save
-    redirect_to event_path(event.id)
+    @event = event.find(params[:event_id])
+    @list =List.new(list_params)
+    @list.event_id = event.id
+    if @list.save
+      redirect_to event_path(@event.id)
+    else
+      # flash.now[:message] = "予定名と日時は必須項目です"
+      render :new
+    end
   end
 
   def index

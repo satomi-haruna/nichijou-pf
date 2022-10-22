@@ -1,9 +1,5 @@
 <h3 class="sessions-title">新規登録</h3>
 
-<div class="flash">
-  <%= flash[:message] %>
-</div>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "public/shared/error_messages", resource: resource %>
 

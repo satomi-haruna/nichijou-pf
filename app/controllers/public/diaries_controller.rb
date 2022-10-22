@@ -14,7 +14,7 @@ class Public::DiariesController < ApplicationController
     if @diary.save
       redirect_to new_event_diary_path(@event.id)
     else
-      flash[:message] = "ひとこと日記、または日記部分のどちらかは入力してください"
+      flash.now[:message] = "ひとこと日記、または日記部分のどちらかは入力してください"
       render :new
     end
   end
@@ -30,7 +30,7 @@ class Public::DiariesController < ApplicationController
     if @diary.update(diary_params)
       redirect_to new_event_diary_path
     else
-      flash[:message] = "ひとこと日記、または日記部分のどちらかは入力してください"
+      flash.now[:message] = "ひとこと日記、または日記部分のどちらかは入力してください"
       render :edit
     end
   end
