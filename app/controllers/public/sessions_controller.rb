@@ -10,6 +10,8 @@ class Public::SessionsController < Devise::SessionsController
     user = User.guest
     sign_in user
     flash[:message] = 'ゲストユーザーでログインしました'
+                      # '※ゲストユーザーで登録した予定や日記のデータは、3日間ですべて削除されます。'
+                      # '記録を保存したい場合は、新規登録の上ご利用ください。'
     redirect_to events_path
   end
 
