@@ -79,89 +79,89 @@ input[type=radio] {
   background-color: #fffaf0;
 }
 
-#colorless:hover, #colorless:active, #colorless:focus, #colorless:target {
+#colorless:active, #colorless:focus, #colorless:target {
   background-color: #ffeecc;
 }
 
 #pink {
   background-color: #f4b3c2;
-  accent-color: #f4b3c2;
 }
 
-#pink:hover, #pink:active, #pink:focus {
+#pink:active, #pink:focus {
   background-color: #e7609e;
+  accent-color: #f4b3c2;
 }
 
 #red {
   background-color: #ec6d71;
-  accent-color: #ec6d71;
 }
 
-#red:hover, #red:active, #red:focus {
+#red:active, #red:focus {
   background-color: #d9333f;
+  accent-color: #ec6d71;
 }
 
 #orange {
   background-color: #f8b862;
-  accent-color: #f8b862;
 }
 
-#orange:hover, #orange:active, #orange:focus {
+#orange:active, #orange:focus {
   background-color: #f08300;
+  accent-color: #f8b862;
 }
 
 #yellow {
   background-color: #fef263;
-  accent-color: #fef263;
 }
 
-#yellow:hover, #yellow:active, #yellow:focus {
+#yellow:active, #yellow:focus {
   background-color: #ffdc00;
+  accent-color: #fef263;
 }
 
 #yellow_green {
   background-color: #98d98e;
-  accent-color: #98d98e;
 }
 
-#yellow_green:hover, #yellow_green:active, #yellow_green:focus {
+#yellow_green:active, #yellow_green:focus {
   background-color: #65ab31;
+  accent-color: #98d98e;
 }
 
 #green {
   background-color: #3eb370;
-  accent-color: #3eb370;
 }
 
-#green:hover, #green:active, #green:focus {
+#green:active, #green:focus {
   background-color: #007b43;
+  accent-color: #3eb370;
 }
 
 #light_blue {
   background-color: #66ccff;
-  accent-color: #66ccff;
 }
 
-#light_blue:hover, #light_blue:active, #light_blue:focus {
+#light_blue:active, #light_blue:focus {
   background-color: #2ca9e1;
+  accent-color: #66ccff;
 }
 
 #blue {
   background-color: #3381ff;
-  accent-color: #3381ff;
 }
 
-#blue:hover, #blue:active, #blue:focus {
+#blue:active, #blue:focus {
   background-color: #1e50a2;
+  accent-color: #3381ff;
 }
 
 #purple {
   background-color: #a96ded;
-  accent-color: #a96ded;
 }
 
-#purple:hover, #purple:active, #purple:focus {
+#purple:active, #purple:focus {
   background-color: #674196;
+  accent-color: #a96ded;
 }
 
 // タブレット横置きサイズ（1024px）以下

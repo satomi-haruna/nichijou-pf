@@ -31,9 +31,6 @@
             <%= f.datetime_select :plan_datetime, {include_blank: true,start_year: (Time.now.year), end_year: (Time.now.year + 10), use_month_numbers: true, minute_step: 05}, {class: 'time-box'} %>
           </td>
         </tr>
-        <!--<tr>-->
-        <!--  <th>終日フラグ</th>-->
-        <!--</tr>-->
         <tr>
           <th>色をつける</th>
           <td>
@@ -79,19 +76,6 @@
           <th>場所</th>
           <td><%= f.text_area :place, class: "place form_width" %></td>
         </tr>
-        <!--<tr>-->
-        <!--  <th>通知</th>-->
-        <!--  <td>-->
-        <!--    <div class="btn-group btn-group-toggle">-->
-        <!--      <label>-->
-        <!--        <%= f.radio_button :is_active, :true %>ON-->
-        <!--      </label>-->
-        <!--      <label>-->
-        <!--        <%= f.radio_button :is_active, :false %>OFF-->
-        <!--      </label>-->
-        <!--    </div>-->
-        <!--  </td>-->
-        <!--</tr>-->
       </table>
       <div class="edit-btn float-right">
         <%= f.submit '予定を登録', class: "btn btn-success" %>
@@ -100,16 +84,3 @@
     </div>
   </div>
 </div>
-
-<!--% case 'pink' %>-->
-<!--  % when 'pink' then %>-->
-<!--    % @color = "#f4b3c2" %>-->
-<!--  % when 'red' then %>-->
-<!--    % @color = "#ec6d71" %>-->
-<!--  % else %>-->
-<!--    % @color = "#ffffff" %>-->
-<!--% end %>-->
-
-<!--<span id="%= @color_id %>" style="background-color: %= @color %>">-->
-<!--  message-->
-<!--</span>-->

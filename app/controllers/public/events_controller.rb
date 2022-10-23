@@ -18,6 +18,7 @@ class Public::EventsController < ApplicationController
     @event = Event.find(params[:id])
     @diary = Diary.new
     @list = List.new
+    @color_id = @event.color_id
   end
 
   def edit

@@ -35,7 +35,28 @@
         </tr>
         <tr>
           <th>今日の予定</th>
-          <td><%= @event.plan %></td>
+          <% case @event.color_id %>
+            <% when 'colorless' then %>
+              <td id="<%= @color_id %>"><%= @event.plan %></td>
+            <% when 'pink' then %>
+              <td id="<%= @color_id %>"><%= @event.plan %></td>
+            <% when 'red' then %>
+              <td id="<%= @color_id %>"><%= @event.plan %></td>
+            <% when 'orange' then %>
+              <td id="<%= @color_id %>"><%= @event.plan %></td>
+            <% when 'yellow' then %>
+              <td id="<%= @color_id %>"><%= @event.plan %></td>
+            <% when 'yellow_green' then %>
+              <td id="<%= @color_id %>"><%= @event.plan %></td>
+            <% when 'green' then %>
+              <td id="<%= @color_id %>"><%= @event.plan %></td>
+            <% when 'light_blue' then %>
+              <td id="<%= @color_id %>"><%= @event.plan %></td>
+            <% when 'blue' then %>
+              <td id="<%= @color_id %>"><%= @event.plan %></td>
+            <% when 'purple' then %>
+              <td id="<%= @color_id %>"><%= @event.plan %></td>
+          <% end %>
         </tr>
         <tr>
           <th>日時</th>
@@ -45,10 +66,6 @@
           </td>
         </tr>
         <tr>
-          <th>色をつける</th>
-          <td><%= @event.color_id %></td>
-        </tr>
-        <tr>
           <th>メモ</th>
           <td><%= @event.memo %></td>
         </tr>
@@ -56,16 +73,6 @@
           <th>場所</th>
           <td><%= @event.place %></td>
         </tr>
-        <!--<tr>-->
-        <!--  <th>通知</th>-->
-        <!--  <td>-->
-        <!--    <% if @event.is_active == false %>-->
-        <!--      OFF-->
-        <!--    <% else %>-->
-        <!--      ON-->
-        <!--    <% end %>-->
-        <!--  </td>-->
-        <!--</tr>-->
       </table>
     </div>
   </div>
