@@ -12,7 +12,6 @@ class User < ApplicationRecord
   validates :nickname, presence: true
   validates :email, presence: true
   validates :encrypted_password, presence: true
-  validates :is_deleted, presence: true
 
   # ゲストログイン
   def self.guest
