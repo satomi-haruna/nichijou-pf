@@ -19,9 +19,9 @@ class User < ApplicationRecord
     find_or_create_by!(nickname: 'ゲスト', email: 'guest@sample.com') do |user|
       user.password = SecureRandom.urlsafe_base64
       user.last_name = 'ゲスト'
-      user.first_name = 'ユーザー'
+      user.first_name = 'ゲスト'
       user.last_name_kana = 'ゲスト'
-      user.first_name_kana = 'ユーザー'
+      user.first_name_kana = 'ゲスト'
     end
   end
 
