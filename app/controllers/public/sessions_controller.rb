@@ -9,9 +9,10 @@ class Public::SessionsController < Devise::SessionsController
   def guest_sign_in
     user = User.guest
     sign_in user
-    flash[:message] = 'ゲストユーザーでログインしました'
-                      # '※ゲストユーザーで登録した予定や日記のデータは、3日間ですべて削除されます。'
-                      # '記録を保存したい場合は、新規登録の上ご利用ください。'
+    # エラー文改行のために、ハッシュとしてpush(<<)、eachで取り出して3行
+    flash[:message] = ['ゲストユーザーでログインしました']
+    flash[:message]  << '※ゲストユーザーで登録した予定や日記のデータは、3日間ですべて削除されます。'
+    flash[:message]  <<  '記録を保存したい場合は、新規登録の上ご利用ください。'
     redirect_to events_path
   end
 

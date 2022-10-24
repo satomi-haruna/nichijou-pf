@@ -25,7 +25,19 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
-            <% if user_signed_in? %>
+            <!--ゲストユーザーのヘッダー-->
+            <% if user_signed_in? && current_user.email == 'guest@sample.com' %>
+              <li class="nav-item text-right">
+                <%= link_to "予定登録", new_event_path, class: 'nav-link text-dark' %>
+              </li>
+              <li class="nav-item text-right">
+                <%= link_to "カレンダー", events_path, class: 'nav-link text-dark' %>
+              </li>
+              <li class="nav-item text-right">
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-link text-dark' %>
+              </li>
+            <!--ゲストユーザー以外のログイン後のヘッダー-->
+            <% elsif user_signed_in? %>
               <li class="nav-item text-right">
                 <%= link_to "予定登録", new_event_path, class: 'nav-link text-dark' %>
               </li>
@@ -38,6 +50,7 @@
               <li class="nav-item text-right">
                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-link text-dark' %>
               </li>
+            <!--管理者側のヘッダー-->
             <% elsif admin_signed_in? %>
               <li class="nav-item text-right">
                 <%= link_to "会員一覧", admin_root_path, class: 'nav-link text-dark' %>
@@ -45,6 +58,7 @@
               <li class="nav-item text-right">
                 <%= link_to "管理者ログアウト", destroy_admin_session_path, method: :delete, class: 'nav-link text-dark' %>
               </li>
+            <!--ログイン前のヘッダー-->
             <% else %>
               <li class="nav-item text-right">
                 <%= link_to "ログイン", new_user_session_path, class: 'nav-link text-dark' %>
@@ -67,9 +81,18 @@
         <div class="row">
           <div class="col align-self-center py-4">
             <!--エラーメッセージなどの表示-->
-            <div class="flash">
-              <%= flash[:message] %>
-            </div>
+            <!--ハッシュならeachで取り出し、ハッシュ以外は通常に表示-->
+            <% if flash[:message].class == Array %>
+              <% flash[:message].each do |flash| %>
+                < class="">
+                  <%= flash %>
+                </div>
+              <%end%>
+            <%else%>
+              <div class="flash">
+                 <%= flash[:message] %>
+              </div>
+             <%end%>
             <%= yield %>
           </div>
         </div>
