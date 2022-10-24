@@ -3,6 +3,12 @@ class Event < ApplicationRecord
   has_many :diaries, dependent: :destroy
   has_many :lists, dependent: :destroy
 
+  # 予定入力項目のバリデーション
+  validates :user_id, presence: true
+  validates :plan, presence: true
+  validates :plan_datetime, presence: true
+  validates :color_id, presence: true
+
   # 色分けのためのcolor_idをenumで設定
   enum color_id: {
     colorless:    0,

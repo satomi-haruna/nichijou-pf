@@ -9,14 +9,19 @@ class Public::SessionsController < Devise::SessionsController
   def guest_sign_in
     user = User.guest
     sign_in user
-    redirect_to events_path, message: 'ゲストユーザーでログインしました。'
+    flash[:message] = 'ゲストユーザーでログインしました'
+                      # '※ゲストユーザーで登録した予定や日記のデータは、3日間ですべて削除されます。'
+                      # '記録を保存したい場合は、新規登録の上ご利用ください。'
+    redirect_to events_path
   end
 
   def after_sign_in_path_for(resource)
+    flash[:message] = 'ログインしました'
     events_path
   end
 
   def after_sign_out_path_for(resource)
+    flash[:message] = 'ログアウトしました'
     root_path
   end
 

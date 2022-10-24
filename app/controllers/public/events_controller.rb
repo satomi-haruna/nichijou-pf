@@ -6,14 +6,19 @@ class Public::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.user_id = current_user.id
-    @event.save
-    redirect_to event_path(@event.id)
+    if @event.save
+      redirect_to event_path(@event.id)
+    else
+      flash.now[:message] = "予定名と日時は必須項目です"
+      render :new
+    end
   end
 
   def show
     @event = Event.find(params[:id])
     @diary = Diary.new
     @list = List.new
+    @color_id = @event.color_id
   end
 
   def edit
@@ -22,8 +27,12 @@ class Public::EventsController < ApplicationController
 
   def update
     @event = Event.find(params[:id])
-    @event.update(event_params)
-    redirect_to event_path(@event.id)
+    if @event.update(event_params)
+      redirect_to event_path(@event.id)
+    else
+      flash.now[:message] = "予定名と日時は必須項目です"
+      render :edit
+    end
   end
 
   def destroy

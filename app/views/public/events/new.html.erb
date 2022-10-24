@@ -1,6 +1,14 @@
 <div class="event">
   <div class="row">
-    <div class="col title">
+    <div class="col-2">
+      <h4>
+        <%= link_to events_path do %>
+          <i class="fas fa-arrow-circle-left"></i>
+        <% end %>
+        <%= image_tag 'calendar.png', size: '50x50' %>
+      </h4>
+    </div>
+    <div class="col-8 title">
       <h3>
         <%= image_tag 'hitsuji.png', size: '80x80' %>
         予定の登録
@@ -23,9 +31,6 @@
             <%= f.datetime_select :plan_datetime, {include_blank: true,start_year: (Time.now.year), end_year: (Time.now.year + 10), use_month_numbers: true, minute_step: 05}, {class: 'time-box'} %>
           </td>
         </tr>
-        <!--<tr>-->
-        <!--  <th>終日フラグ</th>-->
-        <!--</tr>-->
         <tr>
           <th>色をつける</th>
           <td>
@@ -71,19 +76,6 @@
           <th>場所</th>
           <td><%= f.text_area :place, class: "place form_width" %></td>
         </tr>
-        <!--<tr>-->
-        <!--  <th>通知</th>-->
-        <!--  <td>-->
-        <!--    <div class="btn-group btn-group-toggle">-->
-        <!--      <label>-->
-        <!--        <%= f.radio_button :is_active, :true %>ON-->
-        <!--      </label>-->
-        <!--      <label>-->
-        <!--        <%= f.radio_button :is_active, :false %>OFF-->
-        <!--      </label>-->
-        <!--    </div>-->
-        <!--  </td>-->
-        <!--</tr>-->
       </table>
       <div class="edit-btn float-right">
         <%= f.submit '予定を登録', class: "btn btn-success" %>

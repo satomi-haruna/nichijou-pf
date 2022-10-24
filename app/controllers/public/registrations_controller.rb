@@ -7,6 +7,7 @@ class Public::RegistrationsController < Devise::RegistrationsController
   # before_action :guest_check, only: %i[update destroy]
 
   def after_sign_up_path_for(resource)
+    flash[:message] = 'ログインしました'
     events_path
   end
 

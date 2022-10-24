@@ -1,14 +1,24 @@
 <div class="event-show">
   <div class="row">
-    <div class="col title">
+    <div class="col-2">
+      <h4>
+        <%= link_to events_path do %>
+          <i class="fas fa-arrow-circle-left"></i>
+        <% end %>
+        <%= image_tag 'calendar.png', size: '50x50' %>
+      </h4>
+    </div>
+    <div class="col-8 title">
       <h3>
         <%= image_tag 'hitsuji.png', size: '80x80' %>
         登録した予定
-        <sapn class="float-right">
-          <%= link_to "日記", new_event_diary_path(@event.id), class: "btn btn-primary" %>
-          <!--%= link_to "リスト", event_lists_path(@event.id), class: "btn btn-success" %>-->
-        </sapn>
       </h3>
+    </div>
+    <div class="col-2">
+      <sapn class="float-right">
+        <%= link_to "日記", new_event_diary_path(@event.id), class: "btn btn-primary" %>
+        <!--%= link_to "リスト", event_lists_path(@event.id), class: "btn btn-success" %>-->
+      </sapn>
     </div>
   </div>
 
@@ -25,7 +35,58 @@
         </tr>
         <tr>
           <th>今日の予定</th>
-          <td><%= @event.plan %></td>
+          <% case @event.color_id %>
+            <% when 'colorless' then %>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/colorless.png', class: "flower-image" %>
+              </td>
+            <% when 'pink' then %>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/pink.png', class: "flower-image" %>
+              </td>
+            <% when 'red' then %>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/red.png', class: "flower-image" %>
+              </td>
+            <% when 'orange' then %>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/orange.png', class: "flower-image" %>
+              </td>
+            <% when 'yellow' then %>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/yellow.png', class: "flower-image" %>
+              </td>
+            <% when 'yellow_green' then %>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/yellow_green.png', class: "flower-image" %>
+              </td>
+            <% when 'green' then %>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/green.png', class: "flower-image" %>
+              </td>
+            <% when 'light_blue' then %>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/light_blue.png', class: "flower-image" %>
+              </td>
+            <% when 'blue' then %>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/blue.png', class: "flower-image" %>
+              </td>
+            <% when 'purple' then %>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/purple.png', class: "flower-image" %>
+              </td>
+          <% end %>
         </tr>
         <tr>
           <th>日時</th>
@@ -33,13 +94,6 @@
             <%= @event.plan_datetime.to_date %>
             <%= @event.plan_datetime.strftime( "%H:%M" ) %>
           </td>
-        </tr>
-        <!--<tr>-->
-        <!--  <th>終日フラグ</th>-->
-        <!--</tr>-->
-        <tr>
-          <th>色をつける</th>
-          <td><%= @event.color_id %></td>
         </tr>
         <tr>
           <th>メモ</th>
@@ -49,16 +103,6 @@
           <th>場所</th>
           <td><%= @event.place %></td>
         </tr>
-        <!--<tr>-->
-        <!--  <th>通知</th>-->
-        <!--  <td>-->
-        <!--    <% if @event.is_active == false %>-->
-        <!--      OFF-->
-        <!--    <% else %>-->
-        <!--      ON-->
-        <!--    <% end %>-->
-        <!--  </td>-->
-        <!--</tr>-->
       </table>
     </div>
   </div>
