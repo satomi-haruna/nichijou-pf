@@ -164,6 +164,14 @@ input[type=radio] {
   accent-color: #a96ded;
 }
 
+// event/show flower画像の設定
+.flower-image {
+  width: 25%;
+  position: absolute;
+  bottom: -115%;
+  right: -25%;
+}
+
 // タブレット横置きサイズ（1024px）以下
 @media screen and (max-width:1025px) {
   .backimage {
@@ -177,6 +185,21 @@ input[type=radio] {
 
   .event-show th {
     height: 70px;
+  }
+
+  // event/show flower画像の設定
+  .flower-image {
+    width: 20%;
+    position: absolute;
+    bottom: -70%;
+    right: -15%;
+  }
+
+  .flower-image-2 {
+    width: 5%;
+    position: absolute;
+    bottom: 91%;
+    right: 53%;
   }
 }
 

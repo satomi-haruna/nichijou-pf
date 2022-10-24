@@ -37,25 +37,55 @@
           <th>今日の予定</th>
           <% case @event.color_id %>
             <% when 'colorless' then %>
-              <td id="<%= @color_id %>"><%= @event.plan %></td>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/colorless.png', class: "flower-image" %>
+              </td>
             <% when 'pink' then %>
-              <td id="<%= @color_id %>"><%= @event.plan %></td>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/pink.png', class: "flower-image" %>
+              </td>
             <% when 'red' then %>
-              <td id="<%= @color_id %>"><%= @event.plan %></td>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/red.png', class: "flower-image" %>
+              </td>
             <% when 'orange' then %>
-              <td id="<%= @color_id %>"><%= @event.plan %></td>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/orange.png', class: "flower-image" %>
+              </td>
             <% when 'yellow' then %>
-              <td id="<%= @color_id %>"><%= @event.plan %></td>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/yellow.png', class: "flower-image" %>
+              </td>
             <% when 'yellow_green' then %>
-              <td id="<%= @color_id %>"><%= @event.plan %></td>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/yellow_green.png', class: "flower-image" %>
+              </td>
             <% when 'green' then %>
-              <td id="<%= @color_id %>"><%= @event.plan %></td>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/green.png', class: "flower-image" %>
+              </td>
             <% when 'light_blue' then %>
-              <td id="<%= @color_id %>"><%= @event.plan %></td>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/light_blue.png', class: "flower-image" %>
+              </td>
             <% when 'blue' then %>
-              <td id="<%= @color_id %>"><%= @event.plan %></td>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/blue.png', class: "flower-image" %>
+              </td>
             <% when 'purple' then %>
-              <td id="<%= @color_id %>"><%= @event.plan %></td>
+              <td id="<%= @color_id %>">
+                <%= @event.plan %>
+                <%= image_tag 'flower/purple.png', class: "flower-image" %>
+              </td>
           <% end %>
         </tr>
         <tr>
