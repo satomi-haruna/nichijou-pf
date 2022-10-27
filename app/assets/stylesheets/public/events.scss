@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+// カレンダーの点
+.fc-daygrid-event-dot {
+  display: none;
+}
+
+// カレンダーの表示色
+.fc .fc-daygrid-day-number {
+  color: #696969;
+}
+
+.fc .fc-col-header-cell-cushion {
+  color: #696969;
+}
+
 // event 登録・編集画面
 .backimage {
   width: 100%;

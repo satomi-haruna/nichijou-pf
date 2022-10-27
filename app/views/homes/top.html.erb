@@ -1,7 +1,28 @@
-<h1>Homes#top</h1>
-
+<%= image_tag 'kifure-mu.jpeg', class: "background" %>
 <div class="row">
-  <%= link_to "ログイン", new_user_session_path, class: 'btn btn-success btn-sm btn-block mb-3 sign_in' %>
-  <%= link_to "新規登録", new_user_registration_path, class: 'btn btn-primary btn-sm btn-block mb-3 sign_in' %>
-  <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "btn btn-secondary btn-sm btn-block mb-3 sign_in" %>
+  <div class="about-text">
+    <p>ようこそ。<br>
+    当サイトは、予定を立てたり、日記を書いたり、<br>
+    そんな、毎日を書き記しておく場所です。</p>
+    <p>「買い物に出たらネコに出会った」<br>
+    「今日は家の掃除をがんばった」<br>
+    「今日は何事もない穏やかな一日だった」</p>
+    <p>予定に日記も添えてみましょう。</p>
+    <p>予定は色分けできるので、家族の分も一緒に管理したり、<br>
+    予定によって区別したりできます。</p>
+  </div>
 </div>
+
+<% unless user_signed_in? %>
+  <div class="row top-btn-group">
+    <div class="top-btn">
+      <%= link_to "ログイン", new_user_session_path, class: 'btn btn-outline-success btn-sm btn-block mb-3 sign_in' %>
+    </div>
+    <div class="top-btn">
+      <%= link_to "新規登録", new_user_registration_path, class: 'btn btn-outline-primary btn-sm btn-block mb-3 sign_in' %>
+    </div>
+    <div class="top-btn">
+      <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "btn btn-outline-secondary btn-sm btn-block mb-3 sign_in" %>
+    </div>
+  </div>
+<% end %>

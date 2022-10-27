@@ -84,15 +84,16 @@
             <!--ハッシュならeachで取り出し、ハッシュ以外は通常に表示-->
             <% if flash[:message].class == Array %>
               <% flash[:message].each do |flash| %>
-                < class="">
+                <div>
                   <%= flash %>
                 </div>
-              <%end%>
-            <%else%>
+              <% end %>
+            <% else %>
               <div class="flash">
-                 <%= flash[:message] %>
+                <%= flash[:message] %>
               </div>
-             <%end%>
+            <% end %>
+
             <%= yield %>
           </div>
         </div>
@@ -105,7 +106,12 @@
         <div class="row">
           <div class="col">
             <h2 class="text-center">今日もいい日でありますように<br>
-            <span>Ordinary days may be boring, but they are very important times.</span></p>
+              <span>Ordinary days may be boring, but they are very important times.</span>
+              <!--管理者画面へ遷移-->
+              <%= link_to new_admin_session_path do %>
+                <%= image_tag('tanpopo.png', class: "admin-flower") %>
+              <% end %>
+            </h2>
           </div>
         </div>
       </div>

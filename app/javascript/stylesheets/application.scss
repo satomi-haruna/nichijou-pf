@@ -13,23 +13,43 @@
   padding: 5px 0 20px;
 }
 
-// 
+// エラーメッセージ表示時にレイアウトに影響がでない
 .field_with_errors {
   display: inline;
 }
 
-// カレンダーの点
-.fc-daygrid-event-dot {
-  display: none;
+// aboutページ
+.background {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
 }
 
-// カレンダーの表示色
-.fc .fc-daygrid-day-number {
-  color: #696969;
+.about-text {
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  text-align: center;
+  font-size: 12px;
 }
 
-.fc .fc-col-header-cell-cushion {
-  color: #696969;
+.top-btn-group {
+  position: absolute;
+  top: 89%;
+  left: 56%;
+}
+
+.top-btn {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.admin-flower {
+  width: 5%;
+  position: absolute;
+  bottom: -10%;
 }
 
 .footer-image {
@@ -50,4 +70,50 @@
 .footer span {
   color: #f5f5f5;
   font-size: 8px;
+}
+
+// タブレット横置きサイズ（1024px）以下
+@media screen and (max-width:1025px) {
+  .about-text {
+    top: 33%;
+    font-size: 12px;
+  }
+}
+
+// タブレット縦置きサイズ（768px）以下
+@media screen and (max-width:769px) {
+  .about-text {
+    top: 30%;
+    font-size: 6px;
+  }
+
+  .top-btn-group {
+    top: 95%;
+    left: 37%;
+  }
+}
+
+// （490px）以下
+@media screen and (max-width:491px) {
+  .about-text {
+    top: 29%;
+    font-size: 5px;
+  }
+
+  .top-btn-group {
+    top: 95%;
+    left: 26%;
+  }
+}
+
+// スマートフォンサイズ（425px）以下
+@media screen and (max-width:426px) {
+  .about-text {
+    top: 26%;
+    font-size: 4px;
+  }
+
+  .top-btn-group {
+    left: 20%;
+  }
 }
