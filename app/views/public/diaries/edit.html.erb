@@ -1,9 +1,9 @@
 <div class="row">
-  <div class="col-1">
+  <h4 class="col-1">
     <%= link_to new_event_diary_path(@event.id) do %>
       <i class="fas fa-arrow-circle-left"></i>
     <% end %>
-  </div>
+  </h4>
   <div class="col-9 title">
     <h3>
       <%= @event.plan_datetime.to_date %>

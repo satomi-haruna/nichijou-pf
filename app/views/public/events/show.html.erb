@@ -4,8 +4,8 @@
       <h4>
         <%= link_to events_path do %>
           <i class="fas fa-arrow-circle-left"></i>
+          <%= image_tag 'calendar-icon1.png', size: '50x50' %>
         <% end %>
-        <%= image_tag 'calendar.png', size: '50x50' %>
       </h4>
     </div>
     <div class="col-8 title">
@@ -39,73 +39,50 @@
         </tr>
         <tr>
           <th>今日の予定</th>
+          <td class="<%= @color_id %>">
+            <%= @event.plan %>
+          </td>
           <% case @event.color_id %>
             <% when 'colorless' then %>
-              <td id="<%= @color_id %>">
-                <%= @event.plan %>
-                <%= image_tag 'flower/colorless.png', class: "flower-image" %>
-              </td>
+              <%= image_tag 'flower/colorless.png', class: "flower-image" %>
             <% when 'pink' then %>
-              <td id="<%= @color_id %>">
-                <%= @event.plan %>
-                <%= image_tag 'flower/pink.png', class: "flower-image" %>
-              </td>
+              <%= image_tag 'flower/pink.png', class: "flower-image" %>
             <% when 'red' then %>
-              <td id="<%= @color_id %>">
-                <%= @event.plan %>
-                <%= image_tag 'flower/red.png', class: "flower-image" %>
-              </td>
+              <%= image_tag 'flower/red.png', class: "flower-image" %>
             <% when 'orange' then %>
-              <td id="<%= @color_id %>">
-                <%= @event.plan %>
-                <%= image_tag 'flower/orange.png', class: "flower-image" %>
-              </td>
+              <%= image_tag 'flower/orange.png', class: "flower-image" %>
             <% when 'yellow' then %>
-              <td id="<%= @color_id %>">
-                <%= @event.plan %>
-                <%= image_tag 'flower/yellow.png', class: "flower-image" %>
-              </td>
+              <%= image_tag 'flower/yellow.png', class: "flower-image" %>
             <% when 'yellow_green' then %>
-              <td id="<%= @color_id %>">
-                <%= @event.plan %>
-                <%= image_tag 'flower/yellow_green.png', class: "flower-image" %>
-              </td>
+              <%= image_tag 'flower/yellow_green.png', class: "flower-image" %>
             <% when 'green' then %>
-              <td id="<%= @color_id %>">
-                <%= @event.plan %>
-                <%= image_tag 'flower/green.png', class: "flower-image" %>
-              </td>
+              <%= image_tag 'flower/green.png', class: "flower-image" %>
             <% when 'light_blue' then %>
-              <td id="<%= @color_id %>">
-                <%= @event.plan %>
-                <%= image_tag 'flower/light_blue.png', class: "flower-image" %>
-              </td>
+              <%= image_tag 'flower/light_blue.png', class: "flower-image" %>
             <% when 'blue' then %>
-              <td id="<%= @color_id %>">
-                <%= @event.plan %>
-                <%= image_tag 'flower/blue.png', class: "flower-image" %>
-              </td>
+              <%= image_tag 'flower/blue.png', class: "flower-image" %>
             <% when 'purple' then %>
-              <td id="<%= @color_id %>">
-                <%= @event.plan %>
-                <%= image_tag 'flower/purple.png', class: "flower-image" %>
-              </td>
+              <%= image_tag 'flower/purple.png', class: "flower-image" %>
           <% end %>
         </tr>
         <tr>
           <th>日時</th>
-          <td>
+          <td class="<%= @color_id %>">
             <%= @event.plan_datetime.to_date %>
             <%= @event.plan_datetime.strftime( "%H:%M" ) %>
           </td>
         </tr>
         <tr>
           <th>メモ</th>
-          <td><%= @event.memo %></td>
+          <td class="<%= @color_id %>">
+            <%= @event.memo %>
+          </td>
         </tr>
         <tr>
           <th>場所</th>
-          <td><%= @event.place %></td>
+          <td class="<%= @color_id %>">
+            <%= @event.place %>
+          </td>
         </tr>
       </table>
     </div>
