@@ -29,8 +29,12 @@
         <tr>
           <th></th>
           <td align="right">
-            <%= link_to "編集", edit_event_path(@event.id), class: "btn btn-outline-primary" %>
-            <%= link_to "削除", event_path, method: :delete, "data-confirm" => "この予定に対しての日記やリストも削除されます。\n削除してよろしいですか？", class: "btn btn-outline-danger" %>
+            <%= link_to edit_event_path(@event.id), class: "btn btn-outline-primary" do %>
+              <i class="fas fa-pen"></i> 編集
+            <% end %>
+            <%= link_to event_path, method: :delete, "data-confirm" => "この予定に対しての日記やリストも削除されます。\n削除してよろしいですか？", class: "btn btn-outline-danger" do %>
+              <i class="fas fa-trash"></i> 削除
+            <% end %>
           </td>
         </tr>
         <tr>

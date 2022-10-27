@@ -1,61 +1,71 @@
-<h3 class="sessions-title">登録情報の編集</h3>
+<div class="row">
+  <div class="col title">
+    <h3>
+      <%= image_tag 'hitsuji_sensu.png', size: '80x80' %>
+      登録情報の編集
+    </h3>
+  </div>
+</div>
 
-<%= form_with model: @user, url: users_information_path, method: :patch do |f| %>
-<table class="registration">
-  <tr>
-    <div class="field">
-      <th>
-        <%= f.label :"お名前" %>
-      </th>
-      <td>
-        <%= f.text_field :last_name %>
-        <%= f.text_field :first_name %>
-      </td>
-    </div>
-  </tr>
+<div class="row justify-content-center">
+  <div class="col-sm-12 col-md-8 col-lg-7">
+    <%= form_with model: @user, url: users_information_path, method: :patch do |f| %>
+    <table class="registration">
+      <tr>
+        <div class="field">
+          <th>
+            <%= f.label :"お名前" %>
+          </th>
+          <td>
+            <%= f.text_field :last_name %>
+            <%= f.text_field :first_name %>
+          </td>
+        </div>
+      </tr>
 
-  <tr>
-    <div class="field">
-      <th>
-        <%= f.label :"フリガナ" %>
-      </th>
-      <td>
-        <%= f.text_field :last_name_kana %>
-        <%= f.text_field :first_name_kana %>
-      </td>
-    </div>
-  </tr>
+      <tr>
+        <div class="field">
+          <th>
+            <%= f.label :"フリガナ" %>
+          </th>
+          <td>
+            <%= f.text_field :last_name_kana %>
+            <%= f.text_field :first_name_kana %>
+          </td>
+        </div>
+      </tr>
 
-  <tr>
-    <div class="field">
-      <th>
-        <%= f.label :"ニックネーム" %>
-      </th>
-      <td>
-        <%= f.text_field :nickname, class:"registration-form" %>
-      </td>
-    </div>
-  </tr>
+      <tr>
+        <div class="field">
+          <th>
+            <%= f.label :"ニックネーム" %>
+          </th>
+          <td>
+            <%= f.text_field :nickname, class:"registration-form" %>
+          </td>
+        </div>
+      </tr>
 
-  <tr>
-    <div class="field">
-      <th>
-        <%= f.label :"メールアドレス" %>
-      </th>
-      <td>
-        <%= f.email_field :email, class:"registration-form" %>
-      </td>
-    </div>
-  </tr>
+      <tr>
+        <div class="field">
+          <th>
+            <%= f.label :"メールアドレス" %>
+          </th>
+          <td>
+            <%= f.email_field :email, class:"registration-form" %>
+          </td>
+        </div>
+      </tr>
 
-  <tr>
-    <th></th>
-    <td>
-      <div>
-        <%= f.submit "更新", class:"btn btn-primary" %>
-      </div>
-    </td>
-  </tr>
-</table>
-<% end %>
-
+      <tr>
+        <th></th>
+        <td>
+          <div>
+            <%= f.submit "更新", class:"btn btn-primary" %>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <% end %>
+  </div>
+</div>
