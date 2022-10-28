@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root to: 'homes#top'
-  get 'homes/about' => 'homes#about', as: 'about'
 
   # 会員側 devise
   devise_for :users, skip: [:passwords], controllers: {
@@ -12,7 +11,6 @@ Rails.application.routes.draw do
   scope module: :public do
     resources :events do
       resources :diaries, except: [:index]
-      resources :lists, except: [:new, :show]
     end
     get 'users/my_page' => 'users#show'
     get 'users/information/edit' => 'users#edit'
