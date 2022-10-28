@@ -13,11 +13,14 @@
   </head>
 
   <body class="d-flex flex-column vh-100">
-    <header class="shadow-sm">
+    <header class="shadow-sm sticky-top">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
           <a class="navbar-brand p-3" href="/">
-            <%= image_tag('Schedul Diary.png', :size => '60x60') %>
+            <%= image_tag('cloud-logo3.png', :size => '90x60') %>
+            <div class="cloud-img">
+              <%= image_tag('cloud-logo4-1.png', :size => '42x28') %>
+            </div>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,49 +31,76 @@
             <!--ゲストユーザーのヘッダー-->
             <% if user_signed_in? && current_user.email == 'guest@sample.com' %>
               <li class="nav-item text-right">
-                <%= link_to "予定登録", new_event_path, class: 'nav-link text-dark' %>
+                <%= link_to new_event_path, class: 'nav-link text-dark' do %>
+                  <i class="fas fa-clock"></i> 予定登録
+                <% end %>
               </li>
               <li class="nav-item text-right">
-                <%= link_to "カレンダー", events_path, class: 'nav-link text-dark' %>
+                <%= link_to events_path, class: 'nav-link text-dark' do %>
+                  <i class="fas fa-calendar-alt"></i> カレンダー
+                <% end %>
               </li>
               <li class="nav-item text-right">
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-link text-dark' %>
+                <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-dark' do %>
+                  <i class="fas fa-sign-out-alt"></i> ログアウト
+                <% end %>
               </li>
             <!--ゲストユーザー以外のログイン後のヘッダー-->
             <% elsif user_signed_in? %>
               <li class="nav-item text-right">
-                <%= link_to "予定登録", new_event_path, class: 'nav-link text-dark' %>
+                <%= link_to new_event_path, class: 'nav-link text-dark' do %>
+                  <i class="fas fa-clock"></i> 予定登録
+                <% end %>
               </li>
               <li class="nav-item text-right">
-                <%= link_to "カレンダー", events_path, class: 'nav-link text-dark' %>
+                <%= link_to events_path, class: 'nav-link text-dark' do %>
+                  <i class="fas fa-calendar-alt"></i> カレンダー
+                <% end %>
               </li>
               <li class="nav-item text-right">
-                <%= link_to "会員情報の確認", users_my_page_path, class: 'nav-link text-dark' %>
+                <%= link_to users_my_page_path, class: 'nav-link text-dark' do %>
+                  <i class="fas fa-user"></i> 会員情報の確認
+                <% end %>
               </li>
               <li class="nav-item text-right">
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-link text-dark' %>
+                <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-dark' do %>
+                  <i class="fas fa-sign-out-alt"></i> ログアウト
+                <% end %>
               </li>
             <!--管理者側のヘッダー-->
             <% elsif admin_signed_in? %>
               <li class="nav-item text-right">
-                <%= link_to "会員一覧", admin_root_path, class: 'nav-link text-dark' %>
+                <%= link_to admin_root_path, class: 'nav-link text-dark' do %>
+                  <i class="fas fa-users"></i> 会員一覧
+                <% end %>
               </li>
               <li class="nav-item text-right">
-                <%= link_to "管理者ログアウト", destroy_admin_session_path, method: :delete, class: 'nav-link text-dark' %>
+                <%= link_to destroy_admin_session_path, method: :delete, class: 'nav-link text-dark' do %>
+                  <i class="fas fa-sign-out-alt"></i> 管理者ログアウト
+                <% end %>
               </li>
             <!--ログイン前のヘッダー-->
             <% else %>
               <li class="nav-item text-right">
-                <%= link_to "ログイン", new_user_session_path, class: 'nav-link text-dark' %>
+                <%= link_to new_user_session_path, class: 'nav-link text-dark' do %>
+                 <i class="fas fa-sign-in-alt"></i> ログイン
+                <% end %>
               </li>
               <li class="nav-item text-right">
-                <%= link_to "新規登録", new_user_registration_path, class: 'nav-link text-dark' %>
+                <%= link_to new_user_registration_path, class: 'nav-link text-dark' do %>
+                  <i class="fas fa-user-plus"></i> 新規登録
+                <% end %>
               </li>
               <li class="nav-item text-right">
-                <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: 'nav-link text-dark' %>
+                <%= link_to users_guest_sign_in_path, method: :post, class: 'nav-link text-dark' do %>
+                  <i class="fas fa-feather-alt"></i> ゲストログイン
+                <% end %>
               </li>
             <% end %>
             </ul>
+          </div>
+          <div class="cloud-img2">
+            <%= image_tag('cloud-logo4-1.png', :size => '42x28') %>
           </div>
         </div>
       </nav>
@@ -84,15 +114,16 @@
             <!--ハッシュならeachで取り出し、ハッシュ以外は通常に表示-->
             <% if flash[:message].class == Array %>
               <% flash[:message].each do |flash| %>
-                < class="">
+                <div>
                   <%= flash %>
                 </div>
-              <%end%>
-            <%else%>
+              <% end %>
+            <% else %>
               <div class="flash">
-                 <%= flash[:message] %>
+                <%= flash[:message] %>
               </div>
-             <%end%>
+            <% end %>
+
             <%= yield %>
           </div>
         </div>
@@ -105,7 +136,12 @@
         <div class="row">
           <div class="col">
             <h2 class="text-center">今日もいい日でありますように<br>
-            <span>Ordinary days may be boring, but they are very important times.</span></p>
+              <span>Ordinary days may be boring, but they are very important times.</span>
+              <!--管理者画面へ遷移-->
+              <%= link_to new_admin_session_path do %>
+                <%= image_tag('tanpopo.png', class: "admin-flower") %>
+              <% end %>
+            </h2>
           </div>
         </div>
       </div>

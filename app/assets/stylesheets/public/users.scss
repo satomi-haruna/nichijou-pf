@@ -12,6 +12,10 @@
   width: 40%;
 }
 
+.registration td {
+  padding-left: 10px;
+}
+
 .caution {
   font-size: 10px;
 }
@@ -33,12 +37,20 @@
   width: 30%;
 }
 
+.sessions td {
+  padding-left: 10px;
+}
+
 .sessions-form {
   width: 85%;
 }
 
 .users-edit {
   padding: 20px 15px 0 0;
+}
+
+.users-edit-btn {
+  width: 95px;
 }
 
 .unsubscribe {
@@ -51,4 +63,9 @@
 
 .unsubscribe-btn {
   padding-top: 20px;
+}
+
+// 会員情報ページ
+.user-td {
+  border-bottom: 1px solid #68be8d;
 }

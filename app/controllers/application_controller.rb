@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!, except: [:top, :about]
   before_action :withdraw_check, if: :withdraw_not_check
 
   # 管理者側で「退会」にした場合、会員は閲覧できなくなる。

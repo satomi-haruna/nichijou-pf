@@ -10,6 +10,7 @@ class Admin::UsersController < ApplicationController
     @users = User.all
   end
 
+  # 退会ステータスの変更
   def withdraw
     @user = User.find(params[:id])
     if @user.is_deleted == false

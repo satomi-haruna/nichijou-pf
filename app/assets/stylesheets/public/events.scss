@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+// カレンダーの点
+.fc-daygrid-event-dot {
+  display: none;
+}
+
+// カレンダーの表示色
+.fc .fc-daygrid-day-number {
+  color: #696969;
+}
+
+.fc .fc-col-header-cell-cushion {
+  color: #696969;
+}
+
 // event 登録・編集画面
 .backimage {
   width: 100%;
@@ -29,14 +43,6 @@
 .title {
   text-align: center;
 }
-
-// .flower {
-//   width: 50px;
-//   height: 50px;
-//   position: absolute;
-//   top: 50px;
-//   left: 50px;
-// }
 
 .table-1 {
   position: absolute;
@@ -76,7 +82,7 @@ input[type=radio] {
 }
 
 #colorless {
-  background-color: #fffaf0;
+  border-bottom: 2px solid #fffaf0;
 }
 
 #colorless:active, #colorless:focus, #colorless:target {
@@ -164,12 +170,83 @@ input[type=radio] {
   accent-color: #a96ded;
 }
 
+// event/show tableの色付け
+.colorless {
+  background-image: repeating-linear-gradient(45deg, transparent 0 3px, #fffaf0 3px 6px);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3rem;
+  background-position: bottom;
+}
+
+.pink {
+  background-image: repeating-linear-gradient(45deg, transparent 0 3px, #f4b3c2 3px 6px);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3rem;
+  background-position: bottom;
+}
+
+.red {
+  background-image: repeating-linear-gradient(45deg, transparent 0 3px, #ec6d71 3px 6px);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3rem;
+  background-position: bottom;
+}
+
+.orange {
+  background-image: repeating-linear-gradient(45deg, transparent 0 3px, #f8b862 3px 6px);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3rem;
+  background-position: bottom;
+}
+
+.yellow {
+  background-image: repeating-linear-gradient(45deg, transparent 0 3px, #fef263 3px 6px);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3rem;
+  background-position: bottom;
+}
+
+.yellow_green {
+  background-image: repeating-linear-gradient(45deg, transparent 0 3px, #98d98e 3px 6px);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3rem;
+  background-position: bottom;
+}
+
+.green {
+  background-image: repeating-linear-gradient(45deg, transparent 0 3px, #3eb370 3px 6px);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3rem;
+  background-position: bottom;
+}
+
+.light_blue {
+  background-image: repeating-linear-gradient(45deg, transparent 0 3px, #66ccff 3px 6px);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3rem;
+  background-position: bottom;
+}
+
+.blue {
+  background-image: repeating-linear-gradient(45deg, transparent 0 3px, #3381ff 3px 6px);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3rem;
+  background-position: bottom;
+}
+
+.purple {
+  background-image: repeating-linear-gradient(45deg, transparent 0 3px, #a96ded 3px 6px);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3rem;
+  background-position: bottom;
+}
+
 // event/show flower画像の設定
 .flower-image {
-  width: 25%;
+  width: 20%;
   position: absolute;
-  bottom: -115%;
-  right: -25%;
+  bottom: -16%;
+  right: -3%;
 }
 
 // タブレット横置きサイズ（1024px）以下
@@ -189,17 +266,8 @@ input[type=radio] {
 
   // event/show flower画像の設定
   .flower-image {
-    width: 20%;
-    position: absolute;
-    bottom: -70%;
-    right: -15%;
-  }
-
-  .flower-image-2 {
-    width: 5%;
-    position: absolute;
-    bottom: 91%;
-    right: 53%;
+    bottom: -13%;
+    right: 0%;
   }
 }
 
@@ -224,6 +292,11 @@ input[type=radio] {
 
   .btn-group {
     display: inline-block;
+  }
+
+  // event/show flower画像の設定
+  .flower-image {
+    bottom: -16%;
   }
 }
 
@@ -252,5 +325,18 @@ input[type=radio] {
 
   .btn-group {
     display: inline-block;
+  }
+
+  // event/show flower画像の設定
+  .flower-image {
+    bottom: -13%;
+  }
+}
+
+// 339px以下
+@media screen and (max-width:340px) {
+  // event/show flower画像の設定
+  .flower-image {
+    bottom: -11%;
   }
 }

@@ -1,96 +1,104 @@
-<h3 class="sessions-title">新規登録</h3>
+<div class="row justify-content-center">
+  <div class="col-sm-12 col-md-11 col-lg-8">
+    <h3 class="sessions-title">新規登録</h3>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "public/shared/error_messages", resource: resource %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "public/shared/error_messages", resource: resource %>
 
-  <table class="registration">
-    <tr>
-      <div class="field">
-        <th>
-          <%= f.label :"お名前" %>
-        </th>
-        <td>
-          <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "姓" %>
-          <%= f.text_field :first_name, autocomplete: "first_name", placeholder: "名" %>
-        </td>
-      </div>
-    </tr>
+      <table class="registration">
+        <tr>
+          <div class="field">
+            <th>
+              <%= f.label :"お名前" %>
+            </th>
+            <td>
+              <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "姓" %>
+            </td>
+            <td>
+              <%= f.text_field :first_name, autocomplete: "first_name", placeholder: "名" %>
+            </td>
+          </div>
+        </tr>
 
-    <tr>
-      <div class="field">
-        <th>
-          <%= f.label :"フリガナ" %>
-        </th>
-        <td>
-          <%= f.text_field :last_name_kana, autocomplete: "last_name_kana", placeholder: "セイ" %>
-          <%= f.text_field :first_name_kana, autocomplete: "first_name_kana", placeholder: "メイ" %>
-        </td>
-      </div>
-    </tr>
+        <tr>
+          <div class="field">
+            <th>
+              <%= f.label :"フリガナ" %>
+            </th>
+            <td>
+              <%= f.text_field :last_name_kana, autocomplete: "last_name_kana", placeholder: "セイ" %>
+            </td>
+            <td>
+              <%= f.text_field :first_name_kana, autocomplete: "first_name_kana", placeholder: "メイ" %>
+            </td>
+          </div>
+        </tr>
 
-    <tr>
-      <div class="field">
-        <th>
-          <%= f.label :ニックネーム %>
-        </th>
-        <td>
-          <%= f.text_field :nickname, autocomplete: "nickname", placeholder: "表示名", class:"registration-form" %><br>
-          <span class="caution">
-            ※こちらがアカウント内の表示名、ログイン情報として使用されます。
-          </span>
-        </td>
-      </div>
-    </tr>
+        <tr>
+          <div class="field">
+            <th>
+              <%= f.label :ニックネーム %>
+            </th>
+            <td colspan="2">
+              <%= f.text_field :nickname, autocomplete: "nickname", placeholder: "表示名", class:"registration-form" %><br>
+              <span class="caution">
+                ※こちらがアカウント内の表示名、ログイン情報として使用されます。
+              </span>
+            </td>
+          </div>
+        </tr>
 
-    <tr>
-      <div class="field">
-        <th>
-          <%= f.label :"メールアドレス" %>
-        </th>
-        <td>
-          <%= f.email_field :email, autocomplete: "email", placeholder: "e-address@sample.jp", class:"registration-form" %>
-        </td>
-      </div>
-    </tr>
+        <tr>
+          <div class="field">
+            <th>
+              <%= f.label :"メールアドレス" %>
+            </th>
+            <td colspan="2">
+              <%= f.email_field :email, autocomplete: "email", placeholder: "e-address@sample.jp", class:"registration-form" %>
+            </td>
+          </div>
+        </tr>
 
-    <tr>
-      <div class="field">
-        <th>
-          <%= f.label :"パスワード" %>
-          <% if @minimum_password_length %>
-          (<%= @minimum_password_length %> 文字以上)
-          <% end %>
-        </th>
-        <td>
-          <%= f.password_field :password, autocomplete: "new-password", class:"registration-form" %>
-        </td>
-      </div>
-    </tr>
+        <tr>
+          <div class="field">
+            <th>
+              <%= f.label :"パスワード" %>
+              <% if @minimum_password_length %>
+              (<%= @minimum_password_length %> 文字以上)
+              <% end %>
+            </th>
+            <td colspan="2">
+              <%= f.password_field :password, autocomplete: "new-password", class:"registration-form" %>
+            </td>
+          </div>
+        </tr>
 
-    <tr>
-      <div class="field">
-        <th>
-          <%= f.label :"パスワード(確認用)" %>
-        </th>
-        <td>
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"registration-form" %>
-        </td>
-      </div>
-    </tr>
+        <tr>
+          <div class="field">
+            <th>
+              <%= f.label :"パスワード(確認用)" %>
+            </th>
+            <td colspan="2">
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"registration-form" %>
+            </td>
+          </div>
+        </tr>
 
-    <tr>
-      <th></th>
-      <td>
-        <div class="actions">
-          <%= f.submit "新規登録", class:"btn btn-success" %>
-        </div>
-      </td>
-    </tr>
-  </table>
-<% end %>
+        <tr>
+          <th></th>
+          <td>
+            <button type="submit", class="btn btn-primary">
+              <i class="fas fa-user-plus"></i> 新規登録
+            </button>
+          </td>
+        </tr>
+      </table>
+    <% end %>
 
-<div class="log-in float-right">
-  <p>すでに登録済みの方は
-    <%= render "public/shared/links" %>
-  </p>
+    <div class="log-in float-right">
+      <p>すでに登録済みの方は
+        <%= render "public/shared/links" %>
+      </p>
+    </div>
+  </div>
 </div>

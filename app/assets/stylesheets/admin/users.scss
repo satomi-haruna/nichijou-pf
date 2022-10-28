@@ -1,3 +1,39 @@
 // Place all the styles related to the admin/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.table th {
+  text-align: center;
+}
+
+.table td {
+  padding: 12px 8px;
+}
+
+.admin-table {
+  font-size: 16px;
+}
+
+.status-btn {
+  font-size: 5px;
+  width: 80px;
+}
+
+// タブレット横置きサイズ（1024px）以下
+@media screen and (max-width:1025px) {
+  .admin-table {
+    font-size: 12px;
+  }
+}
+
+// タブレット縦置きサイズ（768px）以下
+@media screen and (max-width:769px) {
+  .admin-table {
+    font-size: 9px;
+  }
+}
+
+// スマートフォンサイズ（425px）以下
+@media screen and (max-width:426px) {
+
+}

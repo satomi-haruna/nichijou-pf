@@ -1,10 +1,10 @@
 <div class="event">
   <div class="row">
-    <div class="col-1">
+    <h4 class="col-1">
       <%= link_to event_path(@event.id) do %>
         <i class="fas fa-arrow-circle-left"></i>
       <% end %>
-    </div>
+    </h4>
     <div class="col-9 title">
       <h3>
         <%= image_tag 'hitsuji.png', size: '80x80' %>
@@ -28,9 +28,6 @@
             <%= f.datetime_select :plan_datetime, {include_blank: true,start_year: (Time.now.year), end_year: (Time.now.year + 10), use_month_numbers: true, minute_step: 05}, {class: 'time-box'} %>
           </td>
         </tr>
-        <!--<tr>-->
-        <!--  <th>終日フラグ</th>-->
-        <!--</tr>-->
         <tr>
           <th>色をつける</th>
           <td>
@@ -76,23 +73,10 @@
           <th>場所</th>
           <td><%= f.text_area :place, class: "place form_width" %></td>
         </tr>
-        <!--<tr>-->
-        <!--  <th>通知</th>-->
-        <!--  <td>-->
-        <!--    <div class="btn-group btn-group-toggle">-->
-        <!--      <label>-->
-        <!--        <%= f.radio_button :is_active, :true %>ON-->
-        <!--      </label>-->
-        <!--      <label>-->
-        <!--        <%= f.radio_button :is_active, :false %>OFF-->
-        <!--      </label>-->
-        <!--    </div>-->
-        <!--  </td>-->
-        <!--</tr>-->
       </table>
-      <div class="edit-btn float-right">
-        <%= f.submit '更新', class:"btn btn-success" %>
-      </div>
+      <button type="submit", class="edit-btn float-right btn btn-success">
+        更新 <i class="fas fa-hand-point-up"></i>
+      </button>
       <% end %>
     </div>
   </div>
