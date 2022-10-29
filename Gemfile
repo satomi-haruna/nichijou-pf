@@ -76,3 +76,5 @@ gem 'momentjs-rails'
 
 # ゲストログイン機能に伴うwhenever,cron導入
 gem 'whenever', require: false
+
+gem 'devise-i18n'

@@ -3,6 +3,7 @@
     <h3 class="sessions-title">ログイン</h3>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= render "public/shared/error_messages", resource: resource %>
     <table class="sessions">
       <tr>
         <div class="field">
@@ -10,7 +11,7 @@
             <%= f.label :"ニックネーム" %>
           </th>
           <td>
-            <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", placeholder: "表示名", class:"sessions-form" %>
+            <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", placeholder: "表示名", class:"sessions-form", required: true %>
           </td>
         </div>
       </tr>
@@ -21,7 +22,7 @@
             <%= f.label :"メールアドレス" %>
           </th>
           <td>
-            <%= f.email_field :email, autocomplete: "email", placeholder: "e-address@sample.jp", class:"sessions-form" %>
+            <%= f.email_field :email, autocomplete: "email", placeholder: "e-address@sample.jp", class:"sessions-form", required: true %>
           </td>
         </div>
       </tr>
@@ -32,7 +33,7 @@
             <%= f.label :"パスワード" %>
           </th>
           <td>
-            <%= f.password_field :password, autocomplete: "current-password", class:"sessions-form" %>
+            <%= f.password_field :password, autocomplete: "current-password", class:"sessions-form", required: true %>
           </td>
         </div>
       </tr>

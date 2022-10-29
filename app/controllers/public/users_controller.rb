@@ -15,7 +15,7 @@ class Public::UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to users_my_page_path
     else
-      fash.now[:message] = "予定名と日時は必須項目です"
+      flash.now[:message] = "すべて必須項目です"
       render :edit
     end
   end

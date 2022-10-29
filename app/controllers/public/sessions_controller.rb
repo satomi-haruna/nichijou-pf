@@ -16,6 +16,10 @@ class Public::SessionsController < Devise::SessionsController
     redirect_to events_path
   end
 
+  # def create
+  #   self.resource = warden.authenticate!(auth_options)
+  # end
+
   def after_sign_in_path_for(resource)
     flash[:message] = 'ログインしました'
     events_path
