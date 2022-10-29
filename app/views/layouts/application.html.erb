@@ -122,6 +122,8 @@
               <div class="flash">
                 <%= flash[:message] %>
               </div>
+              <!--sign inのエラーメッセージ-->
+              <p class="alert"><%= alert %></p>
             <% end %>
 
             <%= yield %>
