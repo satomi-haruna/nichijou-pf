@@ -11,6 +11,7 @@ class Public::DiariesController < ApplicationController
     @event = Event.find(params[:event_id])
     @diary = Diary.new(diary_params)
     @diary.event_id = @event.id
+    @diary.score = Language.get_data(diary_params[:simple_diary])
     if @diary.save
       redirect_to new_event_diary_path(@event.id)
     else
@@ -27,6 +28,7 @@ class Public::DiariesController < ApplicationController
   def update
     @event = Event.find(params[:event_id])
     @diary = Diary.find(params[:id])
+    @diary.score = Language.get_data(diary_params[:simple_diary])
     if @diary.update(diary_params)
       redirect_to new_event_diary_path
     else

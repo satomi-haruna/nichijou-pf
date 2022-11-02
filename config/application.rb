@@ -13,6 +13,7 @@ module Nichijou
     config.i18n.default_locale = :ja
 
     # ゲストユーザーの情報を定期削除
+    # AI機能導入の記述
     config.paths.add 'lib', eager_load: true
 
     # Configuration for the application, engines, and railties goes here.
