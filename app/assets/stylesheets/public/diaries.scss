@@ -79,6 +79,24 @@
   padding: 30px 0;
 }
 
+// AI機能 感情分析のスコアは、羊の画像にカーソルを合わせると表示される
+.mental:hover .mental-score {
+  display: inline;
+}
+
+.mental-score {
+  position: absolute;
+  display: none;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: #ffffe0;
+  width: 100px;
+  top: 90px;
+  left: 5%;
+  font-size: 12px;
+  text-align: center;
+}
+
 // タブレット横置きサイズ（1024px）以下
 @media screen and (max-width:1025px) {
   .diaryimage {
