@@ -5,7 +5,7 @@
       <% event.diaries.each do |diary| %>
       <div class="row">
         <div class="col-1">
-            <%= image_tag "hane.png", class:"hane" %>
+          <%= image_tag "hane.png", class:"hane" %>
         </div>
         <div class="col-8 simple-diary2">
           <%= diary.simple_diary %>
@@ -22,14 +22,40 @@
             <i class="fas fa-trash"></i>
           <% end %>
         </div>
+      </div>
+      <div class="row">
         <%= image_tag "blue.line2.png", class:"line1" %>
       </div>
       <div class="row">
-        <div class="col-lg-1">
-        </div>
-        <div class="col-lg-10 detail">
+        <div class="col-1"></div>
+        <div class="col-8 detail">
           <%= diary.detail %>
           <!--%= diary.image_id %>-->
+        </div>
+        <div class="col-3">
+          <!--AI機能 感情分析-->
+          <% if diary.score < -0.3 %>
+            <p class="text-secondary">♥
+              <span class="mental">
+                <%= image_tag "emotion/sad.png", class:"emotion" %>
+                <span class="mental-score">気分の点数<%= diary.score %></span>
+              </span>
+            </p>
+          <% elsif diary.score.between?(-0.3, 0.3) %>
+            <p class="text-success">♥
+              <span class="mental">
+                <%= image_tag "emotion/nomal.png", class:"emotion" %>
+                <span class="mental-score">気分の点数<%= diary.score %></span>
+              </span>
+            </p>
+          <% else diary.score > 0.3 %>
+            <p class="text-danger">♥
+              <span class="mental">
+                <%= image_tag "emotion/happy.png", class:"emotion" %>
+                <span class="mental-score">気分の点数<%= diary.score %></span>
+              </span>
+            </p>
+          <% end %>
         </div>
           <%= image_tag "eda1.png", class:"line2" %>
       </div>
