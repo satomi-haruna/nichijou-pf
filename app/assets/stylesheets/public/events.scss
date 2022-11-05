@@ -170,6 +170,19 @@ input[type=radio] {
   accent-color: #a96ded;
 }
 
+// eventのshow画面
+.diarylink_image {
+  width: 70%;
+}
+
+.diarylink {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  font-size: 20px;
+  color: #8bb33d;
+}
+
 // event/show tableの色付け
 .colorless {
   background-image: repeating-linear-gradient(45deg, transparent 0 3px, #fffaf0 3px 6px);
@@ -269,6 +282,13 @@ input[type=radio] {
     bottom: -13%;
     right: 0%;
   }
+
+  // eventのshow画面
+  .diarylink {
+    top: 3%;
+    left: 5%;
+    font-size: 20px;
+  }
 }
 
 // タブレット縦置きサイズ（768px）以下
@@ -292,6 +312,13 @@ input[type=radio] {
 
   .btn-group {
     display: inline-block;
+  }
+
+  // eventのshow画面
+  .diarylink {
+    top: 0%;
+    left: 5%;
+    font-size: 16px;
   }
 
   // event/show flower画像の設定
@@ -330,6 +357,15 @@ input[type=radio] {
   // event/show flower画像の設定
   .flower-image {
     bottom: -13%;
+  }
+
+  // eventのshow画面
+  .diarylink_image {
+    display: none;
+  }
+
+  .pen {
+    display: none;
   }
 }
 
