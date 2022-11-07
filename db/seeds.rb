@@ -19,7 +19,7 @@ User.create!(
       last_name: '信乃',
       first_name_kana: 'いぬづか',
       last_name_kana: 'しの',
-      nickname: 'こう'
+      nickname: 'こう',
       email: 'kou_inuduka@eight.com',
       password:              'inuduka',
       password_confirmation: 'inuduka'
@@ -29,7 +29,7 @@ User.create!(
       last_name: '荘助',
       first_name_kana: 'いぬかわ',
       last_name_kana: 'そうすけ',
-      nickname: 'ぎー'
+      nickname: 'ぎー',
       email: 'gi_inukawa@eight.com',
       password:              'inukawa',
       password_confirmation: 'inukawa'
