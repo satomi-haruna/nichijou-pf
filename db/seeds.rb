@@ -108,7 +108,19 @@ users = [
 ]
 
 # 本番環境にデータがあればスキップ、なければデータを追加
-# find_or_create_byは複数レコード追加する仕様はないため、上記にハッシュで記述・複数回呼び出して使用
 users.each do |user|
-  User.find_or_create_by(user)
+  # deviseの場合、ユーザーを一度メールアドレスで検索
+  user_email = User.find_by(email: user[:email])
+  # 該当しなければcreate
+  if user_email.nil?
+    User.create(
+      first_name: user[:first_name],
+      last_name: user[:last_name],
+      first_name_kana: user[:first_name_kana],
+      last_name_kana: user[:last_name_kana],
+      nickname: user[:nickname],
+      email: user[:email],
+      password: user[:password]
+    )
+  end
 end
