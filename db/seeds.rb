@@ -9,7 +9,7 @@
 
 
 admin_data = Admin.find_by(email: ENV['ADMIN_EMAIL'])
-unless admin_data.nil?
+if admin_data.nil?
   Admin.create!(
     email: ENV['ADMIN_EMAIL'],
     password: ENV['ADMIN_PASSWORD'],
