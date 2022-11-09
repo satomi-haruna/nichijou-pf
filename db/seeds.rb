@@ -6,12 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Admin.create!(
-  email: ENV['ADMIN_EMAIL'],
-  password: ENV['ADMIN_PASSWORD'],
-)
 
-()
+
+admin_data = Admin.find_by(email: ENV['ADMIN_EMAIL'])
+unless admin_data.nil?
+  Admin.create!(
+    email: ENV['ADMIN_EMAIL'],
+    password: ENV['ADMIN_PASSWORD'],
+  )
+end
 
 
 users = [
@@ -22,8 +25,7 @@ users = [
     last_name_kana: 'しの',
     nickname: 'こう',
     email: 'kou_inuduka@eight.com',
-    password:              'inuduka',
-    password_confirmation: 'inuduka'
+    password:              'inuduka'
   },
   {
     first_name: '犬川',
@@ -32,8 +34,7 @@ users = [
     last_name_kana: 'そうすけ',
     nickname: 'ぎー',
     email: 'gi_inukawa@eight.com',
-    password:              'inukawa',
-    password_confirmation: 'inukawa'
+    password:              'inukawa'
   },
   {
     first_name: '犬山',
@@ -42,8 +43,7 @@ users = [
     last_name_kana: 'どうせつ',
     nickname: 'ちゅう',
     email: 'tyu_inuyama@eight.com',
-    password:              'inuyama',
-    password_confirmation: 'inuyama'
+    password:              'inuyama'
   },
   {
     first_name: '犬飼',
@@ -52,8 +52,7 @@ users = [
     last_name_kana: 'げんぱち',
     nickname: 'しん',
     email: 'shin_inukai@eight.com',
-    password:              'inukai',
-    password_confirmation: 'inukai'
+    password:              'inukai'
   },
   {
     first_name: '犬田',
@@ -62,8 +61,7 @@ users = [
     last_name_kana: 'こぶんご',
     nickname: 'てい',
     email: 'tei_inuta@eight.com',
-    password:              'inutainuta',
-    password_confirmation: 'inutainuta'
+    password:              'inutainuta'
   },
   {
     first_name: '犬江',
@@ -72,8 +70,7 @@ users = [
     last_name_kana: 'しんべえ',
     nickname: 'じん',
     email: 'jin_inue@eight.com',
-    password:              'inueinue',
-    password_confirmation: 'inueinue'
+    password:              'inueinue'
   },
   {
     first_name: '犬坂',
@@ -82,8 +79,7 @@ users = [
     last_name_kana: 'けの',
     nickname: 'ちー',
     email: 'chi_inusaka@eight.com',
-    password:              'inusaka',
-    password_confirmation: 'inusaka'
+    password:              'inusaka'
   },
   {
     first_name: '犬村',
@@ -92,8 +88,7 @@ users = [
     last_name_kana: 'だいかく',
     nickname: 'れい',
     email: 'rei_inumura@eight.com',
-    password:              'inumura',
-    password_confirmation: 'inumura'
+    password:              'inumura'
   },
   {
     first_name: '里見',
@@ -102,8 +97,7 @@ users = [
     last_name_kana: 'はっけんでん',
     nickname: '南総里見八犬伝',
     email: 'satomihakkenden@eight.com',
-    password:              'hakkenden',
-    password_confirmation: 'hakkenden'
+    password:              'hakkenden'
   }
 ]
 
