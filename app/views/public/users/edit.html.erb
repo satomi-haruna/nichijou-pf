@@ -10,66 +10,66 @@
 <div class="row justify-content-center">
   <div class="col-sm-12 col-md-10 col-lg-7">
     <%= form_with model: @user, url: users_information_path, method: :patch do |f| %>
-    <table class="registration">
-      <tr>
-        <div class="field">
-          <th>
-            <%= f.label :"お名前" %>
-          </th>
-          <td>
-            <%= f.text_field :last_name, required: true %>
-          </td>
-          <td>
-            <%= f.text_field :first_name, required: true %>
-          </td>
-        </div>
-      </tr>
+      <table class="registration">
+        <tr>
+          <div class="field">
+            <th>
+              <%= f.label :"お名前" %>
+            </th>
+            <td>
+              <%= f.text_field :last_name, required: true %>
+            </td>
+            <td>
+              <%= f.text_field :first_name, required: true %>
+            </td>
+          </div>
+        </tr>
 
-      <tr>
-        <div class="field">
-          <th>
-            <%= f.label :"フリガナ" %>
-          </th>
+        <tr>
+          <div class="field">
+            <th>
+              <%= f.label :"フリガナ" %>
+            </th>
+            <td>
+              <%= f.text_field :last_name_kana, required: true %>
+            </td>
+            <td>
+              <%= f.text_field :first_name_kana, required: true %>
+            </td>
+          </div>
+        </tr>
+
+        <tr>
+          <div class="field">
+            <th>
+              <%= f.label :"ニックネーム" %>
+            </th>
+            <td colspan="2">
+              <%= f.text_field :nickname, class:"registration-form", required: true %>
+            </td>
+          </div>
+        </tr>
+
+        <tr>
+          <div class="field">
+            <th>
+              <%= f.label :"メールアドレス" %>
+            </th>
+            <td colspan="2">
+              <%= f.email_field :email, class:"registration-form", required: true %>
+            </td>
+          </div>
+        </tr>
+
+        <tr>
+          <th></th>
           <td>
-            <%= f.text_field :last_name_kana, required: true %>
+            <button type="submit", class="btn btn-primary users-edit-btn">
+              更新 <i class="fas fa-hand-point-up"></i>
+            </button>
           </td>
-          <td>
-            <%= f.text_field :first_name_kana, required: true %>
-          </td>
-        </div>
-      </tr>
-
-      <tr>
-        <div class="field">
-          <th>
-            <%= f.label :"ニックネーム" %>
-          </th>
-          <td colspan="2">
-            <%= f.text_field :nickname, class:"registration-form", required: true %>
-          </td>
-        </div>
-      </tr>
-
-      <tr>
-        <div class="field">
-          <th>
-            <%= f.label :"メールアドレス" %>
-          </th>
-          <td colspan="2">
-            <%= f.email_field :email, class:"registration-form", required: true %>
-          </td>
-        </div>
-      </tr>
-
-      <tr>
-        <th></th>
-        <td>
-          <button type="submit", class="btn btn-primary users-edit-btn">
-            更新 <i class="fas fa-hand-point-up"></i>
-          </button>
-        </td>
-      </tr>
-    </table>
+        </tr>
+      </table>
     <% end %>
   </div>
 </div>

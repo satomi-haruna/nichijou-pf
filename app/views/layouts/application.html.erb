@@ -22,81 +22,80 @@
               <%= image_tag('cloud-logo4-1.png', :size => '42x28') %>
             </div>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
-            <!--ゲストユーザーのヘッダー-->
-            <% if user_signed_in? && current_user.email == 'guest@sample.com' %>
-              <li class="nav-item text-right">
-                <%= link_to new_event_path, class: 'nav-link text-dark' do %>
-                  <i class="fas fa-clock"></i> 予定登録
-                <% end %>
-              </li>
-              <li class="nav-item text-right">
-                <%= link_to events_path, class: 'nav-link text-dark' do %>
-                  <i class="fas fa-calendar-alt"></i> カレンダー
-                <% end %>
-              </li>
-              <li class="nav-item text-right">
-                <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-dark' do %>
-                  <i class="fas fa-sign-out-alt"></i> ログアウト
-                <% end %>
-              </li>
-            <!--ゲストユーザー以外のログイン後のヘッダー-->
-            <% elsif user_signed_in? %>
-              <li class="nav-item text-right">
-                <%= link_to new_event_path, class: 'nav-link text-dark' do %>
-                  <i class="fas fa-clock"></i> 予定登録
-                <% end %>
-              </li>
-              <li class="nav-item text-right">
-                <%= link_to events_path, class: 'nav-link text-dark' do %>
-                  <i class="fas fa-calendar-alt"></i> カレンダー
-                <% end %>
-              </li>
-              <li class="nav-item text-right">
-                <%= link_to users_my_page_path, class: 'nav-link text-dark' do %>
-                  <i class="fas fa-user"></i> 会員情報の確認
-                <% end %>
-              </li>
-              <li class="nav-item text-right">
-                <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-dark' do %>
-                  <i class="fas fa-sign-out-alt"></i> ログアウト
-                <% end %>
-              </li>
-            <!--管理者側のヘッダー-->
-            <% elsif admin_signed_in? %>
-              <li class="nav-item text-right">
-                <%= link_to admin_root_path, class: 'nav-link text-dark' do %>
-                  <i class="fas fa-users"></i> 会員一覧
-                <% end %>
-              </li>
-              <li class="nav-item text-right">
-                <%= link_to destroy_admin_session_path, method: :delete, class: 'nav-link text-dark' do %>
-                  <i class="fas fa-sign-out-alt"></i> 管理者ログアウト
-                <% end %>
-              </li>
-            <!--ログイン前のヘッダー-->
-            <% else %>
-              <li class="nav-item text-right">
-                <%= link_to new_user_session_path, class: 'nav-link text-dark' do %>
-                 <i class="fas fa-sign-in-alt"></i> ログイン
-                <% end %>
-              </li>
-              <li class="nav-item text-right">
-                <%= link_to new_user_registration_path, class: 'nav-link text-dark' do %>
-                  <i class="fas fa-user-plus"></i> 新規登録
-                <% end %>
-              </li>
-              <li class="nav-item text-right">
-                <%= link_to users_guest_sign_in_path, method: :post, class: 'nav-link text-dark' do %>
-                  <i class="fas fa-feather-alt"></i> ゲストログイン
-                <% end %>
-              </li>
-            <% end %>
+              <!--ゲストユーザーのヘッダー-->
+              <% if user_signed_in? && current_user.email == 'guest@sample.com' %>
+                <li class="nav-item text-right">
+                  <%= link_to new_event_path, class: 'nav-link text-dark' do %>
+                    <i class="fas fa-clock"></i> 予定登録
+                  <% end %>
+                </li>
+                <li class="nav-item text-right">
+                  <%= link_to events_path, class: 'nav-link text-dark' do %>
+                    <i class="fas fa-calendar-alt"></i> カレンダー
+                  <% end %>
+                </li>
+                <li class="nav-item text-right">
+                  <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-dark' do %>
+                    <i class="fas fa-sign-out-alt"></i> ログアウト
+                  <% end %>
+                </li>
+              <!--ゲストユーザー以外のログイン後のヘッダー-->
+              <% elsif user_signed_in? %>
+                <li class="nav-item text-right">
+                  <%= link_to new_event_path, class: 'nav-link text-dark' do %>
+                    <i class="fas fa-clock"></i> 予定登録
+                  <% end %>
+                </li>
+                <li class="nav-item text-right">
+                  <%= link_to events_path, class: 'nav-link text-dark' do %>
+                    <i class="fas fa-calendar-alt"></i> カレンダー
+                  <% end %>
+                </li>
+                <li class="nav-item text-right">
+                  <%= link_to users_my_page_path, class: 'nav-link text-dark' do %>
+                    <i class="fas fa-user"></i> 会員情報の確認
+                  <% end %>
+                </li>
+                <li class="nav-item text-right">
+                  <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-dark' do %>
+                    <i class="fas fa-sign-out-alt"></i> ログアウト
+                  <% end %>
+                </li>
+              <!--管理者側のヘッダー-->
+              <% elsif admin_signed_in? %>
+                <li class="nav-item text-right">
+                  <%= link_to admin_root_path, class: 'nav-link text-dark' do %>
+                    <i class="fas fa-users"></i> 会員一覧
+                  <% end %>
+                </li>
+                <li class="nav-item text-right">
+                  <%= link_to destroy_admin_session_path, method: :delete, class: 'nav-link text-dark' do %>
+                    <i class="fas fa-sign-out-alt"></i> 管理者ログアウト
+                  <% end %>
+                </li>
+              <!--ログイン前のヘッダー-->
+              <% else %>
+                <li class="nav-item text-right">
+                  <%= link_to new_user_session_path, class: 'nav-link text-dark' do %>
+                   <i class="fas fa-sign-in-alt"></i> ログイン
+                  <% end %>
+                </li>
+                <li class="nav-item text-right">
+                  <%= link_to new_user_registration_path, class: 'nav-link text-dark' do %>
+                    <i class="fas fa-user-plus"></i> 新規登録
+                  <% end %>
+                </li>
+                <li class="nav-item text-right">
+                  <%= link_to users_guest_sign_in_path, method: :post, class: 'nav-link text-dark' do %>
+                    <i class="fas fa-feather-alt"></i> ゲストログイン
+                  <% end %>
+                </li>
+              <% end %>
             </ul>
           </div>
           <div class="cloud-img2">
@@ -111,7 +110,7 @@
         <div class="row">
           <div class="col align-self-center py-4">
             <!--エラーメッセージなどの表示-->
-            <!--ハッシュならeachで取り出し、ハッシュ以外は通常に表示-->
+            <!--ハッシュならeachで取り出し、ハッシュ以外は通常に表示。ゲストログインのメッセージが3行のため。-->
             <% if flash[:message].class == Array %>
               <% flash[:message].each do |flash| %>
                 <div>
@@ -122,7 +121,7 @@
               <div class="flash">
                 <%= flash[:message] %>
               </div>
-              <!--sign inのエラーメッセージ-->
+              <!--sign inのメッセージ-->
               <p class="alert"><%= alert %></p>
             <% end %>
 

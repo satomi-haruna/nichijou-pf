@@ -1,6 +1,7 @@
 <div class="event-show">
   <div class="row">
     <div class="col-2">
+      <!--カレンダー画面へ-->
       <h4>
         <%= link_to events_path do %>
           <i class="fas fa-arrow-circle-left"></i>
@@ -15,6 +16,7 @@
       </h3>
     </div>
     <div class="col-2">
+      <!--日記画面へ-->
       <h4 class="float-right">
         <%= image_tag "book4.png", class:"diarylink_image" %>
         <%= link_to new_event_diary_path(@event.id), class: "btn diarylink" do %>
@@ -32,19 +34,23 @@
         <tr>
           <th></th>
           <td align="right">
+            <!--予定の編集画面へ-->
             <%= link_to edit_event_path(@event.id), class: "btn btn-outline-primary" do %>
               <i class="fas fa-pen"></i> 編集
             <% end %>
+            <!--予定の削除ボタン-->
             <%= link_to event_path, method: :delete, "data-confirm" => "この予定に対しての日記も削除されます。\n削除してよろしいですか？", class: "btn btn-outline-danger" do %>
               <i class="fas fa-trash"></i> 削除
             <% end %>
           </td>
         </tr>
+        <!--予定の詳細-->
         <tr>
           <th>今日の予定</th>
           <td class="<%= @color_id %>">
             <%= @event.plan %>
           </td>
+          <!--カラータグによって表示・デザインの切り替え-->
           <% case @event.color_id %>
             <% when 'colorless' then %>
               <%= image_tag 'flower/colorless.png', class: "flower-image" %>

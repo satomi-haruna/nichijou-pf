@@ -10,13 +10,13 @@
         <div class="col-8 simple-diary2">
           <%= diary.simple_diary %>
         </div>
-        <!--日記の編集-->
+        <!--日記の編集ボタン-->
         <div class="col-1 simple-diary2">
           <%= link_to edit_event_diary_path(diary.event_id,diary.id) do %>
             <i class="fas fa-pen"></i>
           <% end %>
         </div>
-        <!--日記の削除-->
+        <!--日記の削除ボタン-->
         <div class="col-1 simple-diary2">
           <%= link_to event_diary_path(diary.event, diary), method: :delete, "data-confirm" => "削除しますか？" do %>
             <i class="fas fa-trash"></i>
@@ -30,10 +30,10 @@
         <div class="col-1"></div>
         <div class="col-8 detail">
           <%= diary.detail %>
-          <!--%= diary.image_id %>-->
         </div>
+        <!--AI機能 感情分析-->
+        <!--スコアによって羊の画像が変化、カーソルをあてるとスコアが表示される-->
         <div class="col-3">
-          <!--AI機能 感情分析-->
           <% if diary.score.to_f < -0.3 %>
             <p class="text-secondary">♥
               <span class="mental">

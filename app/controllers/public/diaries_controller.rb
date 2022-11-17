@@ -15,7 +15,6 @@ class Public::DiariesController < ApplicationController
     # simple_diary_score = Mental.get_score(diary_params[:simple_diary])
     # detail_score = Mental.get_score(diary_params[:detail])
     @diary.score = (Mental.get_score(diary_params[:simple_diary]) + Mental.get_score(diary_params[:detail])) / 2
-
     if @diary.save
       redirect_to new_event_diary_path(@event.id)
     else
@@ -34,7 +33,6 @@ class Public::DiariesController < ApplicationController
     @diary = Diary.find(params[:id])
     # AI機能 感情分析　simple_diaryとdetailの感情スコアの平均で、表示画像を決定
     @diary.score = (Mental.get_score(diary_params[:simple_diary]) + Mental.get_score(diary_params[:detail])) / 2
-
     if @diary.update(diary_params)
       redirect_to new_event_diary_path
     else
@@ -54,10 +52,11 @@ class Public::DiariesController < ApplicationController
     true
   end
 
+
   private
 
   def diary_params
-    params.require(:diary).permit(:event_id, :simple_diary, :detail, :image_id)
+    params.require(:diary).permit(:event_id, :simple_diary, :detail)
   end
 
 end

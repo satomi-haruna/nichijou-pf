@@ -29,7 +29,7 @@ header {
   padding: 5px 0 20px;
 }
 
-// エラーメッセージ表示時にレイアウトに影響がでない
+// エラーメッセージ表示時にレイアウトに影響がでないようにする記述
 .field_with_errors {
   display: inline;
 }

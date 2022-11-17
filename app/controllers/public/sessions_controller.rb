@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Public::SessionsController < Devise::SessionsController
-  # before_action :configure_sign_in_params, only: [:create]
   before_action :user_state, only: [:create]
   before_action :configure_permitted_parameters, if: :devise_controller?
 
@@ -16,10 +15,6 @@ class Public::SessionsController < Devise::SessionsController
     redirect_to events_path
   end
 
-  # def create
-  #   self.resource = warden.authenticate!(auth_options)
-  # end
-
   def after_sign_in_path_for(resource)
     flash[:message] = 'ログインしました'
     events_path
@@ -29,6 +24,10 @@ class Public::SessionsController < Devise::SessionsController
     flash[:message] = 'ログアウトしました'
     root_path
   end
+
+  # def create
+  #   self.resource = warden.authenticate!(auth_options)
+  # end
 
   # GET /resource/sign_in
   # def new

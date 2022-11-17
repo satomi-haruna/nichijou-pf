@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   root to: 'homes#top'
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  # 会員側 devise
+  # 会員側、devise
   devise_for :users, skip: [:passwords], controllers: {
     registrations: "public/registrations",
     sessions: 'public/sessions'
   }
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   scope module: :public do
     resources :events do
@@ -26,7 +26,7 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'public/sessions#guest_sign_in'
   end
 
-  # 管理者用 devise
+  # 管理者用、devise
   devise_for :admin, skip: [:registrations, :passwords], controllers: {
     sessions: "admin/sessions"
   }

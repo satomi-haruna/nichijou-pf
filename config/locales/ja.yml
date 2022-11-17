@@ -2,6 +2,7 @@
 ja:
   enums:
     schedule:
+      # カラータグのenum
       color_id:
         colorless: "なし"
         pink: "桃色"
@@ -17,6 +18,7 @@ ja:
   activerecord:
     attributes:
       user:
+        # エラーメッセージ表示用日本語変換
         last_name: 氏名（姓）
         first_name: 氏名（名）
         last_name_kana: フリガナ（セイ）

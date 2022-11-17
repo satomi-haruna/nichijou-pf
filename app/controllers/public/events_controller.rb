@@ -19,7 +19,6 @@ class Public::EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @diary = Diary.new
-    @list = List.new
     @color_id = @event.color_id
   end
 
@@ -54,10 +53,11 @@ class Public::EventsController < ApplicationController
     true
   end
 
+
   private
 
   def event_params
-    params.require(:event).permit(:user_id, :plan, :plan_datetime, :allday_flg, :memo, :place, :color_id, :is_active)
+    params.require(:event).permit(:user_id, :plan, :plan_datetime, :memo, :place, :color_id)
   end
 
 end

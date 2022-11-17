@@ -38,6 +38,7 @@ class Public::UsersController < ApplicationController
     true
   end
 
+
   private
 
   def user_params
