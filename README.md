@@ -38,7 +38,7 @@
 - テーブル定義書
   https://docs.google.com/spreadsheets/d/1LCxs2BIVReeKhGSQHW_gmFyGtSjUi_X0ezhJcOqAprw/edit#gid=0
 - アプリケーション詳細設計
-  file:///C:/Users/Haruna%20Satomi/Downloads/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E8%A9%B3%E7%B4%B0%E8%A8%AD%E8%A8%88%E6%9B%B8_%E3%81%BB%E3%81%AE%E3%81%BC%E3%81%AESD-pf%20-%20routes.pdf
+  https://docs.google.com/spreadsheets/d/1gs81HPOOvc16TodJFdTRwZ_eM7mb8vUsQCp4urGtTkw/edit#gid=0
 
 ## 開発環境
 - OS：Linux(CentOS)
