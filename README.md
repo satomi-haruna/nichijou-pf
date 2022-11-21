@@ -1,4 +1,4 @@
-# 日常のスケジュール日誌
+# ほのぼのスケジュール日誌
 
 ## サイト概要
 ### サイトテーマ
@@ -28,10 +28,12 @@
 スケジュールと一緒に日記を残しておくため、前後の行事など一目でわかる。<br>
 
 ## 設計書
-- ER図
-- ワイヤーフレーム　https://app.diagrams.net/#G1Jb7eFonuiUNE4jVMJoox7RcrjzTFdz3-
-- 画面遷移図　https://app.diagrams.net/#G1k-EIhKFxDzvJQGhdjpC8bHtpUJWcX9mT
-- テーブル定義書　https://docs.google.com/spreadsheets/d/1LCxs2BIVReeKhGSQHW_gmFyGtSjUi_X0ezhJcOqAprw/edit#gid=291359249
+- ER図　https://drive.google.com/file/d/18GFXXKxlelouKJiDEG9JmaBGJ6mOCVSF/view
+- ワイヤーフレーム　https://app.diagrams.net/#G19r_Dy4rtLzIftIkCBJwh4F4K4VxPGP5N
+- 画面遷移図　https://drive.google.com/file/d/1VD_K-De5bCDjWLHxfnPwhb_zzT7C9RJG/view
+　　　　　　　https://drive.google.com/file/d/1gAQiiGbJD5lofM3D6ho5hmfyFnuAEx7B/view
+- テーブル定義書　https://docs.google.com/spreadsheets/d/1LCxs2BIVReeKhGSQHW_gmFyGtSjUi_X0ezhJcOqAprw/edit#gid=0
+- アプリケーション詳細設計　file:///C:/Users/Haruna%20Satomi/Downloads/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E8%A9%B3%E7%B4%B0%E8%A8%AD%E8%A8%88%E6%9B%B8_%E3%81%BB%E3%81%AE%E3%81%BC%E3%81%AESD-pf%20-%20routes.pdf
 
 ## 開発環境
 - OS：Linux(CentOS)
@@ -41,5 +43,14 @@
 - IDE：Cloud9
 
 ## 使用素材
-<!--- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。-->
-<!--- 使用しない場合は、使用素材の項目をREADMEから削除してください。-->
+- https://www.photo-ac.com/main/terms/
+- https://nukumori-icon.com/tag/%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC/
+- https://hiyokoyarou.com/about/
+- https://illustimage.com/help.php
+- https://illust-ryokka.jp/about/rule/
+- https://www.illust-pocket.com/
+- http://free-line-design.com/?page_id=17
+- https://icooon-mono.com/
+- https://www.irasutoya.com/p/faq.html
+- https://www.canva.com/ja_jp/create/logos/
+- https://www.pakutaso.com/userpolicy.html
