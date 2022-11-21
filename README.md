@@ -28,12 +28,17 @@
 スケジュールと一緒に日記を残しておくため、前後の行事など一目でわかる。<br>
 
 ## 設計書
-- ER図　https://drive.google.com/file/d/18GFXXKxlelouKJiDEG9JmaBGJ6mOCVSF/view
-- ワイヤーフレーム　https://app.diagrams.net/#G19r_Dy4rtLzIftIkCBJwh4F4K4VxPGP5N
-- 画面遷移図　https://drive.google.com/file/d/1VD_K-De5bCDjWLHxfnPwhb_zzT7C9RJG/view
-　　　　　　　https://drive.google.com/file/d/1gAQiiGbJD5lofM3D6ho5hmfyFnuAEx7B/view
-- テーブル定義書　https://docs.google.com/spreadsheets/d/1LCxs2BIVReeKhGSQHW_gmFyGtSjUi_X0ezhJcOqAprw/edit#gid=0
-- アプリケーション詳細設計　file:///C:/Users/Haruna%20Satomi/Downloads/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E8%A9%B3%E7%B4%B0%E8%A8%AD%E8%A8%88%E6%9B%B8_%E3%81%BB%E3%81%AE%E3%81%BC%E3%81%AESD-pf%20-%20routes.pdf
+- ER図
+  https://drive.google.com/file/d/18GFXXKxlelouKJiDEG9JmaBGJ6mOCVSF/view
+- ワイヤーフレーム
+  https://app.diagrams.net/#G19r_Dy4rtLzIftIkCBJwh4F4K4VxPGP5N
+- 画面遷移図
+  会員側　https://drive.google.com/file/d/1VD_K-De5bCDjWLHxfnPwhb_zzT7C9RJG/view
+  管理者側　https://drive.google.com/file/d/1gAQiiGbJD5lofM3D6ho5hmfyFnuAEx7B/view
+- テーブル定義書
+  https://docs.google.com/spreadsheets/d/1LCxs2BIVReeKhGSQHW_gmFyGtSjUi_X0ezhJcOqAprw/edit#gid=0
+- アプリケーション詳細設計
+  file:///C:/Users/Haruna%20Satomi/Downloads/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E8%A9%B3%E7%B4%B0%E8%A8%AD%E8%A8%88%E6%9B%B8_%E3%81%BB%E3%81%AE%E3%81%BC%E3%81%AESD-pf%20-%20routes.pdf
 
 ## 開発環境
 - OS：Linux(CentOS)
