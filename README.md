@@ -32,9 +32,8 @@
   https://drive.google.com/file/d/18GFXXKxlelouKJiDEG9JmaBGJ6mOCVSF/view
 - ワイヤーフレーム
   https://app.diagrams.net/#G19r_Dy4rtLzIftIkCBJwh4F4K4VxPGP5N
-- 画面遷移図
-
-  会員側　https://drive.google.com/file/d/1VD_K-De5bCDjWLHxfnPwhb_zzT7C9RJG/view
+- 画面遷移図<br>
+  会員側　https://drive.google.com/file/d/1VD_K-De5bCDjWLHxfnPwhb_zzT7C9RJG/view<br>
   管理者側　https://drive.google.com/file/d/1gAQiiGbJD5lofM3D6ho5hmfyFnuAEx7B/view
 - テーブル定義書
   https://docs.google.com/spreadsheets/d/1LCxs2BIVReeKhGSQHW_gmFyGtSjUi_X0ezhJcOqAprw/edit#gid=0
